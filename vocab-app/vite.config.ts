@@ -4,8 +4,8 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
-  // 部署到 GitHub Pages（用户主页 urrrerin.github.io）时用根路径
-  base: '/',
+  // 相对路径：GitHub Pages 项目站 / CDN 预览都能用
+  base: './',
   plugins: [
     react(),
     VitePWA({
@@ -20,7 +20,7 @@ export default defineConfig({
         display: 'standalone',
         orientation: 'portrait',
         lang: 'zh-CN',
-        start_url: '/',
+        start_url: './',
         icons: [
           {
             src: 'pwa-192.png',
