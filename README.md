@@ -21,3 +21,19 @@
 | 产品 | 魔法词本 |
 | 仓库 | 就是这个 GitHub 仓库 |
 | V0.5 | 先能在手机上看词，不做复杂复习算法 |
+
+## 手机打开（iPhone）
+
+正式地址（需先开启 GitHub Pages，只需一次）：
+
+1. 电脑打开：https://github.com/Urrrerin/Urrrerin/settings/pages
+2. **Build and deployment → Source** 选 **Deploy from a branch**
+3. Branch 选 **gh-pages** / **/(root)** → Save
+4. 一两分钟后用 Safari 打开：
+
+**https://urrrerin.github.io/Urrrerin/**
+
+然后点分享 →「添加到主屏幕」，就能像 App 一样用。
+
+词表源文件也在同一站点：https://urrrerin.github.io/Urrrerin/azkaban-vocabulary.html
+
