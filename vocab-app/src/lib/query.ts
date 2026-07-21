@@ -1,5 +1,8 @@
 import type { FilterKey, SortKey, WordEntry } from '../types'
 
+/** 本书词表多为 1～2 次，≥2 视为高频复现 */
+const HIGH_FREQ_MIN = 2
+
 export function filterAndSortWords(
   words: WordEntry[],
   query: string,
@@ -9,11 +12,10 @@ export function filterAndSortWords(
   const q = query.trim().toLowerCase()
 
   let list = words.filter((word) => {
-    if (filter === 'high-freq' && word.frequency < 20) return false
-    if (filter === 'cet4' && !word.tags.includes('cet4')) return false
-    if (filter === 'cet6' && !word.tags.includes('cet6')) return false
-    if (filter === 'gaokao' && !word.tags.includes('gaokao')) return false
-    if (filter === 'other' && !word.tags.includes('other')) return false
+    if (filter === 'high-freq' && word.frequency < HIGH_FREQ_MIN) return false
+    if (filter !== 'all' && filter !== 'high-freq' && !word.tags.includes(filter)) {
+      return false
+    }
 
     if (!q) return true
     return (
@@ -47,6 +49,9 @@ export const filterLabels: Record<FilterKey, string> = {
   cet4: '四级',
   cet6: '六级',
   gaokao: '高考',
+  tem4: '专四',
+  tem8: '专八',
+  ielts: '雅思',
   other: '其他',
 }
 
@@ -61,5 +66,8 @@ export const tagLabels: Record<string, string> = {
   cet4: '四级',
   cet6: '六级',
   gaokao: '高考',
+  tem4: '专四',
+  tem8: '专八',
+  ielts: '雅思',
   other: '其他',
 }

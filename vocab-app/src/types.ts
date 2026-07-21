@@ -1,4 +1,11 @@
-export type ExamTag = 'cet4' | 'cet6' | 'gaokao' | 'other'
+export type ExamTag =
+  | 'cet4'
+  | 'cet6'
+  | 'gaokao'
+  | 'tem4'
+  | 'tem8'
+  | 'ielts'
+  | 'other'
 
 export type WordEntry = {
   id: string

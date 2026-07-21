@@ -10,7 +10,17 @@ import {
 } from './lib/query'
 import './App.css'
 
-const FILTERS: FilterKey[] = ['all', 'high-freq', 'cet4', 'cet6', 'gaokao', 'other']
+const FILTERS: FilterKey[] = [
+  'all',
+  'high-freq',
+  'cet4',
+  'cet6',
+  'tem4',
+  'tem8',
+  'ielts',
+  'gaokao',
+  'other',
+]
 const SORTS: SortKey[] = [
   'frequency-desc',
   'frequency-asc',
@@ -70,7 +80,7 @@ function App() {
     setWords(sample)
     setSource('sample')
     setSelected(null)
-    showToast('已恢复演示词表')
+    showToast('已恢复阿兹卡班词表')
   }
 
   return (
@@ -80,15 +90,15 @@ function App() {
       <header className="top">
         <div className="brand-block">
           <p className="brand">魔法词本</p>
-          <h1>通勤词单</h1>
+          <h1>阿兹卡班词单</h1>
           <p className="subtitle">
-            把哈利波特阅读词汇装进口袋。V0.5 先支持查看、搜索、筛选与排序。
+            《哈利·波特与阿兹卡班的囚徒》前 5 章生词，通勤可查、可筛、可搜。
           </p>
         </div>
 
         <div className="meta-row">
           <span className="pill">
-            {source === 'sample' ? '演示词表' : '已导入词表'} · {words.length} 词
+            {source === 'sample' ? '阿兹卡班词表' : '已导入词表'} · {words.length} 词
           </span>
           <button type="button" className="text-btn" onClick={() => setImportOpen(true)}>
             导入 HTML
@@ -220,9 +230,9 @@ function App() {
               选择你日常记录的词汇 HTML。识别成功后会保存在本机，通勤打开也能看。
             </p>
             <ol className="import-steps">
-              <li>优先支持表格：单词 / 音标 / 释义 / 频次 / 标签</li>
-              <li>也支持一行一个：<code>word — 释义</code></li>
-              <li>标签里写「四级」「六级」等，可被自动识别</li>
+              <li>已支持阿兹卡班格式：ID / 英文 / 音标 / 变形 / 出现 / 词库 / 中文</li>
+              <li>也支持通用表格：单词 / 音标 / 释义 / 频次 / 标签</li>
+              <li>词库写「四级 / 六级 / 专四 / 专八 / 雅思」会被自动识别</li>
             </ol>
             <input
               ref={fileRef}
@@ -244,7 +254,7 @@ function App() {
             </button>
             {source === 'import' ? (
               <button type="button" className="text-btn reset" onClick={handleReset}>
-                恢复演示词表
+                恢复阿兹卡班词表
               </button>
             ) : null}
           </aside>
