@@ -498,3 +498,173 @@ code {
     padding: 16px 4px;
   }
 }
+
+/* —— V1 结构稿：导航 + 线框标注 —— */
+.app.has-tabbar {
+  padding-bottom: calc(88px + var(--safe-bottom));
+}
+
+.page-head {
+  margin-bottom: 18px;
+}
+
+.page-head h1 {
+  margin: 4px 0 8px;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 8vw, 2.6rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.wire,
+.wire-lite {
+  position: relative;
+  margin: 0 0 16px;
+  padding: 14px 14px 16px;
+  border: 1px dashed rgba(212, 175, 106, 0.45);
+  border-radius: 12px;
+  background: rgba(255, 248, 236, 0.02);
+}
+
+.wire-label {
+  margin: 0 0 10px;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: none;
+  color: var(--gold);
+}
+
+.wire-label.inline {
+  margin-bottom: 12px;
+}
+
+.wire-body > *:first-child {
+  margin-top: 0;
+}
+
+.wire-kicker {
+  margin: 0 0 8px;
+  color: var(--ink-faint);
+  font-size: 0.85rem;
+}
+
+.wire-hero-word {
+  margin: 8px 0 12px;
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  line-height: 1.1;
+}
+
+.wire-muted,
+.wire-hint {
+  margin: 8px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.wire-hint.sheet-hint {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+}
+
+.wire-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.wire-actions.three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.wire-btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: rgba(255, 248, 236, 0.04);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 12px 16px;
+}
+
+.wire-btn.primary,
+.wire-btn.block {
+  width: 100%;
+}
+
+.wire-btn.block {
+  margin-top: 10px;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.stat-box {
+  padding: 16px 12px;
+  border-radius: 10px;
+  background: var(--row);
+  border: 1px solid var(--line);
+  text-align: center;
+}
+
+.stat-num {
+  display: block;
+  font-family: var(--serif);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.stat-label {
+  display: block;
+  margin-top: 8px;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+}
+
+.wire-steps {
+  margin: 0;
+  padding-left: 1.2em;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+.tabbar {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: min(720px, 100%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  padding: 10px 12px calc(10px + var(--safe-bottom));
+  background: rgba(16, 12, 10, 0.92);
+  border-top: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+  z-index: 30;
+}
+
+.tab {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--ink-faint);
+  padding: 12px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.tab.active {
+  color: var(--gold-strong);
+  background: rgba(212, 175, 106, 0.1);
+}
+
+.library-page .list {
+  margin-top: 8px;
+}

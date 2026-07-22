@@ -12,9 +12,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg'],
       manifest: {
-        name: '魔法词本',
-        short_name: '魔法词本',
-        description: '哈利波特阅读词汇小记事本',
+        name: 'Lumos',
+        short_name: 'Lumos',
+        description: '哈利波特阅读生词 · 复习词典',
         theme_color: '#1a1510',
         background_color: '#1a1510',
         display: 'standalone',

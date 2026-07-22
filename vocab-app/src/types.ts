@@ -17,7 +17,17 @@ export type WordEntry = {
   frequency: number
   tags: ExamTag[]
   note?: string
+  /** HTML 录入顺序；默认排序用。不等于稳定 wordId */
+  entryOrder?: number
 }
 
-export type SortKey = 'frequency-desc' | 'frequency-asc' | 'alpha' | 'alpha-desc'
+export type SortKey =
+  | 'entry-order'
+  | 'frequency-desc'
+  | 'frequency-asc'
+  | 'alpha'
+  | 'alpha-desc'
+
 export type FilterKey = 'all' | ExamTag | 'high-freq'
+
+export type TabKey = 'today' | 'library' | 'mine'

@@ -28,6 +28,11 @@ export function filterAndSortWords(
 
   list = [...list].sort((a, b) => {
     switch (sort) {
+      case 'entry-order': {
+        const ao = a.entryOrder ?? Number.MAX_SAFE_INTEGER
+        const bo = b.entryOrder ?? Number.MAX_SAFE_INTEGER
+        return ao - bo || a.word.localeCompare(b.word)
+      }
       case 'frequency-asc':
         return a.frequency - b.frequency || a.word.localeCompare(b.word)
       case 'alpha':
@@ -35,8 +40,9 @@ export function filterAndSortWords(
       case 'alpha-desc':
         return b.word.localeCompare(a.word)
       case 'frequency-desc':
-      default:
         return b.frequency - a.frequency || a.word.localeCompare(b.word)
+      default:
+        return 0
     }
   })
 
@@ -56,6 +62,7 @@ export const filterLabels: Record<FilterKey, string> = {
 }
 
 export const sortLabels: Record<SortKey, string> = {
+  'entry-order': '默认（录入顺序）',
   'frequency-desc': '频次高→低',
   'frequency-asc': '频次低→高',
   alpha: 'A → Z',
