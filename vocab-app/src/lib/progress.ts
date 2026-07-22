@@ -1,0 +1,172 @@
+import type { WordEntry } from '../types'
+
+export type ReviewGrade = 'remember' | 'fuzzy' | 'forgot'
+
+export type LearningState = {
+  wordId: string
+  status: 'learning' | 'mastered'
+  easiness: number
+  intervalDays: number
+  repetitions: number
+  dueAt: string
+  lastReviewedAt: string
+  lastGrade?: ReviewGrade
+}
+
+const PROGRESS_KEY = 'lumos-learning-progress-v1'
+
+function todayIsoDate(): string {
+  return new Date().toISOString().slice(0, 10)
+}
+
+function addDays(isoDate: string, days: number): string {
+  const d = new Date(`${isoDate}T12:00:00`)
+  d.setDate(d.getDate() + days)
+  return d.toISOString().slice(0, 10)
+}
+
+export function loadProgress(): Record<string, LearningState> {
+  try {
+    const raw = localStorage.getItem(PROGRESS_KEY)
+    if (!raw) return {}
+    const parsed = JSON.parse(raw) as Record<string, LearningState>
+    return parsed && typeof parsed === 'object' ? parsed : {}
+  } catch {
+    return {}
+  }
+}
+
+export function saveProgress(map: Record<string, LearningState>): void {
+  localStorage.setItem(PROGRESS_KEY, JSON.stringify(map))
+}
+
+export function isDue(state: LearningState, onDate = todayIsoDate()): boolean {
+  return state.dueAt <= onDate
+}
+
+/** 高频 × 考试标签加权后随机抽新词 */
+export function pickNewWords(
+  words: WordEntry[],
+  progress: Record<string, LearningState>,
+  limit = 30,
+): WordEntry[] {
+  const pool = words.filter((w) => !progress[w.id])
+  if (pool.length <= limit) return shuffle(pool)
+
+  const weighted = pool.map((w) => ({
+    word: w,
+    weight: weightOf(w),
+  }))
+  const picked: WordEntry[] = []
+  const bag = [...weighted]
+
+  while (picked.length < limit && bag.length > 0) {
+    const total = bag.reduce((sum, item) => sum + item.weight, 0)
+    let r = Math.random() * total
+    let index = 0
+    for (; index < bag.length; index += 1) {
+      r -= bag[index].weight
+      if (r <= 0) break
+    }
+    const chosen = bag.splice(Math.min(index, bag.length - 1), 1)[0]
+    picked.push(chosen.word)
+  }
+  return picked
+}
+
+function weightOf(word: WordEntry): number {
+  let score = 1 + Math.min(word.frequency, 5)
+  if (word.tags.includes('cet4')) score += 2
+  if (word.tags.includes('cet6')) score += 2
+  if (word.tags.includes('ielts')) score += 2
+  return score
+}
+
+export function pickReviewWords(
+  words: WordEntry[],
+  progress: Record<string, LearningState>,
+  limit = 75,
+): WordEntry[] {
+  const dueIds = new Set(
+    Object.values(progress)
+      .filter((s) => isDue(s))
+      .map((s) => s.wordId),
+  )
+  const dueWords = words.filter((w) => dueIds.has(w.id))
+  return shuffle(dueWords).slice(0, limit)
+}
+
+export function applyNewLearn(
+  progress: Record<string, LearningState>,
+  wordId: string,
+): Record<string, LearningState> {
+  const today = todayIsoDate()
+  return {
+    ...progress,
+    [wordId]: {
+      wordId,
+      status: 'learning',
+      easiness: 2.5,
+      intervalDays: 1,
+      repetitions: 0,
+      dueAt: addDays(today, 1),
+      lastReviewedAt: today,
+    },
+  }
+}
+
+export function applyReviewGrade(
+  progress: Record<string, LearningState>,
+  wordId: string,
+  grade: ReviewGrade,
+): Record<string, LearningState> {
+  const today = todayIsoDate()
+  const prev = progress[wordId] ?? {
+    wordId,
+    status: 'learning' as const,
+    easiness: 2.5,
+    intervalDays: 1,
+    repetitions: 0,
+    dueAt: today,
+    lastReviewedAt: today,
+  }
+
+  let { easiness, intervalDays, repetitions } = prev
+
+  if (grade === 'forgot') {
+    repetitions = 0
+    intervalDays = 1
+  } else if (grade === 'fuzzy') {
+    repetitions += 1
+    intervalDays = Math.max(1, Math.round(intervalDays * 1.2))
+    easiness = Math.max(1.3, easiness - 0.15)
+  } else {
+    repetitions += 1
+    easiness = Math.min(3.0, easiness + 0.1)
+    intervalDays =
+      repetitions === 1 ? 1 : repetitions === 2 ? 3 : Math.max(1, Math.round(intervalDays * easiness))
+  }
+
+  return {
+    ...progress,
+    [wordId]: {
+      ...prev,
+      easiness,
+      intervalDays,
+      repetitions,
+      dueAt: addDays(today, intervalDays),
+      lastReviewedAt: today,
+      lastGrade: grade,
+      status: intervalDays >= 30 && grade === 'remember' ? 'mastered' : 'learning',
+    },
+  }
+}
+
+function shuffle<T>(list: T[]): T[] {
+  const arr = [...list]
+  for (let i = arr.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[arr[i], arr[j]] = [arr[j], arr[i]]
+  }
+  return arr
+}

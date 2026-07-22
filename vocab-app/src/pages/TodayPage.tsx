@@ -1,103 +1,277 @@
-import { Wire } from '../components/Wire'
+import { useEffect, useMemo, useState } from 'react'
+import type { WordEntry } from '../types'
+import {
+  applyNewLearn,
+  applyReviewGrade,
+  loadProgress,
+  pickNewWords,
+  pickReviewWords,
+  saveProgress,
+  type LearningState,
+  type ReviewGrade,
+} from '../lib/progress'
+import { tagLabels } from '../lib/query'
 
 type TodayMode = 'home' | 'review' | 'learn'
 
 type Props = {
+  words: WordEntry[]
   mode: TodayMode
   onMode: (mode: TodayMode) => void
-  reviewCount?: number
-  learnCount?: number
 }
 
-/** V1.0「今日」结构稿：先只有区块与流程，逻辑稍后接 */
-export function TodayPage({
-  mode,
-  onMode,
-  reviewCount = 60,
-  learnCount = 30,
-}: Props) {
+const NEW_LIMIT = 30
+const REVIEW_LIMIT = 75
+
+export function TodayPage({ words, mode, onMode }: Props) {
+  const [progress, setProgress] = useState<Record<string, LearningState>>({})
+  const [queue, setQueue] = useState<WordEntry[]>([])
+  const [index, setIndex] = useState(0)
+  const [revealed, setRevealed] = useState(false)
+
+  useEffect(() => {
+    setProgress(loadProgress())
+  }, [])
+
+  const reviewQueue = useMemo(
+    () => pickReviewWords(words, progress, REVIEW_LIMIT),
+    [words, progress],
+  )
+  const learnQueue = useMemo(
+    () => pickNewWords(words, progress, NEW_LIMIT),
+    [words, progress],
+  )
+
+  const current = queue[index] ?? null
+  const remaining = Math.max(queue.length - index, 0)
+
+  function persist(next: Record<string, LearningState>) {
+    setProgress(next)
+    saveProgress(next)
+  }
+
+  function startReview() {
+    const list = pickReviewWords(words, progress, REVIEW_LIMIT)
+    setQueue(list)
+    setIndex(0)
+    setRevealed(false)
+    onMode('review')
+  }
+
+  function startLearn() {
+    const list = pickNewWords(words, progress, NEW_LIMIT)
+    setQueue(list)
+    setIndex(0)
+    setRevealed(false)
+    onMode('learn')
+  }
+
+  function finishSession() {
+    setQueue([])
+    setIndex(0)
+    setRevealed(false)
+    onMode('home')
+  }
+
+  function goNext() {
+    if (index + 1 >= queue.length) {
+      finishSession()
+      return
+    }
+    setIndex((i) => i + 1)
+    setRevealed(false)
+  }
+
+  function onReviewGrade(grade: ReviewGrade) {
+    if (!current) return
+    persist(applyReviewGrade(progress, current.id, grade))
+    goNext()
+  }
+
+  function onLearnNext() {
+    if (!current) return
+    persist(applyNewLearn(progress, current.id))
+    goNext()
+  }
+
   if (mode === 'review') {
-    return (
-      <div className="page today-page">
-        <Wire label="区域：复习卡片（一次一词）">
-          <p className="wire-kicker">结构示意 · 复习</p>
-          <p className="wire-hero-word">example</p>
-          <p className="wire-muted">这里之后显示英文词 / 可揭开释义</p>
-          <div className="wire-actions three">
-            <button type="button" className="wire-btn">记得</button>
-            <button type="button" className="wire-btn">模糊</button>
-            <button type="button" className="wire-btn">忘了</button>
-          </div>
-          <p className="wire-hint">点反馈后进入下一词（尚未接真实队列）</p>
-          <button type="button" className="text-btn" onClick={() => onMode('home')}>
-            ← 返回今日概览
+    if (!current) {
+      return (
+        <div className="page today-page">
+          <header className="page-head">
+            <p className="brand">Lumos</p>
+            <h1>复习完成</h1>
+            <p className="subtitle">今天没有更多待复习的词了</p>
+          </header>
+          <button type="button" className="primary-btn" onClick={finishSession}>
+            返回今日
           </button>
-        </Wire>
+          {learnQueue.length > 0 ? (
+            <button type="button" className="secondary-btn" onClick={startLearn}>
+              去新学
+            </button>
+          ) : null}
+        </div>
+      )
+    }
+
+    return (
+      <div className="page today-page session-page">
+        <div className="session-top">
+          <button type="button" className="text-btn" onClick={finishSession}>
+            结束
+          </button>
+          <p className="session-progress">
+            复习 {index + 1} / {queue.length}
+          </p>
+        </div>
+
+        <div className="study-card">
+          <p className="study-word">{current.word}</p>
+          {current.phonetic ? <p className="study-phonetic">{current.phonetic}</p> : null}
+
+          {revealed ? (
+            <div className="study-reveal">
+              <p className="study-meaning">{current.meaning}</p>
+              {current.note ? <p className="study-note">{current.note}</p> : null}
+              <div className="tag-row">
+                {current.tags.map((tag) => (
+                  <span key={tag} className="tag">
+                    {tagLabels[tag] || tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <button type="button" className="secondary-btn" onClick={() => setRevealed(true)}>
+              显示释义
+            </button>
+          )}
+        </div>
+
+        <div className="grade-row">
+          <button type="button" className="grade-btn forgot" onClick={() => onReviewGrade('forgot')}>
+            忘了
+          </button>
+          <button type="button" className="grade-btn fuzzy" onClick={() => onReviewGrade('fuzzy')}>
+            模糊
+          </button>
+          <button
+            type="button"
+            className="grade-btn remember"
+            onClick={() => onReviewGrade('remember')}
+          >
+            记得
+          </button>
+        </div>
+        <p className="session-remain">剩余 {remaining - 1} 词</p>
       </div>
     )
   }
 
   if (mode === 'learn') {
-    return (
-      <div className="page today-page">
-        <Wire label="区域：新学卡片（一次一词）">
-          <p className="wire-kicker">结构示意 · 新学</p>
-          <p className="wire-hero-word">torch</p>
-          <p className="wire-muted">揭开后显示释义 / 音标 / 备注</p>
-          <div className="wire-actions">
-            <button type="button" className="wire-btn primary">显示释义</button>
-            <button type="button" className="wire-btn">下一词</button>
-          </div>
-          <p className="wire-hint">新学在复习告一段落后进入（尚未接抽词算法）</p>
-          <button type="button" className="text-btn" onClick={() => onMode('home')}>
-            ← 返回今日概览
+    if (!current) {
+      return (
+        <div className="page today-page">
+          <header className="page-head">
+            <p className="brand">Lumos</p>
+            <h1>新学完成</h1>
+            <p className="subtitle">今天的新词已经学完了</p>
+          </header>
+          <button type="button" className="primary-btn" onClick={finishSession}>
+            返回今日
           </button>
-        </Wire>
+        </div>
+      )
+    }
+
+    return (
+      <div className="page today-page session-page">
+        <div className="session-top">
+          <button type="button" className="text-btn" onClick={finishSession}>
+            结束
+          </button>
+          <p className="session-progress">
+            新学 {index + 1} / {queue.length}
+          </p>
+        </div>
+
+        <div className="study-card">
+          <p className="study-word">{current.word}</p>
+          {current.phonetic ? <p className="study-phonetic">{current.phonetic}</p> : null}
+
+          {revealed ? (
+            <div className="study-reveal">
+              <p className="study-meaning">{current.meaning}</p>
+              {current.note ? <p className="study-note">{current.note}</p> : null}
+              <div className="tag-row">
+                {current.tags.map((tag) => (
+                  <span key={tag} className="tag">
+                    {tagLabels[tag] || tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <button type="button" className="secondary-btn" onClick={() => setRevealed(true)}>
+              显示释义
+            </button>
+          )}
+        </div>
+
+        <button
+          type="button"
+          className="primary-btn"
+          disabled={!revealed}
+          onClick={onLearnNext}
+        >
+          学会了，下一词
+        </button>
+        <p className="session-remain">剩余 {remaining - 1} 词</p>
       </div>
     )
   }
+
+  const reviewCount = reviewQueue.length
+  const learnCount = learnQueue.length
 
   return (
     <div className="page today-page">
       <header className="page-head">
         <p className="brand">Lumos</p>
         <h1>今日</h1>
-        <p className="subtitle">首页主入口 · 先复习，再新学</p>
+        <p className="subtitle">先复习，再新学</p>
       </header>
 
-      <Wire label="区域：今日概览">
-        <div className="stat-grid">
-          <div className="stat-box">
-            <span className="stat-num">{reviewCount}</span>
-            <span className="stat-label">待复习（示意）</span>
-          </div>
-          <div className="stat-box">
-            <span className="stat-num">{learnCount}</span>
-            <span className="stat-label">待新学（示意）</span>
-          </div>
+      <div className="stat-grid">
+        <div className="stat-box">
+          <span className="stat-num">{reviewCount}</span>
+          <span className="stat-label">待复习</span>
         </div>
-        <p className="wire-hint">数字接队列后会变成真实到期数 / 今日新学额度</p>
-      </Wire>
+        <div className="stat-box">
+          <span className="stat-num">{learnCount}</span>
+          <span className="stat-label">待新学</span>
+        </div>
+      </div>
 
-      <Wire label="区域：主操作">
-        <button type="button" className="primary-btn" onClick={() => onMode('review')}>
-          开始复习
+      <div className="today-actions">
+        <button
+          type="button"
+          className="primary-btn"
+          disabled={reviewCount === 0}
+          onClick={startReview}
+        >
+          {reviewCount > 0 ? '开始复习' : '暂无待复习'}
         </button>
-        <button type="button" className="wire-btn block" onClick={() => onMode('learn')}>
-          开始新学（示意入口）
+        <button
+          type="button"
+          className="secondary-btn"
+          disabled={learnCount === 0}
+          onClick={startLearn}
+        >
+          {learnCount > 0 ? '开始新学' : '今日新学已完成'}
         </button>
-        <p className="wire-hint">
-          正式逻辑：有复习时优先进入复习；新学在复习完成或为空后突出
-        </p>
-      </Wire>
-
-      <Wire label="区域：流程说明（可上线前去掉）">
-        <ol className="wire-steps">
-          <li>打开 App → 默认停在「今日」</li>
-          <li>先刷到期复习（目标约 50～75）</li>
-          <li>再学新词（默认 30）</li>
-        </ol>
-      </Wire>
+      </div>
     </div>
   )
 }

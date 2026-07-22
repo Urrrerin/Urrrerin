@@ -107,7 +107,7 @@ function App() {
       <div className="atmosphere" aria-hidden="true" />
 
       {tab === 'today' ? (
-        <TodayPage mode={todayMode} onMode={setTodayMode} />
+        <TodayPage words={words} mode={todayMode} onMode={setTodayMode} />
       ) : null}
 
       {tab === 'library' ? (
@@ -115,7 +115,6 @@ function App() {
           <header className="page-head">
             <p className="brand">Lumos</p>
             <h1>词库</h1>
-            <p className="subtitle">默认按 HTML 录入顺序排列</p>
           </header>
 
           <div className="meta-row">
@@ -127,8 +126,7 @@ function App() {
             </button>
           </div>
 
-          <section className="controls wire-lite" aria-label="搜索与筛选">
-            <p className="wire-label inline">区域：搜索 / 筛选 / 排序</p>
+          <section className="controls" aria-label="搜索与筛选">
             <label className="search">
               <span className="sr-only">搜索单词</span>
               <input
@@ -169,7 +167,6 @@ function App() {
           <p className="result-count">显示 {visible.length} / {words.length}</p>
 
           <main className="list" aria-label="词汇列表">
-            <p className="wire-label inline">区域：词列表</p>
             {visible.length === 0 ? (
               <div className="empty">
                 <p>没有匹配的单词</p>
@@ -237,7 +234,7 @@ function App() {
             <div className="sheet-handle" />
             <div className="sheet-head">
               <div>
-                <p className="brand mini">词条详情（只读）</p>
+                <p className="brand mini">词条</p>
                 <h2>{selected.word}</h2>
                 {selected.phonetic ? <p className="phonetic">{selected.phonetic}</p> : null}
               </div>
@@ -258,7 +255,6 @@ function App() {
               <blockquote className="example">“{selected.example}”</blockquote>
             ) : null}
             {selected.note ? <p className="note">{selected.note}</p> : null}
-            <p className="wire-hint sheet-hint">结构确认：详情页无「认识/不认识」快捷操作</p>
           </aside>
         </div>
       ) : null}

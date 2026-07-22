@@ -499,7 +499,7 @@ code {
   }
 }
 
-/* —— V1 结构稿：导航 + 线框标注 —— */
+/* —— Lumos 导航与学习页 —— */
 .app.has-tabbar {
   padding-bottom: calc(88px + var(--safe-bottom));
 }
@@ -516,98 +516,16 @@ code {
   letter-spacing: 0.01em;
 }
 
-.wire,
-.wire-lite {
-  position: relative;
-  margin: 0 0 16px;
-  padding: 14px 14px 16px;
-  border: 1px dashed rgba(212, 175, 106, 0.45);
-  border-radius: 12px;
-  background: rgba(255, 248, 236, 0.02);
-}
-
-.wire-label {
-  margin: 0 0 10px;
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: none;
-  color: var(--gold);
-}
-
-.wire-label.inline {
-  margin-bottom: 12px;
-}
-
-.wire-body > *:first-child {
-  margin-top: 0;
-}
-
-.wire-kicker {
-  margin: 0 0 8px;
-  color: var(--ink-faint);
-  font-size: 0.85rem;
-}
-
-.wire-hero-word {
-  margin: 8px 0 12px;
-  font-family: var(--serif);
-  font-size: 2.4rem;
-  line-height: 1.1;
-}
-
-.wire-muted,
-.wire-hint {
-  margin: 8px 0 0;
-  color: var(--ink-soft);
-  font-size: 0.88rem;
-  line-height: 1.5;
-}
-
-.wire-hint.sheet-hint {
-  margin-top: 16px;
-  padding-top: 12px;
-  border-top: 1px dashed var(--line);
-}
-
-.wire-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 16px;
-}
-
-.wire-actions.three {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.wire-btn {
-  appearance: none;
-  border: 1px solid var(--line);
-  background: rgba(255, 248, 236, 0.04);
-  color: var(--ink);
-  border-radius: 999px;
-  padding: 12px 16px;
-}
-
-.wire-btn.primary,
-.wire-btn.block {
-  width: 100%;
-}
-
-.wire-btn.block {
-  margin-top: 10px;
-}
-
 .stat-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+  margin-bottom: 18px;
 }
 
 .stat-box {
-  padding: 16px 12px;
-  border-radius: 10px;
+  padding: 18px 12px;
+  border-radius: 14px;
   background: var(--row);
   border: 1px solid var(--line);
   text-align: center;
@@ -616,7 +534,7 @@ code {
 .stat-num {
   display: block;
   font-family: var(--serif);
-  font-size: 2rem;
+  font-size: 2.1rem;
   line-height: 1;
 }
 
@@ -624,14 +542,139 @@ code {
   display: block;
   margin-top: 8px;
   color: var(--ink-soft);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
 }
 
-.wire-steps {
+.today-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.secondary-btn {
+  appearance: none;
+  width: 100%;
+  border: 1px solid var(--line);
+  background: rgba(255, 248, 236, 0.04);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 14px 18px;
+  font-weight: 600;
+}
+
+.secondary-btn:disabled,
+.primary-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.session-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.session-progress {
   margin: 0;
-  padding-left: 1.2em;
   color: var(--ink-soft);
-  line-height: 1.7;
+  font-size: 0.9rem;
+}
+
+.study-card {
+  min-height: 280px;
+  padding: 28px 20px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255, 248, 236, 0.04), rgba(255, 248, 236, 0.015));
+  margin-bottom: 18px;
+}
+
+.study-word {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 9vw, 2.8rem);
+  line-height: 1.15;
+}
+
+.study-phonetic {
+  margin: 10px 0 0;
+  color: var(--ink-soft);
+}
+
+.study-reveal {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.study-meaning {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.55;
+}
+
+.study-note {
+  margin: 12px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.grade-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.grade-btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: rgba(255, 248, 236, 0.04);
+  color: var(--ink);
+  border-radius: 14px;
+  padding: 14px 8px;
+  font-weight: 600;
+}
+
+.grade-btn.remember {
+  border-color: rgba(212, 175, 106, 0.45);
+  color: var(--gold-strong);
+}
+
+.grade-btn.forgot {
+  border-color: rgba(122, 31, 36, 0.55);
+}
+
+.session-remain {
+  margin: 14px 0 0;
+  text-align: center;
+  color: var(--ink-faint);
+  font-size: 0.85rem;
+}
+
+.mine-block {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.mine-title {
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.mine-line {
+  margin: 0 0 6px;
+  font-size: 1.02rem;
+}
+
+.mine-line.muted {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
 }
 
 .tabbar {
