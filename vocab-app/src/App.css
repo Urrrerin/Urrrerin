@@ -677,6 +677,11 @@ code {
   font-size: 0.92rem;
 }
 
+.update-msg {
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
 .tabbar {
   position: fixed;
   left: 50%;
