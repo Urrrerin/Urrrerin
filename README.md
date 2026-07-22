@@ -1,4 +1,4 @@
-# 魔法词本（Harry Potter 词汇）
+# （Harry Potter 词汇）
 
 这是一个给「哈利波特阅读背单词」用的小项目。
 
