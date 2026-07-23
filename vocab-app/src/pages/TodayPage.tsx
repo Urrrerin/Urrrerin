@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import type { WordEntry } from '../types'
 import {
   applyMastered,
@@ -14,6 +14,7 @@ import {
 import { tagLabels } from '../lib/query'
 
 type TodayMode = 'home' | 'review' | 'learn'
+type Step = 'prompt' | 'detail'
 
 type Props = {
   words: WordEntry[]
@@ -28,7 +29,8 @@ export function TodayPage({ words, mode, onMode }: Props) {
   const [progress, setProgress] = useState<Record<string, LearningState>>({})
   const [queue, setQueue] = useState<WordEntry[]>([])
   const [index, setIndex] = useState(0)
-  const [revealed, setRevealed] = useState(false)
+  const [step, setStep] = useState<Step>('prompt')
+  const [pendingGrade, setPendingGrade] = useState<ReviewGrade | null>(null)
 
   useEffect(() => {
     setProgress(loadProgress())
@@ -44,18 +46,22 @@ export function TodayPage({ words, mode, onMode }: Props) {
   )
 
   const current = queue[index] ?? null
-  const remaining = Math.max(queue.length - index, 0)
 
   function persist(next: Record<string, LearningState>) {
     setProgress(next)
     saveProgress(next)
   }
 
+  function resetCard() {
+    setStep('prompt')
+    setPendingGrade(null)
+  }
+
   function startReview() {
     const list = pickReviewWords(words, progress, REVIEW_LIMIT)
     setQueue(list)
     setIndex(0)
-    setRevealed(false)
+    resetCard()
     onMode('review')
   }
 
@@ -63,42 +69,113 @@ export function TodayPage({ words, mode, onMode }: Props) {
     const list = pickNewWords(words, progress, NEW_LIMIT)
     setQueue(list)
     setIndex(0)
-    setRevealed(false)
+    resetCard()
     onMode('learn')
   }
 
   function finishSession() {
     setQueue([])
     setIndex(0)
-    setRevealed(false)
+    resetCard()
     onMode('home')
   }
 
-  function goNext() {
+  function goNextWord() {
     if (index + 1 >= queue.length) {
       finishSession()
       return
     }
     setIndex((i) => i + 1)
-    setRevealed(false)
+    resetCard()
   }
 
-  function onReviewGrade(grade: ReviewGrade) {
+  function onReviewPromptGrade(grade: ReviewGrade) {
+    setPendingGrade(grade)
+    setStep('detail')
+  }
+
+  function onReviewConfirmNext() {
     if (!current) return
+    // 下一词：沿用上一屏自评（记得/模糊/忘了）；模糊得以保留
+    const grade = pendingGrade ?? 'remember'
     persist(applyReviewGrade(progress, current.id, grade))
-    goNext()
+    goNextWord()
+  }
+
+  function onReviewConfirmWrong() {
+    if (!current) return
+    persist(applyReviewGrade(progress, current.id, 'forgot'))
+    goNextWord()
+  }
+
+  function onLearnOpenDetail() {
+    setStep('detail')
   }
 
   function onLearnNext() {
     if (!current) return
     persist(applyNewLearn(progress, current.id))
-    goNext()
+    goNextWord()
   }
 
   function onMastered() {
     if (!current) return
     persist(applyMastered(progress, current.id))
-    goNext()
+    goNextWord()
+  }
+
+  function SessionChrome({
+    title,
+    children,
+    footer,
+  }: {
+    title: string
+    children: ReactNode
+    footer: ReactNode
+  }) {
+    return (
+      <div className="page today-page session-page">
+        <header className="session-nav">
+          <button type="button" className="session-back" onClick={finishSession} aria-label="返回">
+            ‹
+          </button>
+          <p className="session-progress">
+            {index + 1}/{queue.length}
+          </p>
+          <button type="button" className="session-mastered" onClick={onMastered}>
+            熟
+          </button>
+        </header>
+        <p className="session-mode-label">{title}</p>
+        <div className="session-body">{children}</div>
+        <div className="session-footer">{footer}</div>
+      </div>
+    )
+  }
+
+  function WordDetail({ word }: { word: WordEntry }) {
+    return (
+      <div className="word-detail">
+        <p className="study-word">{word.word}</p>
+        {word.phonetic ? (
+          <p className="phonetic-pill">
+            <span className="phonetic-mark">音</span>
+            {word.phonetic}
+          </p>
+        ) : null}
+        <p className="study-meaning">{word.meaning}</p>
+        {word.note ? <p className="study-note">{word.note}</p> : null}
+        {word.tags.length > 0 ? (
+          <div className="tag-row">
+            {word.tags.map((tag) => (
+              <span key={tag} className="tag">
+                {tagLabels[tag] || tag}
+              </span>
+            ))}
+          </div>
+        ) : null}
+      </div>
+    )
   }
 
   if (mode === 'review') {
@@ -108,74 +185,72 @@ export function TodayPage({ words, mode, onMode }: Props) {
           <header className="page-head">
             <p className="brand">Lumos</p>
             <h1>复习完成</h1>
-            <p className="subtitle">今天没有更多待复习的词了</p>
           </header>
           <button type="button" className="primary-btn" onClick={finishSession}>
             返回今日
           </button>
-          {learnQueue.length > 0 ? (
-            <button type="button" className="secondary-btn" onClick={startLearn}>
-              去新学
-            </button>
-          ) : null}
         </div>
       )
     }
 
-    return (
-      <div className="page today-page session-page">
-        <div className="session-top">
-          <button type="button" className="text-btn" onClick={finishSession}>
-            结束
-          </button>
-          <p className="session-progress">
-            复习 {index + 1} / {queue.length}
-          </p>
-        </div>
-
-        <div className="study-card">
-          <p className="study-word">{current.word}</p>
-          {current.phonetic ? <p className="study-phonetic">{current.phonetic}</p> : null}
-
-          {revealed ? (
-            <div className="study-reveal">
-              <p className="study-meaning">{current.meaning}</p>
-              {current.note ? <p className="study-note">{current.note}</p> : null}
-              <div className="tag-row">
-                {current.tags.map((tag) => (
-                  <span key={tag} className="tag">
-                    {tagLabels[tag] || tag}
-                  </span>
-                ))}
-              </div>
+    if (step === 'prompt') {
+      return (
+        <SessionChrome
+          title="复习"
+          footer={
+            <div className="footer-grades">
+              <button
+                type="button"
+                className="footer-grade remember"
+                onClick={() => onReviewPromptGrade('remember')}
+              >
+                记得
+              </button>
+              <button
+                type="button"
+                className="footer-grade fuzzy"
+                onClick={() => onReviewPromptGrade('fuzzy')}
+              >
+                模糊
+              </button>
+              <button
+                type="button"
+                className="footer-grade forgot"
+                onClick={() => onReviewPromptGrade('forgot')}
+              >
+                忘了
+              </button>
             </div>
-          ) : (
-            <button type="button" className="secondary-btn" onClick={() => setRevealed(true)}>
-              显示释义
-            </button>
-          )}
-        </div>
+          }
+        >
+          <p className="study-word">{current.word}</p>
+          {current.phonetic ? (
+            <p className="phonetic-pill">
+              <span className="phonetic-mark">音</span>
+              {current.phonetic}
+            </p>
+          ) : null}
+          <p className="recall-hint">先回想词义再选择</p>
+        </SessionChrome>
+      )
+    }
 
-        <div className="grade-row">
-          <button type="button" className="grade-btn forgot" onClick={() => onReviewGrade('forgot')}>
-            忘了
-          </button>
-          <button type="button" className="grade-btn fuzzy" onClick={() => onReviewGrade('fuzzy')}>
-            模糊
-          </button>
-          <button
-            type="button"
-            className="grade-btn remember"
-            onClick={() => onReviewGrade('remember')}
-          >
-            记得
-          </button>
-        </div>
-        <button type="button" className="mastered-btn" onClick={onMastered}>
-          熟
-        </button>
-        <p className="session-remain">剩余 {remaining - 1} 词</p>
-      </div>
+    return (
+      <SessionChrome
+        title="复习"
+        footer={
+          <div className="footer-pair">
+            <button type="button" className="footer-link next" onClick={onReviewConfirmNext}>
+              下一词
+            </button>
+            <button type="button" className="footer-link wrong" onClick={onReviewConfirmWrong}>
+              记错了
+            </button>
+          </div>
+        }
+      >
+        <WordDetail word={current} />
+      </SessionChrome>
     )
   }
 
@@ -186,7 +261,6 @@ export function TodayPage({ words, mode, onMode }: Props) {
           <header className="page-head">
             <p className="brand">Lumos</p>
             <h1>新学完成</h1>
-            <p className="subtitle">今天的新词已经学完了</p>
           </header>
           <button type="button" className="primary-btn" onClick={finishSession}>
             返回今日
@@ -195,55 +269,37 @@ export function TodayPage({ words, mode, onMode }: Props) {
       )
     }
 
-    return (
-      <div className="page today-page session-page">
-        <div className="session-top">
-          <button type="button" className="text-btn" onClick={finishSession}>
-            结束
-          </button>
-          <p className="session-progress">
-            新学 {index + 1} / {queue.length}
-          </p>
-        </div>
-
-        <div className="study-card">
-          <p className="study-word">{current.word}</p>
-          {current.phonetic ? <p className="study-phonetic">{current.phonetic}</p> : null}
-
-          {revealed ? (
-            <div className="study-reveal">
-              <p className="study-meaning">{current.meaning}</p>
-              {current.note ? <p className="study-note">{current.note}</p> : null}
-              <div className="tag-row">
-                {current.tags.map((tag) => (
-                  <span key={tag} className="tag">
-                    {tagLabels[tag] || tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <button type="button" className="secondary-btn" onClick={() => setRevealed(true)}>
-              显示释义
+    if (step === 'prompt') {
+      return (
+        <SessionChrome
+          title="新学"
+          footer={
+            <button type="button" className="footer-link next" onClick={onLearnOpenDetail}>
+              查看释义
             </button>
-          )}
-        </div>
+          }
+        >
+          <p className="study-word">{current.word}</p>
+        </SessionChrome>
+      )
+    }
 
-        <div className="learn-actions">
-          <button
-            type="button"
-            className="primary-btn"
-            disabled={!revealed}
-            onClick={onLearnNext}
-          >
-            学会了，下一词
-          </button>
-          <button type="button" className="mastered-btn" onClick={onMastered}>
-            熟
-          </button>
-        </div>
-        <p className="session-remain">剩余 {remaining - 1} 词</p>
-      </div>
+    return (
+      <SessionChrome
+        title="新学"
+        footer={
+          <div className="footer-pair">
+            <button type="button" className="footer-link mastered" onClick={onMastered}>
+              已掌握
+            </button>
+            <button type="button" className="footer-link next" onClick={onLearnNext}>
+              下一词
+            </button>
+          </div>
+        }
+      >
+        <WordDetail word={current} />
+      </SessionChrome>
     )
   }
 
@@ -255,36 +311,26 @@ export function TodayPage({ words, mode, onMode }: Props) {
       <header className="page-head">
         <p className="brand">Lumos</p>
         <h1>今日</h1>
-        <p className="subtitle">先复习，再新学</p>
       </header>
 
-      <div className="stat-grid">
-        <div className="stat-box">
-          <span className="stat-num">{reviewCount}</span>
-          <span className="stat-label">待复习</span>
-        </div>
-        <div className="stat-box">
-          <span className="stat-num">{learnCount}</span>
-          <span className="stat-label">待新学</span>
-        </div>
-      </div>
-
-      <div className="today-actions">
+      <div className="home-entries">
         <button
           type="button"
-          className="primary-btn"
-          disabled={reviewCount === 0}
-          onClick={startReview}
-        >
-          {reviewCount > 0 ? '开始复习' : '暂无待复习'}
-        </button>
-        <button
-          type="button"
-          className="secondary-btn"
+          className="home-entry"
           disabled={learnCount === 0}
           onClick={startLearn}
         >
-          {learnCount > 0 ? '开始新学' : '今日新学已完成'}
+          <span className="home-entry-label">新学</span>
+          <span className="home-entry-num">{learnCount}</span>
+        </button>
+        <button
+          type="button"
+          className="home-entry"
+          disabled={reviewCount === 0}
+          onClick={startReview}
+        >
+          <span className="home-entry-label">复习</span>
+          <span className="home-entry-num">{reviewCount}</span>
         </button>
       </div>
     </div>
