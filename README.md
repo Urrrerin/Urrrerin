@@ -8,11 +8,11 @@
 
 ## 已录入词表
 
-已把《哈利·波特与阿兹卡班的囚徒》前 5 章生词 HTML 录入为默认词表：
+已把《哈利·波特与阿兹卡班的囚徒》前 6 章生词 HTML 录入为默认词表：
 
 - 源文件：[`vocab-app/public/azkaban-vocabulary.html`](./vocab-app/public/azkaban-vocabulary.html)
 - 数据：[`vocab-app/src/data/azkabanWords.ts`](./vocab-app/src/data/azkabanWords.ts)
-- 规模：约 **583** 条（含章节内复现条目）
+- 规模：约 **680** 条（含章节内复现条目）
 
 ## 小白怎么理解
 
