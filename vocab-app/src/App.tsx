@@ -6,10 +6,10 @@ import {
   filterAndSortWords,
   filterLabels,
   sortLabels,
-  tagLabels,
 } from './lib/query'
 import { TodayPage } from './pages/TodayPage'
 import { MinePage } from './pages/MinePage'
+import { WordDetailView } from './components/WordDetailView'
 import './App.css'
 
 const FILTERS: FilterKey[] = [
@@ -254,22 +254,7 @@ function App() {
                 关闭
               </button>
             </div>
-            <p className="sheet-meaning">{selected.meaning}</p>
-            {selected.example ? (
-              <div className="sheet-example">
-                <p className="sheet-example-label">例句</p>
-                <p className="sheet-example-text">{selected.example}</p>
-              </div>
-            ) : null}
-            <div className="tag-row">
-              {selected.tags.map((tag) => (
-                <span key={tag} className="tag">
-                  {tagLabels[tag] || tag}
-                </span>
-              ))}
-              <span className="tag quiet">录入序 #{selected.entryOrder ?? '—'}</span>
-            </div>
-            {selected.note ? <p className="note">{selected.note}</p> : null}
+            <WordDetailView word={selected} variant="sheet" />
           </aside>
         </div>
       ) : null}

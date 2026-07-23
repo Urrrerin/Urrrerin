@@ -12,7 +12,8 @@ import {
   type LearningState,
   type ReviewGrade,
 } from '../lib/progress'
-import { tagLabels } from '../lib/query'
+import { playSfx } from '../lib/sfx'
+import { WordDetailView } from '../components/WordDetailView'
 
 type TodayMode = 'home' | 'review' | 'learn'
 type Step = 'prompt' | 'detail'
@@ -61,6 +62,7 @@ export function TodayPage({ words, mode, onMode, progressTick = 0 }: Props) {
   }
 
   function startReview() {
+    playSfx('tap')
     const list = pickReviewWords(words, progress, REVIEW_LIMIT)
     setQueue(list)
     setIndex(0)
@@ -69,6 +71,7 @@ export function TodayPage({ words, mode, onMode, progressTick = 0 }: Props) {
   }
 
   function startLearn() {
+    playSfx('tap')
     const list = pickNewWords(words, progress, NEW_LIMIT)
     setQueue(list)
     setIndex(0)
@@ -93,12 +96,14 @@ export function TodayPage({ words, mode, onMode, progressTick = 0 }: Props) {
   }
 
   function onReviewPromptGrade(grade: ReviewGrade) {
+    playSfx(grade)
     setPendingGrade(grade)
     setStep('detail')
   }
 
   function onReviewConfirmNext() {
     if (!current) return
+    playSfx('next')
     // 下一词：沿用上一屏自评（记得/模糊/忘了）；模糊得以保留
     const grade = pendingGrade ?? 'remember'
     persist(applyReviewGrade(progress, current.id, grade))
@@ -107,22 +112,26 @@ export function TodayPage({ words, mode, onMode, progressTick = 0 }: Props) {
 
   function onReviewConfirmWrong() {
     if (!current) return
+    playSfx('forgot')
     persist(applyReviewGrade(progress, current.id, 'forgot'))
     goNextWord()
   }
 
   function onLearnOpenDetail() {
+    playSfx('reveal')
     setStep('detail')
   }
 
   function onLearnNext() {
     if (!current) return
+    playSfx('next')
     persist(applyNewLearn(progress, current.id))
     goNextWord()
   }
 
   function onMastered() {
     if (!current) return
+    playSfx('mastered')
     persist(applyMastered(progress, current.id))
     goNextWord()
   }
@@ -152,37 +161,6 @@ export function TodayPage({ words, mode, onMode, progressTick = 0 }: Props) {
         <p className="session-mode-label">{title}</p>
         <div className="session-body">{children}</div>
         <div className="session-footer">{footer}</div>
-      </div>
-    )
-  }
-
-  function WordDetail({ word }: { word: WordEntry }) {
-    return (
-      <div className="word-detail">
-        <p className="study-word">{word.word}</p>
-        {word.phonetic ? (
-          <p className="phonetic-pill">
-            <span className="phonetic-mark">音</span>
-            {word.phonetic}
-          </p>
-        ) : null}
-        <p className="study-meaning">{word.meaning}</p>
-        {word.example ? (
-          <div className="study-example">
-            <p className="study-example-label">例句</p>
-            <p className="study-example-text">{word.example}</p>
-          </div>
-        ) : null}
-        {word.note ? <p className="study-note">{word.note}</p> : null}
-        {word.tags.length > 0 ? (
-          <div className="tag-row">
-            {word.tags.map((tag) => (
-              <span key={tag} className="tag">
-                {tagLabels[tag] || tag}
-              </span>
-            ))}
-          </div>
-        ) : null}
       </div>
     )
   }
@@ -258,7 +236,7 @@ export function TodayPage({ words, mode, onMode, progressTick = 0 }: Props) {
           </div>
         }
       >
-        <WordDetail word={current} />
+        <WordDetailView word={current} />
       </SessionChrome>
     )
   }
@@ -307,7 +285,7 @@ export function TodayPage({ words, mode, onMode, progressTick = 0 }: Props) {
           </div>
         }
       >
-        <WordDetail word={current} />
+        <WordDetailView word={current} />
       </SessionChrome>
     )
   }
