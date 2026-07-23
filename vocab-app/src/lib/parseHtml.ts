@@ -43,6 +43,27 @@ function emptyish(value: string | undefined): boolean {
   return ['', '/', '—', '-', '–'].includes(value.trim())
 }
 
+/** 从「释义（英文例句）」里拆出例句；纯中文括号说明保留在释义中 */
+function splitMeaningExample(meaning: string): { meaning: string; example?: string } {
+  const matches = Array.from(meaning.matchAll(/（([^（）]*)）/g))
+  for (let i = matches.length - 1; i >= 0; i -= 1) {
+    const m = matches[i]
+    const inner = m[1]?.trim() || ''
+    if (!/[A-Za-z]/.test(inner)) continue
+    const start = m.index ?? -1
+    if (start < 0) continue
+    const nextMeaning = `${meaning.slice(0, start)}${meaning.slice(start + m[0].length)}`
+      .replace(/[；;]\s*$/, '')
+      .replace(/\s+/g, ' ')
+      .trim()
+    return {
+      meaning: nextMeaning || meaning,
+      example: inner,
+    }
+  }
+  return { meaning }
+}
+
 function cellTexts(row: Element): string[] {
   return Array.from(row.querySelectorAll('td, th')).map((cell) =>
     cleanText(cell.textContent || ''),
@@ -55,7 +76,7 @@ function looksLikeWord(text: string): boolean {
 
 /**
  * 尽量兼容常见个人词表 HTML：
- * 1) 阿兹卡班格式：ID | 英文 | 音标 | 变形 | 出现 | 词库 | 中文
+ * 1) 阿兹卡班格式：ID | 英文 | 音标 | 变形 | 出现 | 词库 | 中文 | 例句（例句列可选）
  * 2) table 行：单词 | 音标 | 释义 | 频次 | 标签
  * 3) 带 data-word 的节点
  * 4) li / p 行内：word — meaning
@@ -94,6 +115,8 @@ function parseAzkabanTable(doc: Document): WordEntry[] {
       table.querySelector('thead') ? 0 : 1,
     )
 
+    const hasExampleCol = headerCells.includes('例句')
+
     for (const row of rows) {
       const cells = cellTexts(row)
       if (cells.length < 6) continue
@@ -107,7 +130,19 @@ function parseAzkabanTable(doc: Document): WordEntry[] {
       const inflection = emptyish(cells[3]) ? undefined : cells[3]
       const occur = cells[4] || ''
       const lexicon = cells[5] || ''
-      const meaning = cells[6] || cells.find((c, i) => i > 1 && /[\u4e00-\u9fff]/.test(c)) || ''
+      let meaning = cells[6] || cells.find((c, i) => i > 1 && /[\u4e00-\u9fff]/.test(c)) || ''
+      let example = hasExampleCol
+        ? emptyish(cells[7])
+          ? undefined
+          : cells[7]
+        : undefined
+
+      // 兼容旧表：例句写在中文列括号里
+      if (!example && meaning) {
+        const split = splitMeaningExample(meaning)
+        meaning = split.meaning
+        example = split.example
+      }
       if (!meaning) continue
 
       index += 1
@@ -122,6 +157,7 @@ function parseAzkabanTable(doc: Document): WordEntry[] {
         word,
         phonetic,
         meaning,
+        example,
         frequency: parseFrequency(occur),
         tags: parseTags(lexicon),
         note: noteParts.length > 0 ? noteParts.join(' · ') : undefined,

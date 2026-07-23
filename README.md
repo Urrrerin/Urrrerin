@@ -43,11 +43,14 @@
 
 1. 在仓库里找到：`vocab-app/public/azkaban-vocabulary.html`
 2. 用浏览器打开（双击，或拖进 Chrome / Edge / Safari）
-3. 也能在资源管理器地址栏输入该文件的完整路径回车
+3. 页内按「上一章 / 下一章」或顶部 1–6 圆点翻页（一章一页）；键盘 ← → 也可
 
 如果你在用 Cursor / VS Code：在文件树上右键这个 HTML → **Reveal in Finder / Open in Browser**（有对应扩展时）。
 
 说明：
 - **本地打开**看到的是你电脑上这一份（含未合并的修改，只要文件已同步到本地）
 - **网站预览** https://urrrerin.github.io/Urrrerin/azkaban-vocabulary.html 要等 PR 合并并部署到 `gh-pages` 后才会更新第六章
+
+云端对话预览（含本章改动的分支版）：  
+https://htmlpreview.github.io/?https://raw.githubusercontent.com/Urrrerin/Urrrerin/cursor/azkaban-ch6-vocab-9405/vocab-app/public/azkaban-vocabulary.html
 
