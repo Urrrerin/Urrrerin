@@ -394,15 +394,38 @@ code {
   border-color: rgba(212, 175, 106, 0.3);
 }
 
-.example {
+.sheet-example,
+.study-example {
   margin: 18px 0 0;
   padding: 12px 0 0;
   border-top: 1px solid var(--line);
+}
+
+.sheet-example-label,
+.study-example-label {
+  margin: 0 0 6px;
+  color: var(--gold);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: none;
+}
+
+.sheet-example-text,
+.study-example-text {
+  margin: 0;
   color: var(--ink-soft);
   font-family: var(--serif);
   font-style: italic;
   font-size: 1.05rem;
-  line-height: 1.5;
+  line-height: 1.55;
+}
+
+.word-detail .study-example {
+  margin-top: 16px;
+}
+
+.word-detail .study-example-text {
+  font-size: 1.08rem;
 }
 
 .note {

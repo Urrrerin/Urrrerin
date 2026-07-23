@@ -167,6 +167,12 @@ export function TodayPage({ words, mode, onMode, progressTick = 0 }: Props) {
           </p>
         ) : null}
         <p className="study-meaning">{word.meaning}</p>
+        {word.example ? (
+          <div className="study-example">
+            <p className="study-example-label">例句</p>
+            <p className="study-example-text">{word.example}</p>
+          </div>
+        ) : null}
         {word.note ? <p className="study-note">{word.note}</p> : null}
         {word.tags.length > 0 ? (
           <div className="tag-row">

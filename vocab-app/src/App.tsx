@@ -255,6 +255,12 @@ function App() {
               </button>
             </div>
             <p className="sheet-meaning">{selected.meaning}</p>
+            {selected.example ? (
+              <div className="sheet-example">
+                <p className="sheet-example-label">例句</p>
+                <p className="sheet-example-text">{selected.example}</p>
+              </div>
+            ) : null}
             <div className="tag-row">
               {selected.tags.map((tag) => (
                 <span key={tag} className="tag">
@@ -263,9 +269,6 @@ function App() {
               ))}
               <span className="tag quiet">录入序 #{selected.entryOrder ?? '—'}</span>
             </div>
-            {selected.example ? (
-              <blockquote className="example">“{selected.example}”</blockquote>
-            ) : null}
             {selected.note ? <p className="note">{selected.note}</p> : null}
           </aside>
         </div>

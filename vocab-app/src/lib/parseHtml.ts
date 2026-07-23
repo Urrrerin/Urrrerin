@@ -55,7 +55,7 @@ function looksLikeWord(text: string): boolean {
 
 /**
  * 尽量兼容常见个人词表 HTML：
- * 1) 阿兹卡班格式：ID | 英文 | 音标 | 变形 | 出现 | 词库 | 中文
+ * 1) 阿兹卡班格式：ID | 英文 | 音标 | 变形 | 出现 | 词库 | 中文 | 例句
  * 2) table 行：单词 | 音标 | 释义 | 频次 | 标签
  * 3) 带 data-word 的节点
  * 4) li / p 行内：word — meaning
@@ -109,6 +109,7 @@ function parseAzkabanTable(doc: Document): WordEntry[] {
       const lexicon = cells[5] || ''
       const meaning = cells[6] || cells.find((c, i) => i > 1 && /[\u4e00-\u9fff]/.test(c)) || ''
       if (!meaning) continue
+      const example = cells.length > 7 && !emptyish(cells[7]) ? cells[7] : undefined
 
       index += 1
       const noteParts: string[] = []
@@ -122,9 +123,11 @@ function parseAzkabanTable(doc: Document): WordEntry[] {
         word,
         phonetic,
         meaning,
+        example,
         frequency: parseFrequency(occur),
         tags: parseTags(lexicon),
         note: noteParts.length > 0 ? noteParts.join(' · ') : undefined,
+        entryOrder: index,
       })
     }
   }
