@@ -12,7 +12,7 @@
 
 - 源文件：[`vocab-app/public/azkaban-vocabulary.html`](./vocab-app/public/azkaban-vocabulary.html)
 - 数据：[`vocab-app/src/data/azkabanWords.ts`](./vocab-app/src/data/azkabanWords.ts)
-- 规模：约 **694** 条（含章节内复现条目）
+- 规模：约 **777** 条（含章节内复现条目）
 
 ## 小白怎么理解
 
