@@ -6,7 +6,7 @@
 
 ## 默认词表
 
-已内置《阿兹卡班的囚徒》前 6 章生词（约 680 条）：
+已内置《阿兹卡班的囚徒》前 6 章生词（约 694 条）：
 
 - `public/azkaban-vocabulary.html`：原始 HTML
 - `src/data/azkabanWords.ts`：录入后的 App 数据
