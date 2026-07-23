@@ -14,6 +14,7 @@ export type LearningState = {
 }
 
 const PROGRESS_KEY = 'lumos-learning-progress-v1'
+const DEMO_SEED_KEY = 'lumos-demo-review-seeded-v2'
 
 function todayIsoDate(): string {
   return new Date().toISOString().slice(0, 10)
@@ -38,6 +39,53 @@ export function loadProgress(): Record<string, LearningState> {
 
 export function saveProgress(map: Record<string, LearningState>): void {
   localStorage.setItem(PROGRESS_KEY, JSON.stringify(map))
+}
+
+/**
+ * 制作期测试数据：造一批「今天已到期」的复习词。
+ * - 首次进入且尚无进度时自动填充
+ * - 也可从「我的」手动再次填充
+ */
+export function seedDemoReviewProgress(
+  words: WordEntry[],
+  existing: Record<string, LearningState> = {},
+  count = 40,
+): Record<string, LearningState> {
+  const today = todayIsoDate()
+  const dueDay = addDays(today, -1)
+  const next: Record<string, LearningState> = { ...existing }
+  let added = 0
+
+  for (const word of words) {
+    if (added >= count) break
+    if (next[word.id]?.status === 'mastered') continue
+    next[word.id] = {
+      wordId: word.id,
+      status: 'learning',
+      easiness: 2.5,
+      intervalDays: 1,
+      repetitions: 1,
+      dueAt: dueDay,
+      lastReviewedAt: dueDay,
+      lastGrade: 'remember',
+    }
+    added += 1
+  }
+
+  saveProgress(next)
+  localStorage.setItem(DEMO_SEED_KEY, '1')
+  return next
+}
+
+/** 若从未种过测试复习数据且进度为空，则自动种一份 */
+export function ensureDemoReviewProgress(
+  words: WordEntry[],
+  progress: Record<string, LearningState>,
+): Record<string, LearningState> {
+  if (words.length === 0) return progress
+  if (Object.keys(progress).length > 0) return progress
+  if (localStorage.getItem(DEMO_SEED_KEY) === '1') return progress
+  return seedDemoReviewProgress(words, progress, 40)
 }
 
 export function isDue(state: LearningState, onDate = todayIsoDate()): boolean {

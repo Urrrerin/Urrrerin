@@ -4,6 +4,7 @@ import {
   applyMastered,
   applyNewLearn,
   applyReviewGrade,
+  ensureDemoReviewProgress,
   loadProgress,
   pickNewWords,
   pickReviewWords,
@@ -20,12 +21,13 @@ type Props = {
   words: WordEntry[]
   mode: TodayMode
   onMode: (mode: TodayMode) => void
+  progressTick?: number
 }
 
 const NEW_LIMIT = 30
 const REVIEW_LIMIT = 75
 
-export function TodayPage({ words, mode, onMode }: Props) {
+export function TodayPage({ words, mode, onMode, progressTick = 0 }: Props) {
   const [progress, setProgress] = useState<Record<string, LearningState>>({})
   const [queue, setQueue] = useState<WordEntry[]>([])
   const [index, setIndex] = useState(0)
@@ -33,8 +35,9 @@ export function TodayPage({ words, mode, onMode }: Props) {
   const [pendingGrade, setPendingGrade] = useState<ReviewGrade | null>(null)
 
   useEffect(() => {
-    setProgress(loadProgress())
-  }, [])
+    const loaded = loadProgress()
+    setProgress(ensureDemoReviewProgress(words, loaded))
+  }, [words, progressTick])
 
   const reviewQueue = useMemo(
     () => pickReviewWords(words, progress, REVIEW_LIMIT),

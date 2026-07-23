@@ -52,6 +52,7 @@ function App() {
   const [selected, setSelected] = useState<WordEntry | null>(null)
   const [toast, setToast] = useState<string | null>(null)
   const [importOpen, setImportOpen] = useState(false)
+  const [progressTick, setProgressTick] = useState(0)
 
   useEffect(() => {
     const loaded = loadWords()
@@ -107,7 +108,12 @@ function App() {
       <div className="atmosphere" aria-hidden="true" />
 
       {tab === 'today' ? (
-        <TodayPage words={words} mode={todayMode} onMode={setTodayMode} />
+        <TodayPage
+          words={words}
+          mode={todayMode}
+          onMode={setTodayMode}
+          progressTick={progressTick}
+        />
       ) : null}
 
       {tab === 'library' ? (
@@ -196,7 +202,13 @@ function App() {
         </div>
       ) : null}
 
-      {tab === 'mine' ? <MinePage lexiconCount={words.length} /> : null}
+      {tab === 'mine' ? (
+        <MinePage
+          lexiconCount={words.length}
+          words={words}
+          onProgressSeeded={() => setProgressTick((n) => n + 1)}
+        />
+      ) : null}
 
       <nav className="tabbar" aria-label="主导航">
         <button

@@ -1,36 +1,49 @@
 import { useState } from 'react'
+import type { WordEntry } from '../types'
+import { loadProgress, seedDemoReviewProgress } from '../lib/progress'
+
+/** 改一版就换这个戳，方便确认手机是否拿到新包 */
+export const APP_BUILD = '0723-c'
 
 type Props = {
   lexiconCount: number
+  words: WordEntry[]
   lexiconVersion?: string
+  onProgressSeeded?: () => void
 }
 
-export function MinePage({ lexiconCount, lexiconVersion = 'Azkaban Ch.1–5' }: Props) {
+export function MinePage({
+  lexiconCount,
+  words,
+  lexiconVersion = 'Azkaban Ch.1–5',
+  onProgressSeeded,
+}: Props) {
   const [updateMsg, setUpdateMsg] = useState<string | null>(null)
 
-  async function checkUpdate() {
-    setUpdateMsg('正在检查…')
+  async function forceRefresh() {
+    setUpdateMsg('正在清除缓存…')
     try {
-      if (!('serviceWorker' in navigator)) {
-        setUpdateMsg('当前环境不支持自动更新，请用 Safari 打开网页版后重新「添加到主屏幕」。')
-        return
+      if ('serviceWorker' in navigator) {
+        const regs = await navigator.serviceWorker.getRegistrations()
+        await Promise.all(regs.map((reg) => reg.unregister()))
       }
-      const reg = await navigator.serviceWorker.getRegistration()
-      if (!reg) {
-        setUpdateMsg('未找到缓存服务，请关闭 App 后重新打开一次。')
-        return
+      if ('caches' in window) {
+        const keys = await caches.keys()
+        await Promise.all(keys.map((key) => caches.delete(key)))
       }
-      await reg.update()
-      const hasWaiting = Boolean(reg.waiting)
-      const hasInstalling = Boolean(reg.installing)
-      if (hasWaiting || hasInstalling) {
-        setUpdateMsg('发现新版本。请完全关掉本 App 再打开（上滑清掉），即可用上新版。')
-      } else {
-        setUpdateMsg('已是最新，或新版本正在下载。若仍像旧版：关掉 App 再开一次。')
-      }
+      setUpdateMsg('缓存已清，即将刷新…')
+      window.setTimeout(() => {
+        window.location.reload()
+      }, 400)
     } catch {
-      setUpdateMsg('检查失败。可稍后再试，或用 Safari 打开网页后重新固定到主屏幕。')
+      setUpdateMsg('清除失败。请到 设置 → Safari → 清除历史记录与网站数据 后再打开。')
     }
+  }
+
+  function refillDemoReview() {
+    seedDemoReviewProgress(words, loadProgress(), 40)
+    onProgressSeeded?.()
+    setUpdateMsg('已填充约 40 个待复习测试词，回「今日」查看。')
   }
 
   return (
@@ -38,6 +51,7 @@ export function MinePage({ lexiconCount, lexiconVersion = 'Azkaban Ch.1–5' }: 
       <header className="page-head">
         <p className="brand">Lumos</p>
         <h1>我的</h1>
+        <p className="subtitle">版本 {APP_BUILD}</p>
       </header>
 
       <section className="mine-block">
@@ -53,11 +67,21 @@ export function MinePage({ lexiconCount, lexiconVersion = 'Azkaban Ch.1–5' }: 
       </section>
 
       <section className="mine-block">
+        <h2 className="mine-title">测试数据</h2>
+        <button type="button" className="secondary-btn" onClick={refillDemoReview}>
+          填充待复习测试词
+        </button>
+      </section>
+
+      <section className="mine-block">
         <h2 className="mine-title">更新</h2>
-        <button type="button" className="secondary-btn" onClick={() => void checkUpdate()}>
-          检查更新
+        <button type="button" className="secondary-btn" onClick={() => void forceRefresh()}>
+          强制刷新（清缓存）
         </button>
         {updateMsg ? <p className="mine-line muted update-msg">{updateMsg}</p> : null}
+        <p className="mine-line muted update-msg">
+          若仍是旧版：看本页「版本」是否为 {APP_BUILD}。不是的话点强制刷新。
+        </p>
       </section>
     </div>
   )
