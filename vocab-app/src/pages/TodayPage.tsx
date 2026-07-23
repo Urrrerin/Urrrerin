@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { WordEntry } from '../types'
 import {
+  applyMastered,
   applyNewLearn,
   applyReviewGrade,
   loadProgress,
@@ -94,6 +95,12 @@ export function TodayPage({ words, mode, onMode }: Props) {
     goNext()
   }
 
+  function onMastered() {
+    if (!current) return
+    persist(applyMastered(progress, current.id))
+    goNext()
+  }
+
   if (mode === 'review') {
     if (!current) {
       return (
@@ -164,6 +171,9 @@ export function TodayPage({ words, mode, onMode }: Props) {
             记得
           </button>
         </div>
+        <button type="button" className="mastered-btn" onClick={onMastered}>
+          熟
+        </button>
         <p className="session-remain">剩余 {remaining - 1} 词</p>
       </div>
     )
@@ -219,14 +229,19 @@ export function TodayPage({ words, mode, onMode }: Props) {
           )}
         </div>
 
-        <button
-          type="button"
-          className="primary-btn"
-          disabled={!revealed}
-          onClick={onLearnNext}
-        >
-          学会了，下一词
-        </button>
+        <div className="learn-actions">
+          <button
+            type="button"
+            className="primary-btn"
+            disabled={!revealed}
+            onClick={onLearnNext}
+          >
+            学会了，下一词
+          </button>
+          <button type="button" className="mastered-btn" onClick={onMastered}>
+            熟
+          </button>
+        </div>
         <p className="session-remain">剩余 {remaining - 1} 词</p>
       </div>
     )

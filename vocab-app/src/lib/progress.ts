@@ -89,7 +89,7 @@ export function pickReviewWords(
 ): WordEntry[] {
   const dueIds = new Set(
     Object.values(progress)
-      .filter((s) => isDue(s))
+      .filter((s) => s.status !== 'mastered' && isDue(s))
       .map((s) => s.wordId),
   )
   const dueWords = words.filter((w) => dueIds.has(w.id))
@@ -111,6 +111,29 @@ export function applyNewLearn(
       repetitions: 0,
       dueAt: addDays(today, 1),
       lastReviewedAt: today,
+    },
+  }
+}
+
+/** 标记为已掌握：不再进入复习队列 */
+export function applyMastered(
+  progress: Record<string, LearningState>,
+  wordId: string,
+): Record<string, LearningState> {
+  const today = todayIsoDate()
+  const prev = progress[wordId]
+  return {
+    ...progress,
+    [wordId]: {
+      wordId,
+      status: 'mastered',
+      easiness: prev?.easiness ?? 2.5,
+      intervalDays: prev?.intervalDays ?? 0,
+      repetitions: prev?.repetitions ?? 0,
+      // 远未来日期；真正拦截靠 status === 'mastered'
+      dueAt: '9999-12-31',
+      lastReviewedAt: today,
+      lastGrade: prev?.lastGrade,
     },
   }
 }
@@ -157,7 +180,7 @@ export function applyReviewGrade(
       dueAt: addDays(today, intervalDays),
       lastReviewedAt: today,
       lastGrade: grade,
-      status: intervalDays >= 30 && grade === 'remember' ? 'mastered' : 'learning',
+      status: 'learning',
     },
   }
 }
