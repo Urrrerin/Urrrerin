@@ -404,34 +404,68 @@ code {
 .detail-meanings {
   margin-top: 18px;
   display: grid;
-  gap: 10px;
+  gap: 12px;
 }
 
 .detail-meaning-line {
   margin: 0;
+  display: grid;
+  grid-template-columns: 2.6rem 1fr;
+  column-gap: 12px;
+  align-items: baseline;
   font-size: 1.12rem;
-  line-height: 1.55;
+  line-height: 1.65;
   color: var(--ink);
 }
 
 .detail-pos {
-  display: inline-block;
-  margin-right: 8px;
-  color: var(--gold-strong);
-  font-family: var(--sans);
-  font-size: 0.86rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  color: rgba(36, 48, 40, 0.45);
+  font-family: var(--serif);
+  font-size: 0.92rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
-.detail-meaning-text {
+.detail-meaning-body {
+  min-width: 0;
   color: var(--ink);
 }
 
-.detail-example {
-  margin: 18px 0 0;
-  padding: 12px 0 0;
-  border-top: 1px solid var(--line);
+.detail-sense {
+  border-bottom: 1px dashed rgba(196, 92, 38, 0.55);
+  padding-bottom: 1px;
+}
+
+.detail-sense-sep {
+  color: var(--ink-faint);
+  margin: 0 1px;
+}
+
+.detail-example-line {
+  margin: 16px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.detail-example-mark {
+  color: rgba(36, 48, 40, 0.5);
+  margin-right: 6px;
+  font-size: 0.92rem;
+}
+
+.detail-example-text {
+  font-family: var(--sans);
+  font-style: normal;
+  color: var(--ink-soft);
+}
+
+.detail-example-hit {
+  background: transparent;
+  color: #2a9b8f;
+  font-weight: 700;
+  padding: 0;
 }
 
 .detail-label {
@@ -445,15 +479,6 @@ code {
 .detail-label.inline {
   display: inline;
   margin: 0 8px 0 0;
-}
-
-.detail-example-text {
-  margin: 0;
-  color: var(--ink-soft);
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 1.05rem;
-  line-height: 1.55;
 }
 
 .detail-freq,
@@ -481,7 +506,8 @@ code {
 }
 
 .sheet-detail .detail-meaning-line {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
+  grid-template-columns: 2.4rem 1fr;
 }
 
 .word-detail .detail-tags {
@@ -493,7 +519,8 @@ code {
 }
 
 .word-detail .detail-meaning-line {
-  font-size: 1.18rem;
+  font-size: 1.14rem;
+  grid-template-columns: 2.8rem 1fr;
 }
 
 .note {
@@ -881,6 +908,23 @@ code {
 
 .footer-link.wrong::after {
   background: #b33a3a;
+}
+
+.footer-reveal {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 56px;
+  padding: 16px 18px;
+  border: 1px solid rgba(45, 74, 45, 0.22);
+  border-radius: 14px;
+  background: rgba(45, 74, 45, 0.08);
+  color: var(--gold-strong);
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 .mine-block {

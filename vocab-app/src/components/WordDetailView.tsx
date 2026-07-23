@@ -1,5 +1,10 @@
 import type { WordEntry } from '../types'
-import { displayTags, parseWordMeta, splitMeaningLines } from '../lib/wordDisplay'
+import {
+  displayTags,
+  parseWordMeta,
+  splitExampleHighlight,
+  splitMeaningLines,
+} from '../lib/wordDisplay'
 
 type Props = {
   word: WordEntry
@@ -9,8 +14,11 @@ type Props = {
 
 export function WordDetailView({ word, variant = 'study' }: Props) {
   const tags = displayTags(word)
-  const meaningLines = splitMeaningLines(word.meaning)
+  const meaningLines = splitMeaningLines(word.word, word.meaning)
   const meta = parseWordMeta(word.note)
+  const exampleParts = word.example
+    ? splitExampleHighlight(word.example, word.word)
+    : []
   const root = variant === 'sheet' ? 'sheet-detail' : 'word-detail'
 
   return (
@@ -40,17 +48,34 @@ export function WordDetailView({ word, variant = 'study' }: Props) {
       <div className="detail-meanings" aria-label="中文释义">
         {meaningLines.map((line, i) => (
           <p key={`${line.pos ?? 'm'}-${i}`} className="detail-meaning-line">
-            {line.pos ? <span className="detail-pos">{line.pos}</span> : null}
-            <span className="detail-meaning-text">{line.text}</span>
+            <span className="detail-pos">{line.pos || ''}</span>
+            <span className="detail-meaning-body">
+              {line.senses.map((sense, j) => (
+                <span key={`${i}-${j}`}>
+                  {j > 0 ? <span className="detail-sense-sep">；</span> : null}
+                  <span className="detail-sense">{sense}</span>
+                </span>
+              ))}
+            </span>
           </p>
         ))}
       </div>
 
       {word.example ? (
-        <div className="detail-example">
-          <p className="detail-label">例句</p>
-          <p className="detail-example-text">{word.example}</p>
-        </div>
+        <p className="detail-example-line">
+          <span className="detail-example-mark">【例句】</span>
+          <span className="detail-example-text">
+            {exampleParts.map((part, i) =>
+              part.hit ? (
+                <mark key={i} className="detail-example-hit">
+                  {part.text}
+                </mark>
+              ) : (
+                <span key={i}>{part.text}</span>
+              ),
+            )}
+          </span>
+        </p>
       ) : null}
 
       <p className="detail-freq">

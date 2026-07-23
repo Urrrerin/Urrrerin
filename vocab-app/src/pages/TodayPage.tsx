@@ -261,12 +261,22 @@ export function TodayPage({ words, mode, onMode, progressTick = 0 }: Props) {
         <SessionChrome
           title="新学"
           footer={
-            <button type="button" className="footer-link next" onClick={onLearnOpenDetail}>
+            <button
+              type="button"
+              className="footer-reveal"
+              onClick={onLearnOpenDetail}
+            >
               查看释义
             </button>
           }
         >
           <p className="study-word">{current.word}</p>
+          {current.phonetic ? (
+            <p className="phonetic-pill">
+              <span className="phonetic-mark">音</span>
+              {current.phonetic}
+            </p>
+          ) : null}
         </SessionChrome>
       )
     }

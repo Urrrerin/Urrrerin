@@ -4,6 +4,9 @@ type SfxKind = 'reveal' | 'remember' | 'fuzzy' | 'forgot' | 'next' | 'mastered' 
 
 let ctx: AudioContext | null = null
 
+/** 相对上一版整体再大约 30% */
+const VOL = 1.3
+
 function getCtx(): AudioContext | null {
   if (typeof window === 'undefined') return null
   const AC =
@@ -25,12 +28,13 @@ function tone(
   const audio = getCtx()
   if (!audio) return
 
+  const peak = Math.min(gainPeak * VOL, 0.12)
   const osc = audio.createOscillator()
   const gain = audio.createGain()
   osc.type = type
   osc.frequency.setValueAtTime(frequency, start)
   gain.gain.setValueAtTime(0.0001, start)
-  gain.gain.exponentialRampToValueAtTime(gainPeak, start + 0.018)
+  gain.gain.exponentialRampToValueAtTime(peak, start + 0.018)
   gain.gain.exponentialRampToValueAtTime(0.0001, start + duration)
   osc.connect(gain)
   gain.connect(audio.destination)
