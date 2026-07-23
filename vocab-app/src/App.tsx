@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import type { FilterKey, SortKey, TabKey, WordEntry } from './types'
 import { parseWordsFromHtml } from './lib/parseHtml'
 import { loadWords, resetToSample, saveWords } from './lib/storage'
+import { loadProgress, type LearningState } from './lib/progress'
 import {
   filterAndSortWords,
   filterLabels,
@@ -15,12 +16,15 @@ import './App.css'
 const FILTERS: FilterKey[] = [
   'all',
   'high-freq',
+  'mastered',
+  'unmastered',
   'cet4',
   'cet6',
   'tem4',
   'tem8',
   'ielts',
   'gaokao',
+  'kaoyan',
   'other',
 ]
 const SORTS: SortKey[] = [
@@ -53,6 +57,7 @@ function App() {
   const [toast, setToast] = useState<string | null>(null)
   const [importOpen, setImportOpen] = useState(false)
   const [progressTick, setProgressTick] = useState(0)
+  const [progress, setProgress] = useState<Record<string, LearningState>>({})
 
   useEffect(() => {
     const loaded = loadWords()
@@ -61,14 +66,18 @@ function App() {
   }, [])
 
   useEffect(() => {
+    setProgress(loadProgress())
+  }, [progressTick, tab])
+
+  useEffect(() => {
     if (!toast) return
     const timer = window.setTimeout(() => setToast(null), 2800)
     return () => window.clearTimeout(timer)
   }, [toast])
 
   const visible = useMemo(
-    () => filterAndSortWords(words, query, filter, sort),
-    [words, query, filter, sort],
+    () => filterAndSortWords(words, query, filter, sort, progress),
+    [words, query, filter, sort, progress],
   )
 
   function showToast(message: string) {

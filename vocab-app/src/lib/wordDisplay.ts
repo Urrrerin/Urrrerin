@@ -1,7 +1,7 @@
 import type { ExamTag, WordEntry } from '../types'
 import { tagLabels } from './query'
 
-const EXAM_TAGS: ExamTag[] = ['cet4', 'cet6', 'gaokao', 'tem4', 'tem8', 'ielts']
+const EXAM_TAGS: ExamTag[] = ['cet4', 'cet6', 'gaokao', 'kaoyan', 'tem4', 'tem8', 'ielts']
 
 /** 词性标记：vt./vi./adj. 等（长的优先） */
 const POS_TOKEN =

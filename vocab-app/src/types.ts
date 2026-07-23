@@ -2,6 +2,7 @@ export type ExamTag =
   | 'cet4'
   | 'cet6'
   | 'gaokao'
+  | 'kaoyan'
   | 'tem4'
   | 'tem8'
   | 'ielts'
@@ -28,6 +29,6 @@ export type SortKey =
   | 'alpha'
   | 'alpha-desc'
 
-export type FilterKey = 'all' | ExamTag | 'high-freq'
+export type FilterKey = 'all' | ExamTag | 'high-freq' | 'mastered' | 'unmastered'
 
 export type TabKey = 'today' | 'library' | 'mine'

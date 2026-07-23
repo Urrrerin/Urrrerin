@@ -4,8 +4,8 @@ type SfxKind = 'reveal' | 'remember' | 'fuzzy' | 'forgot' | 'next' | 'mastered' 
 
 let ctx: AudioContext | null = null
 
-/** 相对上一版整体再大约 30% */
-const VOL = 1.3
+/** 相对上一版再提高约 70% */
+const VOL = 1.3 * 1.7
 
 function getCtx(): AudioContext | null {
   if (typeof window === 'undefined') return null
@@ -28,7 +28,7 @@ function tone(
   const audio = getCtx()
   if (!audio) return
 
-  const peak = Math.min(gainPeak * VOL, 0.12)
+  const peak = Math.min(gainPeak * VOL, 0.28)
   const osc = audio.createOscillator()
   const gain = audio.createGain()
   osc.type = type

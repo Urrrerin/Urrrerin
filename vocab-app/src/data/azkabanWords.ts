@@ -3295,7 +3295,7 @@ export const azkabanWords: WordEntry[] = [
     meaning: "极度的；非常的",
     example: "sore need 迫切需求；亦义「疼痛的」",
     frequency: 1,
-    tags: ["cet4", "cet6"],
+    tags: ["cet4", "cet6", "kaoyan"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 六级 考研",
     entryOrder: 315,
   },

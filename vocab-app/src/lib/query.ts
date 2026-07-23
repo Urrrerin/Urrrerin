@@ -1,19 +1,36 @@
 import type { FilterKey, SortKey, WordEntry } from '../types'
+import type { LearningState } from './progress'
 
 /** 本书词表多为 1～2 次，≥2 视为高频复现 */
 const HIGH_FREQ_MIN = 2
+
+function isMastered(
+  wordId: string,
+  progress?: Record<string, LearningState>,
+): boolean {
+  return progress?.[wordId]?.status === 'mastered'
+}
 
 export function filterAndSortWords(
   words: WordEntry[],
   query: string,
   filter: FilterKey,
   sort: SortKey,
+  progress?: Record<string, LearningState>,
 ): WordEntry[] {
   const q = query.trim().toLowerCase()
 
   let list = words.filter((word) => {
     if (filter === 'high-freq' && word.frequency < HIGH_FREQ_MIN) return false
-    if (filter !== 'all' && filter !== 'high-freq' && !word.tags.includes(filter)) {
+    if (filter === 'mastered' && !isMastered(word.id, progress)) return false
+    if (filter === 'unmastered' && isMastered(word.id, progress)) return false
+    if (
+      filter !== 'all' &&
+      filter !== 'high-freq' &&
+      filter !== 'mastered' &&
+      filter !== 'unmastered' &&
+      !word.tags.includes(filter)
+    ) {
       return false
     }
 
@@ -52,9 +69,12 @@ export function filterAndSortWords(
 export const filterLabels: Record<FilterKey, string> = {
   all: '全部',
   'high-freq': '高频',
+  mastered: '已掌握',
+  unmastered: '未掌握',
   cet4: '四级',
   cet6: '六级',
   gaokao: '高考',
+  kaoyan: '考研',
   tem4: '专四',
   tem8: '专八',
   ielts: '雅思',
@@ -73,6 +93,7 @@ export const tagLabels: Record<string, string> = {
   cet4: '四级',
   cet6: '六级',
   gaokao: '高考',
+  kaoyan: '考研',
   tem4: '专四',
   tem8: '专八',
   ielts: '雅思',
