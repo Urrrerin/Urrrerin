@@ -11,6 +11,18 @@
 - `public/azkaban-vocabulary.html`：原始 HTML
 - `src/data/azkabanWords.ts`：录入后的 App 数据
 
+### 预览词表 HTML（本地）
+
+直接用浏览器打开：
+
+`vocab-app/public/azkaban-vocabulary.html`
+
+不需要 `npm run dev`。本地开发时若已启动 Vite，也可访问：
+
+`http://localhost:5173/azkaban-vocabulary.html`
+
+线上（合并并部署后）：https://urrrerin.github.io/Urrrerin/azkaban-vocabulary.html
+
 ## 你怎么在 iPhone 上用
 
 1. 用 Safari 打开上线后的网页（合并 PR 并开启 GitHub Pages 后可用）

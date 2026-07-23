@@ -37,3 +37,17 @@
 
 词表源文件也在同一站点：https://urrrerin.github.io/Urrrerin/azkaban-vocabulary.html
 
+## 怎么预览词表 HTML
+
+词表就是一个普通网页文件，**不需要跑 App**，本地直接打开即可：
+
+1. 在仓库里找到：`vocab-app/public/azkaban-vocabulary.html`
+2. 用浏览器打开（双击，或拖进 Chrome / Edge / Safari）
+3. 也能在资源管理器地址栏输入该文件的完整路径回车
+
+如果你在用 Cursor / VS Code：在文件树上右键这个 HTML → **Reveal in Finder / Open in Browser**（有对应扩展时）。
+
+说明：
+- **本地打开**看到的是你电脑上这一份（含未合并的修改，只要文件已同步到本地）
+- **网站预览** https://urrrerin.github.io/Urrrerin/azkaban-vocabulary.html 要等 PR 合并并部署到 `gh-pages` 后才会更新第六章
+
