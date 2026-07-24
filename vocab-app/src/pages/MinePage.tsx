@@ -3,7 +3,7 @@ import type { WordEntry } from '../types'
 import { loadProgress, seedDemoReviewProgress } from '../lib/progress'
 
 /** 改一版就换这个戳，方便确认手机是否拿到新包 */
-export const APP_BUILD = '0724-a'
+export const APP_BUILD = '0724-b'
 
 type Props = {
   lexiconCount: number
@@ -15,7 +15,7 @@ type Props = {
 export function MinePage({
   lexiconCount,
   words,
-  lexiconVersion = 'Azkaban Ch.1–5',
+  lexiconVersion = 'Azkaban Ch.1–6',
   onProgressSeeded,
 }: Props) {
   const [updateMsg, setUpdateMsg] = useState<string | null>(null)

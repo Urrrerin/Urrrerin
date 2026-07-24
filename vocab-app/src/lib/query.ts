@@ -15,6 +15,7 @@ const BASE_FILTERS: FilterKey[] = [
   'tem4',
   'tem8',
   'ielts',
+  'toefl',
   'gaokao',
   'kaoyan',
   'other',
@@ -32,6 +33,7 @@ const STATIC_FILTER_LABELS: Record<string, string> = {
   tem4: '专四',
   tem8: '专八',
   ielts: '雅思',
+  toefl: '托福',
   other: '其他',
 }
 
@@ -181,5 +183,6 @@ export const tagLabels: Record<string, string> = {
   tem4: '专四',
   tem8: '专八',
   ielts: '雅思',
+  toefl: '托福',
   other: '其他',
 }

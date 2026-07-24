@@ -427,6 +427,23 @@ code {
   letter-spacing: 0.01em;
 }
 
+.detail-context-line {
+  grid-template-columns: 3.6rem 1fr;
+}
+
+.detail-context-line .detail-pos {
+  font-style: normal;
+  font-size: 0.78rem;
+  color: var(--highlight);
+  font-family: var(--sans);
+  font-weight: 600;
+}
+
+.detail-context-text {
+  color: var(--ink-soft);
+  font-size: 0.95em;
+}
+
 .detail-meaning-body {
   min-width: 0;
   color: var(--ink);

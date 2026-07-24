@@ -14,7 +14,7 @@ type Props = {
 
 export function WordDetailView({ word, variant = 'study' }: Props) {
   const tags = displayTags(word)
-  const meaningLines = splitMeaningLines(word.word, word.meaning)
+  const meaningLines = splitMeaningLines(word.word, word.meaning, word.pos)
   const meta = parseWordMeta(word.note)
   const exampleParts = word.example
     ? splitExampleHighlight(word.example, word.word)
@@ -47,13 +47,20 @@ export function WordDetailView({ word, variant = 'study' }: Props) {
 
       <div className="detail-meanings" aria-label="中文释义">
         {meaningLines.map((line, i) => (
-          <p key={`${line.pos ?? 'm'}-${i}`} className="detail-meaning-line">
-            <span className="detail-pos">{line.pos || ''}</span>
+          <p
+            key={`${line.pos ?? line.label ?? 'm'}-${i}`}
+            className={
+              line.label ? 'detail-meaning-line detail-context-line' : 'detail-meaning-line'
+            }
+          >
+            <span className="detail-pos">{line.label || line.pos || ''}</span>
             <span className="detail-meaning-body">
               {line.senses.map((sense, j) => (
                 <span key={`${i}-${j}`}>
                   {j > 0 ? <span className="detail-sense-sep">；</span> : null}
-                  <span className="detail-sense">{sense}</span>
+                  <span className={line.label ? 'detail-context-text' : 'detail-sense'}>
+                    {sense}
+                  </span>
                 </span>
               ))}
             </span>
