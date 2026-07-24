@@ -64,6 +64,15 @@ function splitMeaningExample(meaning: string): { meaning: string; example?: stri
   return { meaning }
 }
 
+/** 从「n. 释义」前缀拆出词性 */
+function splitPosPrefix(meaning: string): { meaning: string; pos?: string } {
+  const matched = meaning.match(
+    /^(n|v|vt|vi|adj|adv|prep|conj|pron|int|num|art|phr|aux)\.\s*(.+)$/i,
+  )
+  if (!matched) return { meaning }
+  return { pos: `${matched[1].toLowerCase()}.`, meaning: matched[2].trim() }
+}
+
 function cellTexts(row: Element): string[] {
   return Array.from(row.querySelectorAll('td, th')).map((cell) =>
     cleanText(cell.textContent || ''),
@@ -76,7 +85,8 @@ function looksLikeWord(text: string): boolean {
 
 /**
  * 尽量兼容常见个人词表 HTML：
- * 1) 阿兹卡班格式：ID | 英文 | 音标 | 变形 | 出现 | 词库 | 中文 | 例句（例句列可选）
+ * 1) 阿兹卡班格式：ID | 英文 | 音标 | 词性 | 变形 | 出现 | 词库 | 中文 | 例句
+ *    （词性 / 例句列可选；亦兼容无词性旧表）
  * 2) table 行：单词 | 音标 | 释义 | 频次 | 标签
  * 3) 带 data-word 的节点
  * 4) li / p 行内：word — meaning
@@ -116,6 +126,8 @@ function parseAzkabanTable(doc: Document): WordEntry[] {
     )
 
     const hasExampleCol = headerCells.includes('例句')
+    const hasPosCol = headerCells.includes('词性')
+    const posIdx = hasPosCol ? headerCells.indexOf('词性') : -1
 
     for (const row of rows) {
       const cells = cellTexts(row)
@@ -127,21 +139,41 @@ function parseAzkabanTable(doc: Document): WordEntry[] {
       if (!/^\d+$/.test(idCell) || !looksLikeWord(word)) continue
 
       const phonetic = emptyish(cells[2]) ? undefined : cells[2]
-      const inflection = emptyish(cells[3]) ? undefined : cells[3]
-      const occur = cells[4] || ''
-      const lexicon = cells[5] || ''
-      let meaning = cells[6] || cells.find((c, i) => i > 1 && /[\u4e00-\u9fff]/.test(c)) || ''
-      let example = hasExampleCol
-        ? emptyish(cells[7])
-          ? undefined
-          : cells[7]
-        : undefined
 
-      // 兼容旧表：例句写在中文列括号里
+      // 新表：ID 英文 音标 词性 变形 出现 词库 中文 例句
+      // 旧表：ID 英文 音标 变形 出现 词库 中文 [例句]
+      let pos: string | undefined
+      let inflection: string | undefined
+      let occur = ''
+      let lexicon = ''
+      let meaning = ''
+      let example: string | undefined
+
+      if (hasPosCol && posIdx === 3) {
+        pos = emptyish(cells[3]) ? undefined : cells[3]
+        inflection = emptyish(cells[4]) ? undefined : cells[4]
+        occur = cells[5] || ''
+        lexicon = cells[6] || ''
+        meaning = cells[7] || ''
+        example = hasExampleCol ? (emptyish(cells[8]) ? undefined : cells[8]) : undefined
+      } else {
+        inflection = emptyish(cells[3]) ? undefined : cells[3]
+        occur = cells[4] || ''
+        lexicon = cells[5] || ''
+        meaning = cells[6] || cells.find((c, i) => i > 1 && /[\u4e00-\u9fff]/.test(c)) || ''
+        example = hasExampleCol ? (emptyish(cells[7]) ? undefined : cells[7]) : undefined
+      }
+
+      // 兼容旧表：例句写在中文列括号里；词性写在释义前缀
       if (!example && meaning) {
         const split = splitMeaningExample(meaning)
         meaning = split.meaning
         example = split.example
+      }
+      if (!pos && meaning) {
+        const posSplit = splitPosPrefix(meaning)
+        pos = posSplit.pos
+        meaning = posSplit.meaning
       }
       if (!meaning) continue
 
@@ -156,6 +188,7 @@ function parseAzkabanTable(doc: Document): WordEntry[] {
         id: uid(`${chapter || 'azkaban'}-${word}`, index),
         word,
         phonetic,
+        pos,
         meaning,
         example,
         frequency: parseFrequency(occur),

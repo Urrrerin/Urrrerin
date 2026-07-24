@@ -164,6 +164,7 @@ function App() {
               <span className="word-main">
                 <span className="word">{word.word}</span>
                 {word.phonetic ? <span className="phonetic">{word.phonetic}</span> : null}
+                {word.pos ? <span className="pos-inline">{word.pos}</span> : null}
               </span>
               <span className="word-side">
                 <span className="meaning">{word.meaning}</span>
@@ -193,6 +194,7 @@ function App() {
                 <p className="brand mini">词条</p>
                 <h2>{selected.word}</h2>
                 {selected.phonetic ? <p className="phonetic">{selected.phonetic}</p> : null}
+                {selected.pos ? <p className="pos-label">{selected.pos}</p> : null}
               </div>
               <button type="button" className="icon-btn" onClick={() => setSelected(null)}>
                 关闭
@@ -230,7 +232,7 @@ function App() {
               选择你日常记录的词汇 HTML。识别成功后会保存在本机，通勤打开也能看。
             </p>
             <ol className="import-steps">
-              <li>已支持阿兹卡班格式：ID / 英文 / 音标 / 变形 / 出现 / 词库 / 中文 / 例句</li>
+              <li>已支持阿兹卡班格式：ID / 英文 / 音标 / 词性 / 变形 / 出现 / 词库 / 中文 / 例句</li>
               <li>也支持通用表格：单词 / 音标 / 释义 / 频次 / 标签</li>
               <li>词库写「四级 / 六级 / 专四 / 专八 / 雅思」会被自动识别</li>
             </ol>

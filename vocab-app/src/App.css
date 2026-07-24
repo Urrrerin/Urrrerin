@@ -276,6 +276,21 @@ code {
   font-size: 0.82rem;
 }
 
+.pos-inline {
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.pos-label {
+  margin-top: 4px;
+  color: var(--gold);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
 .word-side {
   display: flex;
   flex-direction: column;
