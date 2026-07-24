@@ -4,8 +4,9 @@ import { parseWordsFromHtml } from './lib/parseHtml'
 import { loadWords, resetToSample, saveWords } from './lib/storage'
 import { loadProgress, type LearningState } from './lib/progress'
 import {
+  buildFilterOptions,
   filterAndSortWords,
-  filterLabels,
+  getFilterLabel,
   sortLabels,
 } from './lib/query'
 import { TodayPage } from './pages/TodayPage'
@@ -13,20 +14,6 @@ import { MinePage } from './pages/MinePage'
 import { WordDetailView } from './components/WordDetailView'
 import './App.css'
 
-const FILTERS: FilterKey[] = [
-  'all',
-  'high-freq',
-  'mastered',
-  'unmastered',
-  'cet4',
-  'cet6',
-  'tem4',
-  'tem8',
-  'ielts',
-  'gaokao',
-  'kaoyan',
-  'other',
-]
 const SORTS: SortKey[] = [
   'entry-order',
   'frequency-desc',
@@ -79,6 +66,12 @@ function App() {
     () => filterAndSortWords(words, query, filter, sort, progress),
     [words, query, filter, sort, progress],
   )
+
+  const filterOptions = useMemo(() => buildFilterOptions(words), [words])
+
+  useEffect(() => {
+    if (!filterOptions.includes(filter)) setFilter('all')
+  }, [filter, filterOptions])
 
   function showToast(message: string) {
     setToast(message)
@@ -153,7 +146,7 @@ function App() {
             </label>
 
             <div className="filters" role="tablist" aria-label="筛选">
-              {FILTERS.map((key) => (
+              {filterOptions.map((key) => (
                 <button
                   key={key}
                   type="button"
@@ -162,7 +155,7 @@ function App() {
                   className={filter === key ? 'chip active' : 'chip'}
                   onClick={() => setFilter(key)}
                 >
-                  {filterLabels[key]}
+                  {getFilterLabel(key, words)}
                 </button>
               ))}
             </div>

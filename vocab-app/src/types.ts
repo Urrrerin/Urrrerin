@@ -29,6 +29,12 @@ export type SortKey =
   | 'alpha'
   | 'alpha-desc'
 
-export type FilterKey = 'all' | ExamTag | 'high-freq' | 'mastered' | 'unmastered'
+export type FilterKey =
+  | 'all'
+  | ExamTag
+  | 'high-freq'
+  | 'mastered'
+  | 'unmastered'
+  | `chapter-${string}`
 
 export type TabKey = 'today' | 'library' | 'mine'
