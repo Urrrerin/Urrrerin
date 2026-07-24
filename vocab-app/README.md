@@ -11,7 +11,7 @@
 - `public/azkaban-vocabulary.html`：原始 HTML（一章一页翻阅；词性写在中文前（多词性分行）；完整原句例句；若文中义很特殊，释义下加一行 `文中特指：…`）
 - `src/data/azkabanWords.ts`：录入后的 App 数据
 
-释义校准：本地可把开源词典 ECDICT 的 `ecdict.csv` 放到 `vocab-app/.dict/`（已 gitignore），再运行 `python3 scripts/enrich_meanings_ecdict.py` 批量用词典义覆盖上下文义；单次查词用 `python3 scripts/dict_lookup.py <word>`。
+释义校准：本地可把开源词典 ECDICT 的 `ecdict.csv` 放到 `vocab-app/.dict/`（已 gitignore），再运行 `python3 scripts/enrich_meanings_ecdict.py` 批量用词典义覆盖上下文义；单次查词用 `python3 scripts/dict_lookup.py <word>`。考试标签可用 `python3 scripts/retag_exam_tags.py` 按 ECDICT（四级/六级/考研/雅思）+ 专四专八词表重标。
 
 ### 预览词表 HTML（本地）
 

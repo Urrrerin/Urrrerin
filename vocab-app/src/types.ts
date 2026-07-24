@@ -1,10 +1,11 @@
 export type ExamTag =
   | 'cet4'
   | 'cet6'
-  | 'gaokao'
+  | 'kaoyan'
   | 'tem4'
   | 'tem8'
   | 'ielts'
+  | 'gaokao'
   | 'other'
 
 export type WordEntry = {

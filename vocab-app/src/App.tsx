@@ -15,10 +15,10 @@ const FILTERS: FilterKey[] = [
   'high-freq',
   'cet4',
   'cet6',
+  'kaoyan',
   'tem4',
   'tem8',
   'ielts',
-  'gaokao',
   'other',
 ]
 const SORTS: SortKey[] = [
@@ -232,7 +232,7 @@ function App() {
             <ol className="import-steps">
               <li>已支持阿兹卡班格式：ID / 英文 / 音标 / 变形 / 出现 / 词库 / 中文 / 例句（中文前列词性，多词性分行）</li>
               <li>也支持通用表格：单词 / 音标 / 释义 / 频次 / 标签</li>
-              <li>词库写「四级 / 六级 / 专四 / 专八 / 雅思」会被自动识别</li>
+              <li>词库写「四级 / 六级 / 考研 / 专四 / 专八 / 雅思」会被自动识别</li>
             </ol>
             <input
               ref={fileRef}

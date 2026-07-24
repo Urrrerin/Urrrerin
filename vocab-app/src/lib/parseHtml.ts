@@ -2,6 +2,7 @@ import type { ExamTag, WordEntry } from '../types'
 
 const CET4_HINT = /四级|cet-?4|cet4|大学英语四级/i
 const CET6_HINT = /六级|cet-?6|cet6|大学英语六级/i
+const KAOYAN_HINT = /考研|kaoyan|ky\b/i
 const GAOKAO_HINT = /高考|gaokao|高中/i
 const TEM4_HINT = /专四|tem-?4|tem4/i
 const TEM8_HINT = /专八|tem-?8|tem8/i
@@ -15,10 +16,11 @@ function parseTags(text: string): ExamTag[] {
   const tags: ExamTag[] = []
   if (CET4_HINT.test(text)) tags.push('cet4')
   if (CET6_HINT.test(text)) tags.push('cet6')
-  if (GAOKAO_HINT.test(text)) tags.push('gaokao')
+  if (KAOYAN_HINT.test(text)) tags.push('kaoyan')
   if (TEM4_HINT.test(text)) tags.push('tem4')
   if (TEM8_HINT.test(text)) tags.push('tem8')
   if (IELTS_HINT.test(text)) tags.push('ielts')
+  if (GAOKAO_HINT.test(text)) tags.push('gaokao')
   if (tags.length === 0) tags.push('other')
   return tags
 }
