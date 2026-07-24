@@ -8,7 +8,7 @@
 
 已内置《阿兹卡班的囚徒》前 6 章生词（约 777 条）：
 
-- `public/azkaban-vocabulary.html`：原始 HTML（一章一页翻阅；含词性列与完整原句例句）
+- `public/azkaban-vocabulary.html`：原始 HTML（一章一页翻阅；词性写在中文前（多词性分行）；完整原句例句）
 - `src/data/azkabanWords.ts`：录入后的 App 数据
 
 ### 预览词表 HTML（本地）
@@ -45,9 +45,9 @@ npm run dev
 
 优先支持阿兹卡班词表表格：
 
-| ID | 英文 | 音标 | 词性 | 变形 | 出现 | 词库 | 中文 | 例句 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | flashlight | /ˈflæʃlaɪt/ | n. | / | / | 四级 雅思 | 手电筒；火把（英式亦作 torch） | Harry was forced to do his homework in secret, in the dead of night, by flashlight. |
+| ID | 英文 | 音标 | 变形 | 出现 | 词库 | 中文 | 例句 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | flashlight | /ˈflæʃlaɪt/ | / | / | 四级 雅思 | n. 手电筒；火把（英式亦作 torch） | It was nearly midnight... |
 
 也兼容通用表格：单词 / 音标 / 释义 / 频次 / 标签，以及一行一个：`word — 释义`。
 

@@ -64,13 +64,32 @@ function splitMeaningExample(meaning: string): { meaning: string; example?: stri
   return { meaning }
 }
 
-/** 从「n. 释义」前缀拆出词性 */
-function splitPosPrefix(meaning: string): { meaning: string; pos?: string } {
-  const matched = meaning.match(
-    /^(n|v|vt|vi|adj|adv|prep|conj|pron|int|num|art|phr|aux)\.\s*(.+)$/i,
-  )
-  if (!matched) return { meaning }
-  return { pos: `${matched[1].toLowerCase()}.`, meaning: matched[2].trim() }
+/**
+ * 保留中文列中的词性前缀（支持多行多词性），同时提取首个词性。
+ * 例：
+ *   n. 祖母绿
+ *   adj. 翠绿色的
+ */
+function extractPosFromMeaning(meaning: string): { meaning: string; pos?: string } {
+  const normalized = meaning.replace(/\r\n/g, '\n').trim()
+  const lines = normalized.split('\n').map((l) => l.trim()).filter(Boolean)
+  if (lines.length === 0) return { meaning }
+
+  let pos: string | undefined
+  const kept: string[] = []
+  for (const line of lines) {
+    const matched = line.match(
+      /^(n|v|vt|vi|adj|adv|prep|conj|pron|int|num|art|phr|aux)\.\s*(.*)$/i,
+    )
+    if (matched) {
+      const p = `${matched[1].toLowerCase()}.`
+      if (!pos) pos = p
+      kept.push(`${p} ${matched[2].trim()}`.trim())
+    } else {
+      kept.push(line)
+    }
+  }
+  return { meaning: kept.join('\n'), pos }
 }
 
 function cellTexts(row: Element): string[] {
@@ -79,14 +98,28 @@ function cellTexts(row: Element): string[] {
   )
 }
 
+/** 保留释义里的换行（多词性分行）；把 <br> 转成 \\n */
+function cellMeaningText(cell: Element | null | undefined): string {
+  if (!cell) return ''
+  const html = cell.innerHTML || ''
+  const withBreaks = html
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<[^>]+>/g, '')
+  return withBreaks
+    .split('\n')
+    .map((line) => line.replace(/\s+/g, ' ').trim())
+    .filter(Boolean)
+    .join('\n')
+}
+
 function looksLikeWord(text: string): boolean {
   return /^[A-Za-z][A-Za-z\s'\-.]*$/.test(text) || text.startsWith("'")
 }
 
 /**
  * 尽量兼容常见个人词表 HTML：
- * 1) 阿兹卡班格式：ID | 英文 | 音标 | 词性 | 变形 | 出现 | 词库 | 中文 | 例句
- *    （词性 / 例句列可选；亦兼容无词性旧表）
+ * 1) 阿兹卡班格式：ID | 英文 | 音标 | 变形 | 出现 | 词库 | 中文 | 例句
+ *    中文列可含词性前缀（如 `n. 火把`）；多词性多行；例句列可选
  * 2) table 行：单词 | 音标 | 释义 | 频次 | 标签
  * 3) 带 data-word 的节点
  * 4) li / p 行内：word — meaning
@@ -126,10 +159,12 @@ function parseAzkabanTable(doc: Document): WordEntry[] {
     )
 
     const hasExampleCol = headerCells.includes('例句')
+    // 兼容短暂存在过的独立「词性」列
     const hasPosCol = headerCells.includes('词性')
     const posIdx = hasPosCol ? headerCells.indexOf('词性') : -1
 
     for (const row of rows) {
+      const tdCells = Array.from(row.querySelectorAll('td'))
       const cells = cellTexts(row)
       if (cells.length < 6) continue
       if (cells[0] === 'ID' || cells[1] === '英文') continue
@@ -140,40 +175,55 @@ function parseAzkabanTable(doc: Document): WordEntry[] {
 
       const phonetic = emptyish(cells[2]) ? undefined : cells[2]
 
-      // 新表：ID 英文 音标 词性 变形 出现 词库 中文 例句
-      // 旧表：ID 英文 音标 变形 出现 词库 中文 [例句]
-      let pos: string | undefined
+      // 标准：ID 英文 音标 变形 出现 词库 中文 [例句]
+      // 兼容：ID 英文 音标 词性 变形 出现 词库 中文 [例句]
+      let posFromCol: string | undefined
       let inflection: string | undefined
       let occur = ''
       let lexicon = ''
       let meaning = ''
       let example: string | undefined
+      let meaningTd: Element | undefined
 
       if (hasPosCol && posIdx === 3) {
-        pos = emptyish(cells[3]) ? undefined : cells[3]
+        posFromCol = emptyish(cells[3]) ? undefined : cells[3]
         inflection = emptyish(cells[4]) ? undefined : cells[4]
         occur = cells[5] || ''
         lexicon = cells[6] || ''
-        meaning = cells[7] || ''
+        meaningTd = tdCells[7]
+        meaning = cellMeaningText(meaningTd) || cells[7] || ''
         example = hasExampleCol ? (emptyish(cells[8]) ? undefined : cells[8]) : undefined
       } else {
         inflection = emptyish(cells[3]) ? undefined : cells[3]
         occur = cells[4] || ''
         lexicon = cells[5] || ''
-        meaning = cells[6] || cells.find((c, i) => i > 1 && /[\u4e00-\u9fff]/.test(c)) || ''
+        meaningTd = tdCells[6]
+        meaning =
+          cellMeaningText(meaningTd) ||
+          cells[6] ||
+          cells.find((c, i) => i > 1 && /[\u4e00-\u9fff]/.test(c)) ||
+          ''
         example = hasExampleCol ? (emptyish(cells[7]) ? undefined : cells[7]) : undefined
       }
 
-      // 兼容旧表：例句写在中文列括号里；词性写在释义前缀
+      // 兼容旧表：例句写在中文列括号里
       if (!example && meaning) {
         const split = splitMeaningExample(meaning)
         meaning = split.meaning
         example = split.example
       }
-      if (!pos && meaning) {
-        const posSplit = splitPosPrefix(meaning)
-        pos = posSplit.pos
-        meaning = posSplit.meaning
+
+      // 词性写在中文前：保留在 meaning 中；另提取首个词性到 pos
+      let pos = posFromCol
+      if (meaning) {
+        const extracted = extractPosFromMeaning(meaning)
+        if (!pos) pos = extracted.pos
+        // 若独立词性列有值但 meaning 尚未带前缀，则拼回去
+        if (posFromCol && !/^(n|v|vt|vi|adj|adv|prep|conj|pron|int|num|art|phr|aux)\./i.test(meaning.trim())) {
+          meaning = `${posFromCol} ${meaning}`.trim()
+        } else {
+          meaning = extracted.meaning
+        }
       }
       if (!meaning) continue
 
