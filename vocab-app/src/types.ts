@@ -36,9 +36,12 @@ export type SortKey =
 
 export type FilterKey =
   | 'all'
-  | ExamTag
   | 'high-freq'
   | 'mastered'
   | 'unmastered'
+  | 'cet' // 四级或六级
+  | 'tem' // 专四或专八
+  | 'ielts'
+  | 'kaoyan'
 
 export type TabKey = 'today' | 'library' | 'mine'

@@ -1,4 +1,4 @@
-import type { ExamTag, FilterKey, SortKey, WordEntry } from '../types'
+import type { FilterKey, SortKey, WordEntry } from '../types'
 import type { LearningState } from './progress'
 import { parseWordMeta } from './wordDisplay'
 
@@ -10,15 +10,10 @@ export const CHIP_FILTERS: FilterKey[] = [
   'high-freq',
   'mastered',
   'unmastered',
-  'cet4',
-  'cet6',
-  'tem4',
-  'tem8',
+  'cet',
+  'tem',
   'ielts',
-  'toefl',
-  'gaokao',
   'kaoyan',
-  'other',
 ]
 
 const STATIC_FILTER_LABELS: Record<FilterKey, string> = {
@@ -26,15 +21,10 @@ const STATIC_FILTER_LABELS: Record<FilterKey, string> = {
   'high-freq': '高频',
   mastered: '已掌握',
   unmastered: '未掌握',
-  cet4: '四级',
-  cet6: '六级',
-  gaokao: '高考',
-  kaoyan: '考研',
-  tem4: '专四',
-  tem8: '专八',
+  cet: '四六级',
+  tem: '专四专八',
   ielts: '雅思',
-  toefl: '托福',
-  other: '其他',
+  kaoyan: '考研',
 }
 
 export type ScopeFilter = {
@@ -131,15 +121,14 @@ export function filterAndSortWords(
     if (filter === 'high-freq' && word.frequency < HIGH_FREQ_MIN) return false
     if (filter === 'mastered' && !isMastered(word.id, progress)) return false
     if (filter === 'unmastered' && isMastered(word.id, progress)) return false
-    if (
-      filter !== 'all' &&
-      filter !== 'high-freq' &&
-      filter !== 'mastered' &&
-      filter !== 'unmastered' &&
-      !word.tags.includes(filter as ExamTag)
-    ) {
+    if (filter === 'cet' && !word.tags.some((t) => t === 'cet4' || t === 'cet6')) {
       return false
     }
+    if (filter === 'tem' && !word.tags.some((t) => t === 'tem4' || t === 'tem8')) {
+      return false
+    }
+    if (filter === 'ielts' && !word.tags.includes('ielts')) return false
+    if (filter === 'kaoyan' && !word.tags.includes('kaoyan')) return false
 
     if (!q) return true
     return (

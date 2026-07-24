@@ -3,7 +3,7 @@ import type { WordEntry } from '../types'
 import { loadProgress, seedDemoReviewProgress } from '../lib/progress'
 
 /** 改一版就换这个戳，方便确认手机是否拿到新包 */
-export const APP_BUILD = '0724-d'
+export const APP_BUILD = '0724-e'
 
 type Props = {
   lexiconCount: number
