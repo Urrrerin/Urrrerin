@@ -1,7 +1,6 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import type { FilterKey, SortKey, TabKey, WordEntry } from './types'
-import { parseWordsFromHtml } from './lib/parseHtml'
-import { loadWords, resetToSample, saveWords } from './lib/storage'
+import { loadWords } from './lib/storage'
 import { loadProgress, type LearningState } from './lib/progress'
 import {
   CHIP_FILTERS,
@@ -11,6 +10,7 @@ import {
   listChapters,
   sortLabels,
 } from './lib/query'
+import { splitMeaningLines } from './lib/wordDisplay'
 import { TodayPage } from './pages/TodayPage'
 import { MinePage } from './pages/MinePage'
 import { WordDetailView } from './components/WordDetailView'
@@ -33,38 +33,47 @@ function withEntryOrder(words: WordEntry[]): WordEntry[] {
   }))
 }
 
+function ListMeaning({ word }: { word: WordEntry }) {
+  const lines = splitMeaningLines(word.word, word.meaning, word.pos).filter(
+    (line) => !line.label,
+  )
+
+  if (lines.length === 0) {
+    return <span className="meaning-lines">{word.meaning}</span>
+  }
+
+  return (
+    <span className="meaning-lines">
+      {lines.map((line, i) => (
+        <span key={`${line.pos ?? 'm'}-${i}`} className="meaning-line">
+          {line.pos ? <span className="meaning-pos">{line.pos}</span> : null}
+          <span className="meaning-text">{line.senses.join('；')}</span>
+        </span>
+      ))}
+    </span>
+  )
+}
+
 function App() {
-  const fileRef = useRef<HTMLInputElement>(null)
   const [tab, setTab] = useState<TabKey>('today')
   const [todayMode, setTodayMode] = useState<TodayMode>('home')
   const [words, setWords] = useState<WordEntry[]>([])
-  const [source, setSource] = useState<'sample' | 'import'>('sample')
   const [query, setQuery] = useState('')
   const [filter, setFilter] = useState<FilterKey>('all')
   const [bookFilter, setBookFilter] = useState('all')
   const [chapterFilter, setChapterFilter] = useState('all')
   const [sort, setSort] = useState<SortKey>('entry-order')
   const [selected, setSelected] = useState<WordEntry | null>(null)
-  const [toast, setToast] = useState<string | null>(null)
-  const [importOpen, setImportOpen] = useState(false)
   const [progressTick, setProgressTick] = useState(0)
   const [progress, setProgress] = useState<Record<string, LearningState>>({})
 
   useEffect(() => {
-    const loaded = loadWords()
-    setWords(withEntryOrder(loaded.words))
-    setSource(loaded.source)
+    setWords(withEntryOrder(loadWords()))
   }, [])
 
   useEffect(() => {
     setProgress(loadProgress())
   }, [progressTick, tab])
-
-  useEffect(() => {
-    if (!toast) return
-    const timer = window.setTimeout(() => setToast(null), 2800)
-    return () => window.clearTimeout(timer)
-  }, [toast])
 
   const books = useMemo(() => listBooks(words), [words])
   const chapters = useMemo(
@@ -97,36 +106,9 @@ function App() {
     [words, query, filter, sort, progress, bookFilter, chapterFilter],
   )
 
-  function showToast(message: string) {
-    setToast(message)
-  }
-
   function switchTab(next: TabKey) {
     setTab(next)
     if (next !== 'today') setTodayMode('home')
-  }
-
-  async function handleFile(file: File) {
-    const text = await file.text()
-    const parsed = withEntryOrder(parseWordsFromHtml(text))
-    if (parsed.length === 0) {
-      showToast('没识别到单词，请检查 HTML 格式或发我一份样例')
-      return
-    }
-    saveWords(parsed, 'import')
-    setWords(parsed)
-    setSource('import')
-    setImportOpen(false)
-    setSelected(null)
-    showToast(`已导入 ${parsed.length} 个单词`)
-  }
-
-  function handleReset() {
-    const sample = withEntryOrder(resetToSample())
-    setWords(sample)
-    setSource('sample')
-    setSelected(null)
-    showToast('已恢复阿兹卡班词表')
   }
 
   return (
@@ -150,12 +132,7 @@ function App() {
           </header>
 
           <div className="meta-row">
-            <span className="pill">
-              {source === 'sample' ? '阿兹卡班词表' : '已导入词表'} · {words.length} 词
-            </span>
-            <button type="button" className="text-btn" onClick={() => setImportOpen(true)}>
-              导入 HTML
-            </button>
+            <span className="pill">阿兹卡班词表 · {words.length} 词</span>
           </div>
 
           <section className="controls" aria-label="搜索与筛选">
@@ -230,7 +207,9 @@ function App() {
             </label>
           </section>
 
-          <p className="result-count">显示 {visible.length} / {words.length}</p>
+          <p className="result-count">
+            显示 {visible.length} / {words.length}
+          </p>
 
           <main className="list" aria-label="词汇列表">
             {visible.length === 0 ? (
@@ -249,10 +228,12 @@ function App() {
                 >
                   <span className="word-main">
                     <span className="word">{word.word}</span>
-                    {word.phonetic ? <span className="phonetic">{word.phonetic}</span> : null}
+                    {word.phonetic ? (
+                      <span className="phonetic">{word.phonetic}</span>
+                    ) : null}
                   </span>
                   <span className="word-side">
-                    <span className="meaning">{word.meaning}</span>
+                    <ListMeaning word={word} />
                     <span className="freq">#{word.entryOrder ?? '—'}</span>
                   </span>
                 </button>
@@ -308,9 +289,15 @@ function App() {
               <div>
                 <p className="brand mini">词条</p>
                 <h2>{selected.word}</h2>
-                {selected.phonetic ? <p className="phonetic">{selected.phonetic}</p> : null}
+                {selected.phonetic ? (
+                  <p className="phonetic">{selected.phonetic}</p>
+                ) : null}
               </div>
-              <button type="button" className="icon-btn" onClick={() => setSelected(null)}>
+              <button
+                type="button"
+                className="icon-btn"
+                onClick={() => setSelected(null)}
+              >
                 关闭
               </button>
             </div>
@@ -318,49 +305,6 @@ function App() {
           </aside>
         </div>
       ) : null}
-
-      {importOpen ? (
-        <div className="sheet-backdrop" onClick={() => setImportOpen(false)}>
-          <aside
-            className="sheet import-sheet"
-            role="dialog"
-            aria-modal="true"
-            aria-label="导入词表"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="sheet-handle" />
-            <h2>导入你的 HTML 词表</h2>
-            <p className="import-copy">
-              选择你日常记录的词汇 HTML。识别成功后会保存在本机。
-            </p>
-            <input
-              ref={fileRef}
-              type="file"
-              accept=".html,.htm,text/html"
-              hidden
-              onChange={(e) => {
-                const file = e.target.files?.[0]
-                if (file) void handleFile(file)
-                e.target.value = ''
-              }}
-            />
-            <button
-              type="button"
-              className="primary-btn"
-              onClick={() => fileRef.current?.click()}
-            >
-              选择 HTML 文件
-            </button>
-            {source === 'import' ? (
-              <button type="button" className="text-btn reset" onClick={handleReset}>
-                恢复阿兹卡班词表
-              </button>
-            ) : null}
-          </aside>
-        </div>
-      ) : null}
-
-      {toast ? <div className="toast">{toast}</div> : null}
     </div>
   )
 }
