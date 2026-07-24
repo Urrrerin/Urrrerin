@@ -21,6 +21,8 @@ export type WordEntry = {
   frequency: number
   tags: ExamTag[]
   note?: string
+  /** 所属书目；多书词库时用于筛选 */
+  book?: string
   /** HTML 录入顺序；默认排序用。不等于稳定 wordId */
   entryOrder?: number
 }
@@ -38,6 +40,5 @@ export type FilterKey =
   | 'high-freq'
   | 'mastered'
   | 'unmastered'
-  | `chapter-${string}`
 
 export type TabKey = 'today' | 'library' | 'mine'

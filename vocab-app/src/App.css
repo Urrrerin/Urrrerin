@@ -174,6 +174,29 @@ code {
   animation-delay: 140ms;
 }
 
+.scope-filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.scope-field {
+  display: grid;
+  gap: 6px;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.scope-field select {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  padding: 0 10px;
+  border-radius: 8px;
+  color: var(--ink);
+}
+
 .search input {
   width: 100%;
   min-height: 48px;
@@ -341,12 +364,13 @@ code {
 
 .sheet {
   width: min(720px, 100%);
-  max-height: min(78vh, 640px);
+  max-height: min(92dvh, 860px);
   overflow: auto;
   background: linear-gradient(180deg, #fffdf8, #f7f3ea);
   border-top: 1px solid var(--panel-edge);
   box-shadow: var(--shadow);
-  padding: 12px 18px calc(22px + var(--safe-bottom));
+  padding: 12px 18px
+    calc(22px + var(--tabbar-pad-y) * 2 + var(--tab-height) + var(--safe-bottom));
   animation: slide-up 280ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 

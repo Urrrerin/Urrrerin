@@ -5,7 +5,7 @@ import { parseWordMeta } from './wordDisplay'
 /** 本书词表多为 1～2 次，≥2 视为高频复现 */
 const HIGH_FREQ_MIN = 2
 
-const BASE_FILTERS: FilterKey[] = [
+export const CHIP_FILTERS: FilterKey[] = [
   'all',
   'high-freq',
   'mastered',
@@ -21,7 +21,7 @@ const BASE_FILTERS: FilterKey[] = [
   'other',
 ]
 
-const STATIC_FILTER_LABELS: Record<string, string> = {
+const STATIC_FILTER_LABELS: Record<FilterKey, string> = {
   all: '全部',
   'high-freq': '高频',
   mastered: '已掌握',
@@ -37,6 +37,11 @@ const STATIC_FILTER_LABELS: Record<string, string> = {
   other: '其他',
 }
 
+export type ScopeFilter = {
+  book: string
+  chapter: string
+}
+
 function isMastered(
   wordId: string,
   progress?: Record<string, LearningState>,
@@ -44,12 +49,8 @@ function isMastered(
   return progress?.[wordId]?.status === 'mastered'
 }
 
-function isChapterFilter(filter: FilterKey): filter is `chapter-${string}` {
-  return filter.startsWith('chapter-')
-}
-
-/** 从 note 提取章节筛选 key，如 chapter-1 */
-export function getChapterFilterKey(note?: string): `chapter-${string}` | undefined {
+/** 从 note 提取章节 key，如 chapter-1 */
+export function getChapterKey(note?: string): string | undefined {
   const chapter = parseWordMeta(note).chapter
   if (!chapter) return undefined
   const numbered = chapter.match(/Chapter\s+(\d+)/i)
@@ -62,27 +63,42 @@ export function getChapterFilterKey(note?: string): `chapter-${string}` | undefi
   return slug ? `chapter-${slug}` : undefined
 }
 
-export function getChapterFilterLabel(noteChapter: string): string {
+export function getChapterLabel(noteChapter: string): string {
   const numbered = noteChapter.match(/Chapter\s+(\d+)/i)
-  if (numbered) return `第${numbered[1]}章`
-  return noteChapter
+  if (!numbered) return noteChapter
+  const zh = noteChapter.split(' · ')[1]?.trim()
+  return zh ? `第${numbered[1]}章 · ${zh}` : `第${numbered[1]}章`
 }
 
-/** 当前词表里出现过的章节筛选项（按章节号排序） */
-export function listChapterFilters(
+export function listBooks(words: WordEntry[]): string[] {
+  const set = new Set<string>()
+  for (const word of words) {
+    if (word.book?.trim()) set.add(word.book.trim())
+  }
+  return [...set].sort((a, b) => a.localeCompare(b, 'zh'))
+}
+
+export function listChapters(
   words: WordEntry[],
-): { key: `chapter-${string}`; label: string }[] {
-  const map = new Map<string, { key: `chapter-${string}`; label: string; order: number }>()
+  book: string = 'all',
+): { key: string; label: string }[] {
+  const map = new Map<string, { key: string; label: string; order: number }>()
+  const multiBook = listBooks(words).length > 1
 
   for (const word of words) {
+    if (book !== 'all' && (word.book || '') !== book) continue
     const chapter = parseWordMeta(word.note).chapter
     if (!chapter) continue
-    const key = getChapterFilterKey(word.note)
+    const key = getChapterKey(word.note)
     if (!key || map.has(key)) continue
     const numbered = chapter.match(/Chapter\s+(\d+)/i)
+    let label = getChapterLabel(chapter)
+    if (multiBook && book === 'all' && word.book) {
+      label = `${word.book} · ${label}`
+    }
     map.set(key, {
       key,
-      label: getChapterFilterLabel(chapter),
+      label,
       order: numbered ? Number(numbered[1]) : 999,
     })
   }
@@ -92,19 +108,8 @@ export function listChapterFilters(
     .map(({ key, label }) => ({ key, label }))
 }
 
-export function buildFilterOptions(words: WordEntry[]): FilterKey[] {
-  return [...BASE_FILTERS, ...listChapterFilters(words).map((c) => c.key)]
-}
-
-export function getFilterLabel(key: FilterKey, words: WordEntry[] = []): string {
-  if (STATIC_FILTER_LABELS[key]) return STATIC_FILTER_LABELS[key]
-  if (isChapterFilter(key)) {
-    const found = listChapterFilters(words).find((c) => c.key === key)
-    if (found) return found.label
-    const n = key.slice('chapter-'.length)
-    return /^\d+$/.test(n) ? `第${n}章` : key
-  }
-  return key
+export function getFilterLabel(key: FilterKey): string {
+  return STATIC_FILTER_LABELS[key] || key
 }
 
 export function filterAndSortWords(
@@ -113,16 +118,20 @@ export function filterAndSortWords(
   filter: FilterKey,
   sort: SortKey,
   progress?: Record<string, LearningState>,
+  scope: ScopeFilter = { book: 'all', chapter: 'all' },
 ): WordEntry[] {
   const q = query.trim().toLowerCase()
 
   let list = words.filter((word) => {
+    if (scope.book !== 'all' && (word.book || '') !== scope.book) return false
+    if (scope.chapter !== 'all' && getChapterKey(word.note) !== scope.chapter) {
+      return false
+    }
+
     if (filter === 'high-freq' && word.frequency < HIGH_FREQ_MIN) return false
     if (filter === 'mastered' && !isMastered(word.id, progress)) return false
     if (filter === 'unmastered' && isMastered(word.id, progress)) return false
-    if (isChapterFilter(filter)) {
-      if (getChapterFilterKey(word.note) !== filter) return false
-    } else if (
+    if (
       filter !== 'all' &&
       filter !== 'high-freq' &&
       filter !== 'mastered' &&
@@ -137,7 +146,8 @@ export function filterAndSortWords(
       word.word.toLowerCase().includes(q) ||
       word.meaning.toLowerCase().includes(q) ||
       (word.example?.toLowerCase().includes(q) ?? false) ||
-      (word.note?.toLowerCase().includes(q) ?? false)
+      (word.note?.toLowerCase().includes(q) ?? false) ||
+      (word.book?.toLowerCase().includes(q) ?? false)
     )
   })
 
@@ -164,7 +174,7 @@ export function filterAndSortWords(
   return list
 }
 
-/** @deprecated 使用 getFilterLabel；保留静态表兼容旧引用 */
+/** @deprecated 使用 getFilterLabel */
 export const filterLabels: Record<string, string> = STATIC_FILTER_LABELS
 
 export const sortLabels: Record<SortKey, string> = {

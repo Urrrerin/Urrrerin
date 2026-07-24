@@ -12,6 +12,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 1,
   },
   {
@@ -24,6 +25,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 雅思 · 美式版原文 flashlight；英式亦作 torch",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 2,
   },
   {
@@ -36,6 +38,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 3,
   },
   {
@@ -48,6 +51,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 4,
   },
   {
@@ -60,6 +64,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 5,
   },
   {
@@ -72,6 +77,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 6,
   },
   {
@@ -84,6 +90,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 7,
   },
   {
@@ -96,6 +103,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 8,
   },
   {
@@ -108,6 +116,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 9,
   },
   {
@@ -120,6 +129,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 10,
   },
   {
@@ -132,6 +142,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 11,
   },
   {
@@ -144,6 +155,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 12,
   },
   {
@@ -156,6 +168,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 按音标校正为 rooftop",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 13,
   },
   {
@@ -168,6 +181,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 14,
   },
   {
@@ -180,6 +194,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 六级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 15,
   },
   {
@@ -192,6 +207,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 16,
   },
   {
@@ -204,6 +220,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 17,
   },
   {
@@ -216,6 +233,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 18,
   },
   {
@@ -228,6 +246,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 19,
   },
   {
@@ -240,6 +259,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 20,
   },
   {
@@ -252,6 +272,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 21,
   },
   {
@@ -264,6 +285,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 22,
   },
   {
@@ -276,6 +298,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 23,
   },
   {
@@ -288,6 +311,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 24,
   },
   {
@@ -300,6 +324,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 原文为 swivelled",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 25,
   },
   {
@@ -312,6 +337,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 26,
   },
   {
@@ -324,6 +350,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 27,
   },
   {
@@ -336,6 +363,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 28,
   },
   {
@@ -348,6 +376,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 29,
   },
   {
@@ -357,9 +386,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "vi.",
     meaning: "vi. 作呼噜声\nvt. 咕哝\nn. 呼噜声，咕哝\n文中特指：咕哝；哼声（睡梦中的闷哼）",
     example: "The silence in the dark house was broken only by the distant, grunting snores of his enormous cousin, Dudley.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 30,
   },
   {
@@ -372,6 +402,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 31,
   },
   {
@@ -384,6 +415,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 32,
   },
   {
@@ -396,6 +428,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 33,
   },
   {
@@ -408,6 +441,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 34,
   },
   {
@@ -420,6 +454,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 35,
   },
   {
@@ -432,6 +467,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 36,
   },
   {
@@ -444,6 +480,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 37,
   },
   {
@@ -456,6 +493,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 38,
   },
   {
@@ -468,6 +506,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts", "toefl"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 雅思 托福 专四 · 按变形/释义校正为 originator",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 39,
   },
   {
@@ -480,6 +519,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 40,
   },
   {
@@ -492,6 +532,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 41,
   },
   {
@@ -504,6 +545,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 按音标校正为 starry",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 42,
   },
   {
@@ -516,6 +558,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 43,
   },
   {
@@ -528,6 +571,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 44,
   },
   {
@@ -540,6 +584,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 45,
   },
   {
@@ -552,6 +597,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 46,
   },
   {
@@ -564,6 +610,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 47,
   },
   {
@@ -576,6 +623,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 按音标校正为 rooftop",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 48,
   },
   {
@@ -588,6 +636,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 49,
   },
   {
@@ -600,6 +649,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 原文为 lopsided，形容埃罗尔身形歪斜",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 50,
   },
   {
@@ -609,9 +659,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 飘，摆动，拍打，拍打声，片状垂悬物\nv. 拍打，鼓翼而飞，飘动\n文中特指：拍打；扑扇（翅膀）",
     example: "Silhouetted against the golden moon, and growing larger every moment, was a large, strangely lopsided creature, and it was flapping in Harry's direction.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 51,
   },
   {
@@ -624,6 +675,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 原表英文列错位，按音标/释义校正为 latch",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 52,
   },
   {
@@ -636,6 +688,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 雅思 · 原表英文列错位，按音标/释义校正为 slam",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 53,
   },
   {
@@ -648,6 +701,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 54,
   },
   {
@@ -660,6 +714,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 原表英文列错位，按音标/释义校正为 flump",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 55,
   },
   {
@@ -672,6 +727,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 · 原表英文列错位，按音标/释义校正为 cord",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 56,
   },
   {
@@ -684,6 +740,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 原表英文列错位，按音标/释义校正为 bleary",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 57,
   },
   {
@@ -696,6 +753,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 雅思 · 原表英文列错位，按音标/释义校正为 feeble",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 58,
   },
   {
@@ -708,6 +766,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 59,
   },
   {
@@ -720,6 +779,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 专八 · 原表英文列错位，按音标/释义校正为 gulp",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 60,
   },
   {
@@ -732,6 +792,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 雅思 专八 · 按音标校正为 affectionate",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 61,
   },
   {
@@ -744,6 +805,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 原表英文列错位，按音标/释义校正为 nip",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 62,
   },
   {
@@ -756,6 +818,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 原表英文列错位，按音标/释义校正为 tawny",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 63,
   },
   {
@@ -768,6 +831,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 原表英文列错位，按音标/释义校正为 at once",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 64,
   },
   {
@@ -780,6 +844,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 原表英文列错位，按音标/释义校正为 crest",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 65,
   },
   {
@@ -792,6 +857,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 雅思 专八 · 原表英文列错位，按音标/释义校正为 ruffle",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 66,
   },
   {
@@ -804,6 +870,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 67,
   },
   {
@@ -816,6 +883,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 雅思 · 原表英文列错位，按音标/释义校正为 tremble",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 68,
   },
   {
@@ -828,6 +896,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 雅思 专四 · 原表英文列错位，按音标/释义校正为 grin",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 69,
   },
   {
@@ -840,6 +909,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 专四 专八 · 原表英文列错位，按音标/释义校正为 plump",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 70,
   },
   {
@@ -852,6 +922,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 专四 专八 · 原文为 balding",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 71,
   },
   {
@@ -864,6 +935,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 原文为 flaming-red hair 一头红发",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 72,
   },
   {
@@ -876,6 +948,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 原表英文列错位，按音标/释义校正为 gangling",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 73,
   },
   {
@@ -888,6 +961,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 雅思 专四 · 原表英文列错位，按音标/释义校正为 reckon",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 74,
   },
   {
@@ -900,6 +974,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 原表英文列错位，按音标/释义校正为 tomb",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 75,
   },
   {
@@ -912,6 +987,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 76,
   },
   {
@@ -924,6 +1000,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 雅思 专四 · 原表英文列错位，按音标/释义校正为 snap",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 77,
   },
   {
@@ -936,6 +1013,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 专八 · 原表英文列错位，按音标/释义校正为 smug",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 78,
   },
   {
@@ -948,6 +1026,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 79,
   },
   {
@@ -960,6 +1039,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 原表英文列错位，按音标/释义校正为 fez",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 80,
   },
   {
@@ -972,6 +1052,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 专四 专八 · 原表英文列错位，按音标/释义校正为 perch",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 81,
   },
   {
@@ -984,6 +1065,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 82,
   },
   {
@@ -996,6 +1078,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 原文为 horn-rimmed glasses",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 83,
   },
   {
@@ -1008,6 +1091,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 专四 专八 · 原表英文列错位，按音标/释义校正为 miniature",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 84,
   },
   {
@@ -1020,6 +1104,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 雅思 · 原表英文列错位，按音标/释义校正为 spin",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 85,
   },
   {
@@ -1032,6 +1117,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 · 原表英文列错位，按音标/释义校正为 brass",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 86,
   },
   {
@@ -1044,6 +1130,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 专八 · 原表英文列错位，按音标/释义校正为 scrawl",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 87,
   },
   {
@@ -1056,6 +1143,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 88,
   },
   {
@@ -1068,6 +1156,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 89,
   },
   {
@@ -1080,6 +1169,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 90,
   },
   {
@@ -1092,6 +1182,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 专八 · 原表英文列错位，按音标/释义校正为 scuttle",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 91,
   },
   {
@@ -1104,6 +1195,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 92,
   },
   {
@@ -1116,6 +1208,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 93,
   },
   {
@@ -1128,6 +1221,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 94,
   },
   {
@@ -1140,6 +1234,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 95,
   },
   {
@@ -1152,6 +1247,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 96,
   },
   {
@@ -1161,9 +1257,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 飘，摆动，拍打，拍打声，片状垂悬物\nv. 拍打，鼓翼而飞，飘动\n文中特指：拍打；扑腾（怪物书封面扑扇）",
     example: "Silhouetted against the golden moon, and growing larger every moment, was a large, strangely lopsided creature, and it was flapping in Harry's direction.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 97,
   },
   {
@@ -1176,6 +1273,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 专八 · 原文为 scuttling",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 98,
   },
   {
@@ -1188,6 +1286,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 99,
   },
   {
@@ -1200,6 +1299,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 100,
   },
   {
@@ -1209,9 +1309,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "vi.",
     meaning: "vi. 作呼噜声\nvt. 咕哝\nn. 呼噜声，咕哝\n文中特指：咕哝；哼一声（弗农隔壁睡梦中的哼声）",
     example: "The silence in the dark house was broken only by the distant, grunting snores of his enormous cousin, Dudley.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 101,
   },
   {
@@ -1224,6 +1325,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 102,
   },
   {
@@ -1236,6 +1338,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 1 Owl Post · 猫头鹰传书",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 103,
   },
   {
@@ -1248,6 +1351,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 104,
   },
   {
@@ -1260,6 +1364,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 1 Owl Post · 猫头鹰传书 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 105,
   },
   {
@@ -1272,6 +1377,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 106,
   },
   {
@@ -1284,6 +1390,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 107,
   },
   {
@@ -1296,6 +1403,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 108,
   },
   {
@@ -1308,6 +1416,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 109,
   },
   {
@@ -1320,6 +1429,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 110,
   },
   {
@@ -1332,6 +1442,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 111,
   },
   {
@@ -1344,6 +1455,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 112,
   },
   {
@@ -1356,6 +1468,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 113,
   },
   {
@@ -1368,6 +1481,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 114,
   },
   {
@@ -1380,6 +1494,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 115,
   },
   {
@@ -1392,6 +1507,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 116,
   },
   {
@@ -1401,9 +1517,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 撞击，肿块\nvt. 碰撞\nvi. 撞，颠簸而行\n文中特指：猛然一怔；撞到",
     example: "Marge's train gets in at ten.\" Harry, whose thoughts had been upstairs with the Broomstick Servicing Kit, was brought back to earth with an unpleasant bump.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 117,
   },
   {
@@ -1416,6 +1533,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 118,
   },
   {
@@ -1428,6 +1546,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 119,
   },
   {
@@ -1440,6 +1559,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 120,
   },
   {
@@ -1452,6 +1572,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 121,
   },
   {
@@ -1464,6 +1585,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 122,
   },
   {
@@ -1476,6 +1598,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 123,
   },
   {
@@ -1488,6 +1611,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 124,
   },
   {
@@ -1500,6 +1624,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 原文为 bow tie",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 125,
   },
   {
@@ -1512,6 +1637,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级 六级 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 126,
   },
   {
@@ -1524,6 +1650,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 127,
   },
   {
@@ -1536,6 +1663,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 128,
   },
   {
@@ -1548,6 +1676,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 129,
   },
   {
@@ -1560,6 +1689,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 130,
   },
   {
@@ -1572,6 +1702,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 131,
   },
   {
@@ -1584,6 +1715,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 132,
   },
   {
@@ -1596,6 +1728,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 133,
   },
   {
@@ -1608,6 +1741,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 134,
   },
   {
@@ -1620,6 +1754,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级 六级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 135,
   },
   {
@@ -1632,6 +1767,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级 六级 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 136,
   },
   {
@@ -1644,6 +1780,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 137,
   },
   {
@@ -1656,6 +1793,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 138,
   },
   {
@@ -1668,6 +1806,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts", "toefl"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 托福 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 139,
   },
   {
@@ -1680,6 +1819,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 140,
   },
   {
@@ -1692,6 +1832,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 141,
   },
   {
@@ -1704,6 +1845,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 142,
   },
   {
@@ -1716,6 +1858,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts", "toefl"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级 雅思 托福 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 143,
   },
   {
@@ -1728,6 +1871,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 144,
   },
   {
@@ -1740,6 +1884,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 145,
   },
   {
@@ -1752,6 +1897,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 146,
   },
   {
@@ -1761,9 +1907,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 撞击，肿块\nvt. 碰撞\nvi. 撞，颠簸而行",
     example: "Marge's train gets in at ten.\" Harry, whose thoughts had been upstairs with the Broomstick Servicing Kit, was brought back to earth with an unpleasant bump.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 147,
   },
   {
@@ -1776,6 +1923,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 148,
   },
   {
@@ -1788,6 +1936,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 149,
   },
   {
@@ -1797,9 +1946,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 举，抛，起伏，鼓起\nvt. 用力举起，使举起，使鼓起\nvi. 抛出，起伏，喘息，凸起",
     example: "But Harry wasn't complaining; any excuse not to be with Aunt Marge was fine by him, so he began to heave the case upstairs into the spare bedroom, taking as long as he could.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 150,
   },
   {
@@ -1812,6 +1962,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 151,
   },
   {
@@ -1824,6 +1975,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 152,
   },
   {
@@ -1836,6 +1988,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 153,
   },
   {
@@ -1848,6 +2001,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 154,
   },
   {
@@ -1860,6 +2014,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 155,
   },
   {
@@ -1872,6 +2027,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 156,
   },
   {
@@ -1884,6 +2040,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 157,
   },
   {
@@ -1896,6 +2053,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 158,
   },
   {
@@ -1908,6 +2066,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 159,
   },
   {
@@ -1920,6 +2079,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 160,
   },
   {
@@ -1932,6 +2092,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 161,
   },
   {
@@ -1944,6 +2105,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 162,
   },
   {
@@ -1956,6 +2118,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 163,
   },
   {
@@ -1968,6 +2131,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 164,
   },
   {
@@ -1980,6 +2144,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 165,
   },
   {
@@ -1992,6 +2157,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 166,
   },
   {
@@ -2004,6 +2170,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 167,
   },
   {
@@ -2016,6 +2183,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 168,
   },
   {
@@ -2028,6 +2196,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 169,
   },
   {
@@ -2040,6 +2209,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 170,
   },
   {
@@ -2052,6 +2222,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 171,
   },
   {
@@ -2064,6 +2235,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 172,
   },
   {
@@ -2076,6 +2248,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 173,
   },
   {
@@ -2088,6 +2261,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 174,
   },
   {
@@ -2100,6 +2274,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 175,
   },
   {
@@ -2112,6 +2287,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八 · 原文 snarled",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 176,
   },
   {
@@ -2124,6 +2300,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 英式拼写，同 hiccup",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 177,
   },
   {
@@ -2136,6 +2313,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级 六级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 178,
   },
   {
@@ -2148,6 +2326,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 179,
   },
   {
@@ -2160,6 +2339,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 180,
   },
   {
@@ -2172,6 +2352,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 181,
   },
   {
@@ -2184,6 +2365,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 182,
   },
   {
@@ -2196,6 +2378,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 183,
   },
   {
@@ -2208,6 +2391,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 184,
   },
   {
@@ -2220,6 +2404,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 185,
   },
   {
@@ -2232,6 +2417,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 186,
   },
   {
@@ -2244,6 +2430,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 187,
   },
   {
@@ -2256,6 +2443,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 188,
   },
   {
@@ -2268,6 +2456,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 189,
   },
   {
@@ -2277,9 +2466,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 举，抛，起伏，鼓起\nvt. 用力举起，使举起，使鼓起\nvi. 抛出，起伏，喘息，凸起",
     example: "But Harry wasn't complaining; any excuse not to be with Aunt Marge was fine by him, so he began to heave the case upstairs into the spare bedroom, taking as long as he could.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 190,
   },
   {
@@ -2292,6 +2482,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 191,
   },
   {
@@ -2304,6 +2495,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 192,
   },
   {
@@ -2316,6 +2508,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 193,
   },
   {
@@ -2328,6 +2521,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 194,
   },
   {
@@ -2340,6 +2534,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 195,
   },
   {
@@ -2352,6 +2547,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 196,
   },
   {
@@ -2364,6 +2560,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八 · 原文 tatters（in bloody tatters）",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 197,
   },
   {
@@ -2376,6 +2573,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 198,
   },
   {
@@ -2388,6 +2586,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 199,
   },
   {
@@ -2400,6 +2599,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 2 Aunt Marge's Big Mistake · 玛姬阿姨的重大失误 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 200,
   },
   {
@@ -2412,6 +2612,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 201,
   },
   {
@@ -2424,6 +2625,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem8", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 202,
   },
   {
@@ -2436,6 +2638,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 203,
   },
   {
@@ -2445,9 +2648,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. (绳索的)股，绳，串，海滨，河岸\nvi. 搁浅\nvt. 使搁浅，使落后，使陷于困境，弄断，搓",
     example: "He was stranded, quite alone, in the dark Muggle world, with absolutely nowhere to go.",
-    frequency: 1,
+    frequency: 2,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 204,
   },
   {
@@ -2460,6 +2664,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 雅思 专四 专八 · 原文 expelled（almost certainly expelled from Hogwarts）",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 205,
   },
   {
@@ -2472,6 +2677,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 206,
   },
   {
@@ -2484,6 +2690,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 207,
   },
   {
@@ -2496,6 +2703,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 208,
   },
   {
@@ -2508,6 +2716,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 209,
   },
   {
@@ -2520,6 +2729,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 六级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 210,
   },
   {
@@ -2532,6 +2742,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 211,
   },
   {
@@ -2544,6 +2755,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 212,
   },
   {
@@ -2556,6 +2768,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 专八 · 原文 squinted",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 213,
   },
   {
@@ -2568,6 +2781,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 214,
   },
   {
@@ -2580,6 +2794,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 215,
   },
   {
@@ -2592,6 +2807,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 216,
   },
   {
@@ -2604,6 +2820,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 217,
   },
   {
@@ -2616,6 +2833,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 218,
   },
   {
@@ -2628,6 +2846,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 219,
   },
   {
@@ -2640,6 +2859,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 220,
   },
   {
@@ -2652,6 +2872,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 221,
   },
   {
@@ -2664,6 +2885,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 222,
   },
   {
@@ -2676,6 +2898,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 223,
   },
   {
@@ -2688,6 +2911,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 224,
   },
   {
@@ -2700,6 +2924,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 225,
   },
   {
@@ -2709,9 +2934,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. (绳索的)股，绳，串，海滨，河岸\nvi. 搁浅\nvt. 使搁浅，使落后，使陷于困境，弄断，搓",
     example: "He was stranded, quite alone, in the dark Muggle world, with absolutely nowhere to go.",
-    frequency: 1,
+    frequency: 2,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 226,
   },
   {
@@ -2724,6 +2950,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 227,
   },
   {
@@ -2736,6 +2963,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts", "toefl"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 雅思 托福 专四 · 美式版原文 bangs（英式 fringe）",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 228,
   },
   {
@@ -2748,6 +2976,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["ielts", "toefl"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 雅思 托福",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 229,
   },
   {
@@ -2760,6 +2989,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 230,
   },
   {
@@ -2772,6 +3002,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 231,
   },
   {
@@ -2784,6 +3015,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 232,
   },
   {
@@ -2796,6 +3028,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 233,
   },
   {
@@ -2808,6 +3041,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 234,
   },
   {
@@ -2820,6 +3054,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 235,
   },
   {
@@ -2832,6 +3067,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 236,
   },
   {
@@ -2844,6 +3080,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 237,
   },
   {
@@ -2856,6 +3093,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 238,
   },
   {
@@ -2868,6 +3106,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 239,
   },
   {
@@ -2880,6 +3119,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 240,
   },
   {
@@ -2892,6 +3132,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 241,
   },
   {
@@ -2904,6 +3145,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 242,
   },
   {
@@ -2916,6 +3158,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 243,
   },
   {
@@ -2928,6 +3171,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 244,
   },
   {
@@ -2940,6 +3184,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 245,
   },
   {
@@ -2952,6 +3197,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 246,
   },
   {
@@ -2964,6 +3210,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 247,
   },
   {
@@ -2973,9 +3220,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 咯咯的笑声，轻笑\nvi. 咯咯的笑，咕咕叫",
     example: "\"He was on the Muggle news!\" Stanley turned to the front page and chuckled.",
-    frequency: 1,
+    frequency: 2,
     tags: ["tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 248,
   },
   {
@@ -2988,6 +3236,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 249,
   },
   {
@@ -3000,6 +3249,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 250,
   },
   {
@@ -3012,6 +3262,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "toefl"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 托福 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 251,
   },
   {
@@ -3024,6 +3275,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 252,
   },
   {
@@ -3036,6 +3288,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 与第1章相同错位，按音标校正为 slam",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 253,
   },
   {
@@ -3048,6 +3301,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 254,
   },
   {
@@ -3060,6 +3314,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 255,
   },
   {
@@ -3072,6 +3327,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 256,
   },
   {
@@ -3084,6 +3340,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 257,
   },
   {
@@ -3096,6 +3353,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 258,
   },
   {
@@ -3108,6 +3366,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 259,
   },
   {
@@ -3120,6 +3379,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 260,
   },
   {
@@ -3132,6 +3392,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 261,
   },
   {
@@ -3144,6 +3405,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 262,
   },
   {
@@ -3156,6 +3418,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 263,
   },
   {
@@ -3168,6 +3431,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 264,
   },
   {
@@ -3180,6 +3444,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 265,
   },
   {
@@ -3192,6 +3457,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 266,
   },
   {
@@ -3204,6 +3470,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 267,
   },
   {
@@ -3216,6 +3483,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 268,
   },
   {
@@ -3228,6 +3496,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 269,
   },
   {
@@ -3240,6 +3509,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 六级 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 270,
   },
   {
@@ -3249,9 +3519,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 同等的人，匹敌，贵族\nvi. 凝视，窥视，费力地看，隐现\nvt. 与...同等，封为贵族",
     example: "\"'Ow come you di'n't tell us 'oo you are, eh, Neville?\" said Stan, beaming at Harry, while Ernie's owlish face peered interestedly over Stan's shoulder.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 271,
   },
   {
@@ -3264,6 +3535,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 272,
   },
   {
@@ -3276,6 +3548,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 273,
   },
   {
@@ -3288,6 +3561,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 274,
   },
   {
@@ -3300,6 +3574,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 275,
   },
   {
@@ -3312,6 +3587,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 276,
   },
   {
@@ -3324,6 +3600,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 277,
   },
   {
@@ -3336,6 +3613,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 278,
   },
   {
@@ -3348,6 +3626,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 279,
   },
   {
@@ -3360,6 +3639,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 280,
   },
   {
@@ -3372,6 +3652,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 281,
   },
   {
@@ -3384,6 +3665,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 282,
   },
   {
@@ -3396,6 +3678,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 283,
   },
   {
@@ -3408,6 +3691,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 284,
   },
   {
@@ -3420,6 +3704,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 285,
   },
   {
@@ -3432,6 +3717,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 286,
   },
   {
@@ -3444,6 +3730,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 287,
   },
   {
@@ -3456,6 +3743,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 288,
   },
   {
@@ -3468,6 +3756,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 289,
   },
   {
@@ -3480,6 +3769,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 290,
   },
   {
@@ -3492,6 +3782,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 291,
   },
   {
@@ -3504,6 +3795,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 292,
   },
   {
@@ -3516,6 +3808,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 293,
   },
   {
@@ -3525,9 +3818,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "vt.",
     meaning: "vt. 驱逐，逐出，排出，开除",
     example: "And the worst of it was, he had just done serious magic, which meant that he was almost certainly expelled from Hogwarts.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 294,
   },
   {
@@ -3540,6 +3834,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 295,
   },
   {
@@ -3549,9 +3844,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 大步，步幅，步态，进步\nv. 迈大步走，跨过，跨",
     example: "\"Now, have a crumpet, Harry, while I go and see if Tom's got a room for you.\" Fudge strode out of the parlor and Harry stared after him.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 296,
   },
   {
@@ -3564,6 +3860,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 297,
   },
   {
@@ -3576,6 +3873,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 六级 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 298,
   },
   {
@@ -3588,6 +3886,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 299,
   },
   {
@@ -3600,6 +3899,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 300,
   },
   {
@@ -3612,6 +3912,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 301,
   },
   {
@@ -3624,6 +3925,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 302,
   },
   {
@@ -3636,6 +3938,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 303,
   },
   {
@@ -3648,6 +3951,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 3 The Knight Bus · 骑士公共汽车 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 304,
   },
   {
@@ -3660,6 +3964,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 305,
   },
   {
@@ -3672,6 +3977,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 306,
   },
   {
@@ -3684,6 +3990,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 307,
   },
   {
@@ -3696,6 +4003,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 308,
   },
   {
@@ -3708,6 +4016,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 309,
   },
   {
@@ -3720,6 +4029,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 310,
   },
   {
@@ -3732,6 +4042,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 311,
   },
   {
@@ -3744,6 +4055,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 312,
   },
   {
@@ -3756,6 +4068,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 313,
   },
   {
@@ -3768,6 +4081,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八 · 形容词见 #11 sore",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 314,
   },
   {
@@ -3780,6 +4094,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "kaoyan"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 六级 考研",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 315,
   },
   {
@@ -3789,9 +4104,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "vt.",
     meaning: "vt. 诱惑，引诱，引起...的兴趣，吸引，冒...风险",
     example: "He was sorely tempted, too, by the perfect, moving model of the galaxy in a large glass ball, which would have meant he never had to take another Astronomy lesson.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet4", "cet6"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 316,
   },
   {
@@ -3804,6 +4120,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 317,
   },
   {
@@ -3816,6 +4133,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 六级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 318,
   },
   {
@@ -3828,6 +4146,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 319,
   },
   {
@@ -3840,6 +4159,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 六级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 320,
   },
   {
@@ -3852,6 +4172,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 321,
   },
   {
@@ -3864,6 +4185,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 322,
   },
   {
@@ -3876,6 +4198,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 323,
   },
   {
@@ -3888,6 +4211,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 324,
   },
   {
@@ -3900,6 +4224,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 325,
   },
   {
@@ -3912,6 +4237,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 326,
   },
   {
@@ -3924,6 +4250,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 327,
   },
   {
@@ -3936,6 +4263,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 328,
   },
   {
@@ -3948,6 +4276,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 329,
   },
   {
@@ -3960,6 +4289,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 330,
   },
   {
@@ -3972,6 +4302,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 331,
   },
   {
@@ -3984,6 +4315,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 332,
   },
   {
@@ -3996,6 +4328,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 333,
   },
   {
@@ -4008,6 +4341,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 334,
   },
   {
@@ -4020,6 +4354,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 335,
   },
   {
@@ -4032,6 +4367,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 336,
   },
   {
@@ -4044,6 +4380,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 337,
   },
   {
@@ -4056,6 +4393,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 338,
   },
   {
@@ -4068,6 +4406,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 339,
   },
   {
@@ -4080,6 +4419,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 340,
   },
   {
@@ -4092,6 +4432,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 341,
   },
   {
@@ -4101,9 +4442,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 光束，微光，反光\nvi. 闪烁，隐约地闪现\nvt. 使发微光，使闪烁",
     example: "\" But Harry continued to stare at the front cover of the book; it showed a black dog large as a bear, with gleaming eyes.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 342,
   },
   {
@@ -4116,6 +4458,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 343,
   },
   {
@@ -4128,6 +4471,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 六级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 344,
   },
   {
@@ -4140,6 +4484,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 345,
   },
   {
@@ -4152,6 +4497,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 346,
   },
   {
@@ -4164,6 +4510,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 347,
   },
   {
@@ -4176,6 +4523,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 348,
   },
   {
@@ -4188,6 +4536,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 349,
   },
   {
@@ -4200,6 +4549,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 350,
   },
   {
@@ -4212,6 +4562,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 351,
   },
   {
@@ -4224,6 +4575,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 352,
   },
   {
@@ -4233,9 +4585,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "adj.",
     meaning: "adj. 狂乱的，疯狂的",
     example: "HARRY!\" They were there, both of them, sitting outside Florean Fortescue's Ice Cream Parlor -- Ron looking incredibly freckly, Her,,one very brown, both waving frantically at him.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 六级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 353,
   },
   {
@@ -4248,6 +4601,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 354,
   },
   {
@@ -4257,9 +4611,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 胀，膨胀\nvi. 凸出\nvt. 使膨胀",
     example: "The assistant nearly cried when we said we wanted two.\" \"What's all that, Hermione?\" Harry asked, pointing at not one but three bulging bags in the chair next to her. ,,Well, I'm taking more new subjects than you, aren't IF' said Hermione.",
-    frequency: 1,
+    frequency: 2,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 355,
   },
   {
@@ -4272,6 +4627,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 356,
   },
   {
@@ -4284,6 +4640,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 357,
   },
   {
@@ -4296,6 +4653,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 358,
   },
   {
@@ -4308,6 +4666,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 359,
   },
   {
@@ -4320,6 +4679,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 360,
   },
   {
@@ -4332,6 +4692,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 361,
   },
   {
@@ -4344,6 +4705,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 六级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 362,
   },
   {
@@ -4356,6 +4718,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 363,
   },
   {
@@ -4368,6 +4731,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 364,
   },
   {
@@ -4380,6 +4744,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 365,
   },
   {
@@ -4392,6 +4757,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 366,
   },
   {
@@ -4404,6 +4770,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 367,
   },
   {
@@ -4413,9 +4780,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 破布条，破衣服，梭编工人\nvt. 把...扯碎\nvi. 变破烂",
     example: "The witchs eyes moved from Scabbers's tattered left ear to his front paw, which had a toe missing, and tutted loudly.",
-    frequency: 1,
+    frequency: 2,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 368,
   },
   {
@@ -4428,6 +4796,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 369,
   },
   {
@@ -4440,6 +4809,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 370,
   },
   {
@@ -4449,9 +4819,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 激励，提示，提醒物，提词，付款期限\nadj. 迅速的，敏捷的，立刻的，提词员的\nvt. 激励，鼓动，提示\nadv. 准时地",
     example: "\"Now, if you were looking for something a bit more hard-wearing, you might like one of these --\" She indicated the black rats, who promptly started skipping again.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet4", "cet6", "tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 六级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 371,
   },
   {
@@ -4461,9 +4832,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 皮带扣，扣子\nvt. 扣住，使弯曲\nvi. 扣住，变弯曲，屈服",
     example: "\"How much -- OUCH!\" Ron buckled as something huge and orange came soaring from the top of the highest cage, landed on his head, and then propelled itself, spitting madly, at Scabbers.",
-    frequency: 1,
+    frequency: 2,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 372,
   },
   {
@@ -4476,6 +4848,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 373,
   },
   {
@@ -4488,6 +4861,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 374,
   },
   {
@@ -4500,6 +4874,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 375,
   },
   {
@@ -4512,6 +4887,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 376,
   },
   {
@@ -4524,6 +4900,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 377,
   },
   {
@@ -4536,6 +4913,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 378,
   },
   {
@@ -4548,6 +4926,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 379,
   },
   {
@@ -4560,6 +4939,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 380,
   },
   {
@@ -4572,6 +4952,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 六级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 381,
   },
   {
@@ -4584,6 +4965,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 382,
   },
   {
@@ -4596,6 +4978,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 383,
   },
   {
@@ -4608,6 +4991,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 384,
   },
   {
@@ -4620,6 +5004,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 385,
   },
   {
@@ -4632,6 +5017,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 386,
   },
   {
@@ -4644,6 +5030,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 387,
   },
   {
@@ -4656,6 +5043,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 388,
   },
   {
@@ -4668,6 +5056,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 389,
   },
   {
@@ -4680,6 +5069,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 390,
   },
   {
@@ -4692,6 +5082,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 六级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 391,
   },
   {
@@ -4701,9 +5092,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "phr.",
     meaning: "phr. 颇像；几乎就像",
     example: "It was rather like being introduced to the mayor.",
-    frequency: 1,
+    frequency: 2,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 392,
   },
   {
@@ -4716,6 +5108,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 393,
   },
   {
@@ -4728,6 +5121,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 394,
   },
   {
@@ -4740,6 +5134,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 395,
   },
   {
@@ -4752,6 +5147,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 396,
   },
   {
@@ -4761,9 +5157,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 缝褶，活力，鼓声，船尾突出部，食品\nvt. 打褶，卷起，挤进，塞，收藏\nvi. 缝褶裥，缩拢",
     example: "tucked under 塞在…下面",
-    frequency: 1,
+    frequency: 2,
     tags: ["tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 397,
   },
   {
@@ -4776,6 +5173,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 398,
   },
   {
@@ -4785,9 +5183,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "vi.",
     meaning: "vi. 喷着气弄响鼻子，轻蔑地哼，嘶嘶响着排气\nvt. 哼着鼻子说，喷出，吸入(毒品)\nn. 喷鼻息，(潜艇的)水下通气管",
     example: "Weasley snorted into their pudding.",
-    frequency: 1,
+    frequency: 2,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 399,
   },
   {
@@ -4800,6 +5199,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 400,
   },
   {
@@ -4812,6 +5212,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 401,
   },
   {
@@ -4824,6 +5225,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 402,
   },
   {
@@ -4836,6 +5238,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 六级 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 403,
   },
   {
@@ -4848,6 +5251,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 404,
   },
   {
@@ -4860,6 +5264,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 405,
   },
   {
@@ -4869,9 +5274,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 一窝，一伙\nvt. 孵，沉思",
     example: "Black lost everything the night Harry stopped You- Know-Who, and he's had twelve years alone in Azkaban to brood on that....\" There was a silence.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet4", "cet6", "tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 四级 六级 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 406,
   },
   {
@@ -4884,6 +5290,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 六级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 407,
   },
   {
@@ -4896,6 +5303,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 六级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 408,
   },
   {
@@ -4908,6 +5316,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 409,
   },
   {
@@ -4920,6 +5329,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 410,
   },
   {
@@ -4932,6 +5342,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 411,
   },
   {
@@ -4944,6 +5355,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 4 The Leaky Cauldron · 破釜酒吧 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 412,
   },
   {
@@ -4956,6 +5368,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 413,
   },
   {
@@ -4968,6 +5381,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 414,
   },
   {
@@ -4977,9 +5391,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "adj.",
     meaning: "adj. 易怒的，急躁的",
     example: "Harry got dressed and was just persuading a disgruntled Hedwig to get back into her cage when Ron banged his way into the room, pulling a sweatshirt over his head and looking irritable.",
-    frequency: 1,
+    frequency: 2,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 415,
   },
   {
@@ -4992,6 +5407,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 416,
   },
   {
@@ -5004,6 +5420,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 417,
   },
   {
@@ -5016,6 +5433,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 418,
   },
   {
@@ -5028,6 +5446,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 419,
   },
   {
@@ -5040,6 +5459,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 420,
   },
   {
@@ -5049,9 +5469,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 栖木，高位，杆，河鲈\nv. (使)栖息，就位，位于，(使)暂歇",
     example: "Harry had no chance to speak to Ron or Hermione in the chaos of leaving; they were too busy heaving all their trunks down the Leaky Cauldron's narrow staircase and piling them up near the door, with Hedwig and Hermes, Percy's screech owl, perched on top in their cages.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 421,
   },
   {
@@ -5064,6 +5485,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 422,
   },
   {
@@ -5076,6 +5498,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 423,
   },
   {
@@ -5088,6 +5511,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 424,
   },
   {
@@ -5097,9 +5521,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 三月，进行，行军，步伐，长途跋涉，进行曲，边界\nvi. 进军，前进，交界\nvt. 使行军，使行进",
     example: "Weasley marched Harry across the short stretch of pavement toward the first of two old- fashioned dark green cars, each of which was driven by a furtive-looking wizard wearing a suit of emerald velvet.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 425,
   },
   {
@@ -5109,9 +5534,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 伸展，张开，连绵，一段路，一段时间\nadj. 可伸缩的，弹性的\nvt. 伸展，张开，曲解，使过度伸展\nvi. 伸展，延伸",
     example: "Weasley marched Harry across the short stretch of pavement toward the first of two old- fashioned dark green cars, each of which was driven by a furtive-looking wizard wearing a suit of emerald velvet.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 426,
   },
   {
@@ -5124,6 +5550,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 427,
   },
   {
@@ -5136,6 +5563,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 428,
   },
   {
@@ -5148,6 +5576,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 429,
   },
   {
@@ -5160,6 +5589,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 430,
   },
   {
@@ -5172,6 +5602,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 431,
   },
   {
@@ -5184,6 +5615,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 六级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 432,
   },
   {
@@ -5196,6 +5628,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 433,
   },
   {
@@ -5205,9 +5638,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 喘息，悸动\nvi. 喘息，渴望\nvt. 气喘吁吁地说",
     example: "They were panting and had apparently taken the barrier at a run.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 434,
   },
   {
@@ -5217,9 +5651,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 大步，步幅，步态，进步\nv. 迈大步走，跨过，跨",
     example: "Ginny caught Harry's eye, and they both turned away to hide their laughter as Percy strode over to a girl with long, curly hair, walking with his chest thrown out so that she couldn't miss his shiny badge. stood back to let him on.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 435,
   },
   {
@@ -5232,6 +5667,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 436,
   },
   {
@@ -5244,6 +5680,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 437,
   },
   {
@@ -5256,6 +5693,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 438,
   },
   {
@@ -5268,6 +5706,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 439,
   },
   {
@@ -5280,6 +5719,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 440,
   },
   {
@@ -5292,6 +5732,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 441,
   },
   {
@@ -5304,6 +5745,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 442,
   },
   {
@@ -5313,9 +5755,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 性情古怪的人，急拉，肌肉抽搐，牛肉干\nvi. 痉挛，急拉，急推\nvt. 猛拉",
     example: "Yes, I'll have a spot more brandy, Vernon....\" \"Now, this one here --\" She jerked her head at Harry, who felt his stomach clench.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 443,
   },
   {
@@ -5325,9 +5768,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "vi.",
     meaning: "vi. 畏缩，退缩，畏首畏尾\nn. 退缩，弗林奇戏",
     example: "But he hoped she'd be back soon -- she was the only living creature in this house who didn't flinch at the sight of him.",
-    frequency: 1,
+    frequency: 2,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 444,
   },
   {
@@ -5340,6 +5784,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 445,
   },
   {
@@ -5349,9 +5794,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 忧郁，暗处，幽暗\nvi. 变忧沉，变黑暗\nvt. 使忧郁，使黑暗",
     example: "\"Hedwig,\" he said gloomily, \"you're going to have to clear off for a week.",
-    frequency: 1,
+    frequency: 2,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 446,
   },
   {
@@ -5364,6 +5810,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 447,
   },
   {
@@ -5376,6 +5823,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 448,
   },
   {
@@ -5388,6 +5836,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 449,
   },
   {
@@ -5400,6 +5849,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 450,
   },
   {
@@ -5412,6 +5862,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 451,
   },
   {
@@ -5421,9 +5872,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 门槛，入口，开端，阈",
     example: "Harry, Ron, and Hermione checked on the threshold.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 452,
   },
   {
@@ -5436,6 +5888,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 453,
   },
   {
@@ -5448,6 +5901,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 454,
   },
   {
@@ -5460,6 +5914,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 455,
   },
   {
@@ -5469,9 +5924,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "v.",
     meaning: "v. 连续猛打（尤其指妇女），猛击\nn. 面糊（食物），击球员，打击手",
     example: "\"How d'you know that?\" \"It's on his case,\" she replied, pointing at the luggage rack over the man's head, where there was a small, battered case held together with a large quantity of neatly knotted string.",
-    frequency: 1,
+    frequency: 2,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 456,
   },
   {
@@ -5484,6 +5940,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 457,
   },
   {
@@ -5496,6 +5953,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 458,
   },
   {
@@ -5508,6 +5966,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 459,
   },
   {
@@ -5520,6 +5979,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 460,
   },
   {
@@ -5532,6 +5992,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 461,
   },
   {
@@ -5544,6 +6005,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 462,
   },
   {
@@ -5553,9 +6015,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 定金，诚挚，认真\nadj. 认真的，热心的，重要的",
     example: "And he was a top-security prisoner too.\" \"But they'll catch him, won't they?\" said Hermione earnestly.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 463,
   },
   {
@@ -5568,6 +6031,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 464,
   },
   {
@@ -5580,6 +6044,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 465,
   },
   {
@@ -5592,6 +6057,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 466,
   },
   {
@@ -5604,6 +6070,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 467,
   },
   {
@@ -5616,6 +6083,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 468,
   },
   {
@@ -5628,6 +6096,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 469,
   },
   {
@@ -5637,9 +6106,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 原料，要素，东西，材料，素质，织品，废物，废话\nvt. 装填\nvi. 狼吞虎咽",
     example: "Ron stuffed the Sneakoscope into a particularly horrible pair of Uncle Vernon's old socks, which deadened the sound, then closed the lid of the trunk on it.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 470,
   },
   {
@@ -5652,6 +6122,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 471,
   },
   {
@@ -5664,6 +6135,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 472,
   },
   {
@@ -5673,9 +6145,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "adj.",
     meaning: "adj. 锋利的，敏锐的，强烈的，敏捷的，热心的，渴望的\nn. 挽歌，痛哭\nv. 唱挽歌，痛哭\n文中特指：热切地；强烈地",
     example: "Fred and George told me.\" \"Do you know much about Hogsmeade?\" asked Hermione keenly.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 473,
   },
   {
@@ -5688,6 +6161,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 474,
   },
   {
@@ -5700,6 +6174,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 475,
   },
   {
@@ -5712,6 +6187,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 476,
   },
   {
@@ -5724,6 +6200,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 477,
   },
   {
@@ -5736,6 +6213,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 478,
   },
   {
@@ -5745,9 +6223,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 摸索，笨拙的行动，漏球\nvt. 摸索，乱摸，笨拙的处理，漏接(球)\nvi. 摸索，笨手笨脚，漏球",
     example: "You keep away from me.\" He fumbled behind him for the latch on the door.",
-    frequency: 1,
+    frequency: 2,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 479,
   },
   {
@@ -5760,6 +6239,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 480,
   },
   {
@@ -5772,6 +6252,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 481,
   },
   {
@@ -5784,6 +6265,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 482,
   },
   {
@@ -5796,6 +6278,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 483,
   },
   {
@@ -5805,9 +6288,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 挤压，压碎的东西，南瓜属植物，拥挤的人群\nvt. 压扁，镇压，压制\nvi. 被压扁，发溅泼声，挤入",
     example: "Harry's dead parents, who had been a witch and wizard themselves, were never mentioned under the Dursleys' roof For years, Aunt Petunia and Uncle Vernon had hoped that if they kept Harry as downtrodden as possible, they would be able to squash the magic out of him.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 484,
   },
   {
@@ -5820,6 +6304,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 485,
   },
   {
@@ -5832,6 +6317,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 486,
   },
   {
@@ -5844,6 +6330,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 487,
   },
   {
@@ -5856,6 +6343,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 488,
   },
   {
@@ -5865,9 +6353,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 冷笑，嘲笑\nvi. 嘲笑，冷笑\nvt. 嘲笑着说，嘲笑得使",
     example: "\"And why should I do that?\" sneered Uncle Vernon.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 489,
   },
   {
@@ -5880,6 +6369,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 490,
   },
   {
@@ -5892,6 +6382,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 491,
   },
   {
@@ -5904,6 +6395,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 492,
   },
   {
@@ -5916,6 +6408,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 493,
   },
   {
@@ -5928,6 +6421,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 494,
   },
   {
@@ -5940,6 +6434,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 六级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 495,
   },
   {
@@ -5952,6 +6447,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 496,
   },
   {
@@ -5964,6 +6460,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 497,
   },
   {
@@ -5976,6 +6473,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 498,
   },
   {
@@ -5988,6 +6486,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 499,
   },
   {
@@ -5997,9 +6496,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 喘气\nvi. 喘气，喘息，渴望\nvt. 气喘吁吁地说",
     example: "\"Ouch!\" gasped Hermione.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 500,
   },
   {
@@ -6012,6 +6512,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 501,
   },
   {
@@ -6021,9 +6522,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 斗蓬，大氅，掩护\nvt. 遮掩，隐匿，使披斗蓬",
     example: "\"Sorry -- d'you know what's going on? -- Ouch -- sorry \"Hullo, Neville,\" said Harry, feeling around in the dark and pulling Neville up by his cloak.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet4", "cet6"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 六级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 502,
   },
   {
@@ -6036,6 +6538,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 503,
   },
   {
@@ -6045,9 +6548,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 尖叫，抱怨\nvi. 发出尖叫声，高声埋怨\nvt. 用尖声说",
     example: "Harry felt her pass him, heard the door slide open again, and then a thud and two loud squeals of pain.",
-    frequency: 1,
+    frequency: 2,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 504,
   },
   {
@@ -6060,6 +6564,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 505,
   },
   {
@@ -6072,6 +6577,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 506,
   },
   {
@@ -6084,6 +6590,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 507,
   },
   {
@@ -6096,6 +6603,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 508,
   },
   {
@@ -6108,6 +6616,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 六级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 509,
   },
   {
@@ -6120,6 +6629,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 六级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 510,
   },
   {
@@ -6129,9 +6639,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "vt.",
     meaning: "vt. 撤回，取回，撤消，使撤退，拉开，移开\nvi. 撤退，离开",
     example: "As though the creature beneath the cloak sensed Harry's gaze, the hand was suddenly withdrawn into the folds of its black cloak.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 511,
   },
   {
@@ -6144,6 +6655,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 512,
   },
   {
@@ -6156,6 +6668,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 513,
   },
   {
@@ -6168,6 +6681,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 514,
   },
   {
@@ -6180,6 +6694,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 515,
   },
   {
@@ -6189,9 +6704,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 平板，厚片\nvt. 切成厚板，以平板盖上",
     example: "Professor Lupin was breaking an enormous slab of chocolate into pieces.",
-    frequency: 1,
+    frequency: 2,
     tags: ["tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 516,
   },
   {
@@ -6204,6 +6720,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 517,
   },
   {
@@ -6216,6 +6733,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 518,
   },
   {
@@ -6228,6 +6746,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 519,
   },
   {
@@ -6240,6 +6759,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 520,
   },
   {
@@ -6252,6 +6772,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 521,
   },
   {
@@ -6261,9 +6782,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 攀缘，爬行，抢夺，混乱，紧急起飞\nvi. 攀缘，杂乱蔓延，争夺，拼凑，匆忙\nvt. 攀登，扰乱，使混杂",
     example: "At long last, the train stopped at Hogsmeade station, and there was a great scramble to get outside; owls hooted, cats meowed, and Neville's pet toad croaked loudly from under his hat.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 522,
   },
   {
@@ -6273,9 +6795,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "v.",
     meaning: "v. 招手示意，召唤，吸引\nn. 表召唤的点头(或手势)",
     example: "Harry, Ron, and Hermione turned and saw the gigantic outline of Hagrid at the other end of the platform, beckoning the terrified-looking new students forward for their traditional journey across the lake.",
-    frequency: 1,
+    frequency: 2,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 523,
   },
   {
@@ -6288,6 +6811,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 524,
   },
   {
@@ -6300,6 +6824,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 525,
   },
   {
@@ -6309,9 +6834,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 昏厥，昏倒\nadj. 模糊的，微弱的，无力的\nvi. 昏倒，变得微弱",
     example: "A faint, tinny sort of whistle was coming from somewhere.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 526,
   },
   {
@@ -6324,6 +6850,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 527,
   },
   {
@@ -6336,6 +6863,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 528,
   },
   {
@@ -6348,6 +6876,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 529,
   },
   {
@@ -6360,6 +6889,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 530,
   },
   {
@@ -6372,6 +6902,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 531,
   },
   {
@@ -6384,6 +6915,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 532,
   },
   {
@@ -6396,6 +6928,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 533,
   },
   {
@@ -6405,9 +6938,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 颚，颌\nv. 闲谈，教训，唠叨",
     example: "\"Shove off, Malfoy,\" said Ron, whose jaw was clenched.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 534,
   },
   {
@@ -6420,6 +6954,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 535,
   },
   {
@@ -6429,9 +6964,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 牢牢抓住，钉紧，敲弯钉尖\nvt. 紧握，牢牢地抓住，确定，敲弯\nvi. 握紧，钉牢",
     example: "\"Shove off, Malfoy,\" said Ron, whose jaw was clenched.",
-    frequency: 1,
+    frequency: 2,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 536,
   },
   {
@@ -6441,9 +6977,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 侮慢无礼的人\nadj. 粗野的，无礼的，侮慢的",
     example: "Malfoy gave Professor Lupin an insolent stare, which took in the patches on his robes and the delapidated suitcase.",
-    frequency: 1,
+    frequency: 2,
     tags: ["tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 537,
   },
   {
@@ -6456,6 +6993,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 538,
   },
   {
@@ -6468,6 +7006,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 539,
   },
   {
@@ -6480,6 +7019,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 540,
   },
   {
@@ -6489,9 +7029,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "vi.",
     meaning: "vi. 傻笑，假笑，得意地笑\nn. 傻笑，假笑，得意的笑",
     example: "With a tiny hint of sarcasm in his voice, he said, \"Oh, no -- er -- Professor,\" then he smirked at Crabbe and Goyle and led them up the steps into the castle.",
-    frequency: 1,
+    frequency: 2,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 541,
   },
   {
@@ -6504,6 +7045,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 542,
   },
   {
@@ -6516,6 +7058,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 543,
   },
   {
@@ -6528,6 +7071,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 544,
   },
   {
@@ -6540,6 +7084,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 545,
   },
   {
@@ -6552,6 +7097,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 546,
   },
   {
@@ -6564,6 +7110,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 547,
   },
   {
@@ -6576,6 +7123,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 548,
   },
   {
@@ -6588,6 +7136,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 549,
   },
   {
@@ -6600,6 +7149,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 550,
   },
   {
@@ -6612,6 +7162,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 551,
   },
   {
@@ -6624,6 +7175,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 552,
   },
   {
@@ -6636,6 +7188,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 553,
   },
   {
@@ -6648,6 +7201,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 554,
   },
   {
@@ -6657,9 +7211,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 大惊小怪，小题大作，忙乱\nvi. 无事自扰，焦急，焦燥，忙乱\nvt. 使激动，使烦燥",
     example: "It was bad enough that he'd passed out, or whatever he had done, without everyone making all this fuss.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 555,
   },
   {
@@ -6672,6 +7227,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 556,
   },
   {
@@ -6684,6 +7240,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 557,
   },
   {
@@ -6693,9 +7250,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 同等的人，匹敌，贵族\nvi. 凝视，窥视，费力地看，隐现\nvt. 与...同等，封为贵族",
     example: "\"D'you think we've broken down?\" \"Dunno...\" There was a squeaking sound, and Harry saw the dim black outline of Ron, wiping a patch clean on the window and peering out.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 558,
   },
   {
@@ -6708,6 +7266,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 559,
   },
   {
@@ -6720,6 +7279,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 560,
   },
   {
@@ -6732,6 +7292,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 561,
   },
   {
@@ -6741,9 +7302,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 横梁，杆，光线，容光焕发\nvi. 用梁支承，微笑，射出光线\nvt. 照耀，感到欣喜",
     example: "You couldn't help trusting Albus Dumbledore, and as Harry watched him beaming around at the students, he felt really calm for the first time since the dementor had entered the train compartment.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet4", "cet6", "tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 六级 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 562,
   },
   {
@@ -6756,6 +7318,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 563,
   },
   {
@@ -6768,6 +7331,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 564,
   },
   {
@@ -6780,6 +7344,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 565,
   },
   {
@@ -6792,6 +7357,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 566,
   },
   {
@@ -6804,6 +7370,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 567,
   },
   {
@@ -6813,9 +7380,10 @@ export const azkabanWords: WordEntry[] = [
     pos: "n.",
     meaning: "n. 消散，分散，散播，散射，散布，酒馆\nvi. 散布，散播，消散\nvt. 使消散，使分散，撒，散布，散播，散射",
     example: "\"First, Professor Lupin, who has kindly consented to fill the post of Defense Against the Dark Arts teacher.\" There was some scattered, rather unenthusiastic applause.",
-    frequency: 1,
+    frequency: 2,
     tags: ["cet4", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 568,
   },
   {
@@ -6828,6 +7396,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 569,
   },
   {
@@ -6840,6 +7409,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 570,
   },
   {
@@ -6852,6 +7422,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 571,
   },
   {
@@ -6864,6 +7435,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 572,
   },
   {
@@ -6876,6 +7448,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 573,
   },
   {
@@ -6888,6 +7461,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级 六级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 574,
   },
   {
@@ -6900,6 +7474,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 575,
   },
   {
@@ -6912,6 +7487,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 576,
   },
   {
@@ -6924,6 +7500,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 577,
   },
   {
@@ -6936,6 +7513,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 578,
   },
   {
@@ -6948,6 +7526,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 579,
   },
   {
@@ -6960,6 +7539,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 580,
   },
   {
@@ -6972,6 +7552,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 5 The Dementor · 摄魂怪",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 581,
   },
   {
@@ -6984,6 +7565,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 582,
   },
   {
@@ -6996,6 +7578,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 5 The Dementor · 摄魂怪 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 583,
   },
   {
@@ -7008,6 +7591,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 584,
   },
   {
@@ -7020,6 +7604,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 585,
   },
   {
@@ -7032,6 +7617,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 586,
   },
   {
@@ -7044,6 +7630,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 587,
   },
   {
@@ -7056,6 +7643,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 588,
   },
   {
@@ -7068,6 +7656,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 589,
   },
   {
@@ -7080,6 +7669,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 590,
   },
   {
@@ -7092,6 +7682,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 591,
   },
   {
@@ -7104,6 +7695,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 592,
   },
   {
@@ -7116,6 +7708,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 593,
   },
   {
@@ -7128,6 +7721,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 594,
   },
   {
@@ -7140,6 +7734,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 六级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 595,
   },
   {
@@ -7152,6 +7747,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 596,
   },
   {
@@ -7164,6 +7760,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 597,
   },
   {
@@ -7176,6 +7773,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 598,
   },
   {
@@ -7188,6 +7786,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 599,
   },
   {
@@ -7200,6 +7799,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 600,
   },
   {
@@ -7212,6 +7812,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 601,
   },
   {
@@ -7224,6 +7825,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 602,
   },
   {
@@ -7236,6 +7838,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 603,
   },
   {
@@ -7248,6 +7851,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 604,
   },
   {
@@ -7260,6 +7864,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 605,
   },
   {
@@ -7272,6 +7877,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 606,
   },
   {
@@ -7284,6 +7890,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 607,
   },
   {
@@ -7296,6 +7903,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 608,
   },
   {
@@ -7308,6 +7916,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 609,
   },
   {
@@ -7320,6 +7929,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 610,
   },
   {
@@ -7332,6 +7942,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 611,
   },
   {
@@ -7344,6 +7955,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 612,
   },
   {
@@ -7356,6 +7968,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 613,
   },
   {
@@ -7368,6 +7981,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 614,
   },
   {
@@ -7380,6 +7994,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 615,
   },
   {
@@ -7392,6 +8007,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 616,
   },
   {
@@ -7404,6 +8020,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 617,
   },
   {
@@ -7416,6 +8033,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 618,
   },
   {
@@ -7428,6 +8046,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 六级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 619,
   },
   {
@@ -7440,6 +8059,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 620,
   },
   {
@@ -7452,6 +8072,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 621,
   },
   {
@@ -7464,6 +8085,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 622,
   },
   {
@@ -7476,6 +8098,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 623,
   },
   {
@@ -7488,6 +8111,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 624,
   },
   {
@@ -7500,6 +8124,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 625,
   },
   {
@@ -7512,6 +8137,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 626,
   },
   {
@@ -7523,6 +8149,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 627,
   },
   {
@@ -7535,6 +8162,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 628,
   },
   {
@@ -7547,6 +8175,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 629,
   },
   {
@@ -7559,6 +8188,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 630,
   },
   {
@@ -7571,6 +8201,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 631,
   },
   {
@@ -7583,6 +8214,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 632,
   },
   {
@@ -7595,6 +8227,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 633,
   },
   {
@@ -7607,6 +8240,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 634,
   },
   {
@@ -7619,6 +8253,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 635,
   },
   {
@@ -7631,6 +8266,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 六级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 636,
   },
   {
@@ -7643,6 +8279,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 637,
   },
   {
@@ -7655,6 +8292,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 638,
   },
   {
@@ -7667,6 +8305,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 639,
   },
   {
@@ -7679,6 +8318,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 640,
   },
   {
@@ -7691,6 +8331,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 641,
   },
   {
@@ -7703,6 +8344,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 642,
   },
   {
@@ -7715,6 +8357,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 643,
   },
   {
@@ -7727,6 +8370,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 644,
   },
   {
@@ -7739,6 +8383,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 645,
   },
   {
@@ -7751,6 +8396,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 646,
   },
   {
@@ -7763,6 +8409,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 647,
   },
   {
@@ -7775,6 +8422,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 648,
   },
   {
@@ -7787,6 +8435,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 649,
   },
   {
@@ -7799,6 +8448,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 六级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 650,
   },
   {
@@ -7811,6 +8461,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 651,
   },
   {
@@ -7823,6 +8474,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 652,
   },
   {
@@ -7835,6 +8487,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 653,
   },
   {
@@ -7847,6 +8500,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 654,
   },
   {
@@ -7859,6 +8513,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 655,
   },
   {
@@ -7871,6 +8526,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 656,
   },
   {
@@ -7883,6 +8539,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 657,
   },
   {
@@ -7895,6 +8552,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 658,
   },
   {
@@ -7907,6 +8565,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 659,
   },
   {
@@ -7919,6 +8578,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 660,
   },
   {
@@ -7931,6 +8591,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 661,
   },
   {
@@ -7943,6 +8604,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 662,
   },
   {
@@ -7955,6 +8617,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 六级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 663,
   },
   {
@@ -7967,6 +8630,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 664,
   },
   {
@@ -7979,6 +8643,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 665,
   },
   {
@@ -7991,6 +8656,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 666,
   },
   {
@@ -8003,6 +8669,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 667,
   },
   {
@@ -8015,6 +8682,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 六级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 668,
   },
   {
@@ -8027,6 +8695,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 669,
   },
   {
@@ -8039,6 +8708,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 670,
   },
   {
@@ -8051,6 +8721,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 671,
   },
   {
@@ -8063,6 +8734,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 672,
   },
   {
@@ -8075,6 +8747,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 673,
   },
   {
@@ -8087,6 +8760,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 674,
   },
   {
@@ -8099,6 +8773,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 675,
   },
   {
@@ -8111,6 +8786,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 676,
   },
   {
@@ -8123,6 +8799,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 677,
   },
   {
@@ -8135,6 +8812,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 678,
   },
   {
@@ -8147,6 +8825,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 679,
   },
   {
@@ -8159,6 +8838,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 680,
   },
   {
@@ -8171,6 +8851,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 681,
   },
   {
@@ -8183,6 +8864,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 682,
   },
   {
@@ -8195,6 +8877,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思 专八 · 录入稿 flacon 已校正为 falcon",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 683,
   },
   {
@@ -8207,6 +8890,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 六级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 684,
   },
   {
@@ -8219,6 +8903,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 685,
   },
   {
@@ -8231,6 +8916,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 686,
   },
   {
@@ -8243,6 +8929,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 687,
   },
   {
@@ -8255,6 +8942,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 688,
   },
   {
@@ -8267,6 +8955,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 689,
   },
   {
@@ -8279,6 +8968,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 690,
   },
   {
@@ -8291,6 +8981,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 691,
   },
   {
@@ -8303,6 +8994,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 692,
   },
   {
@@ -8315,6 +9007,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 六级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 693,
   },
   {
@@ -8327,6 +9020,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 694,
   },
   {
@@ -8339,6 +9033,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 695,
   },
   {
@@ -8351,6 +9046,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 696,
   },
   {
@@ -8363,6 +9059,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 六级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 697,
   },
   {
@@ -8375,6 +9072,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 698,
   },
   {
@@ -8387,6 +9085,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 699,
   },
   {
@@ -8399,6 +9098,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 700,
   },
   {
@@ -8411,6 +9111,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 701,
   },
   {
@@ -8423,6 +9124,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 702,
   },
   {
@@ -8435,6 +9137,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 703,
   },
   {
@@ -8447,6 +9150,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 704,
   },
   {
@@ -8459,6 +9163,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 705,
   },
   {
@@ -8471,6 +9176,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 706,
   },
   {
@@ -8483,6 +9189,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 707,
   },
   {
@@ -8495,6 +9202,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 六级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 708,
   },
   {
@@ -8507,6 +9215,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 709,
   },
   {
@@ -8519,6 +9228,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 710,
   },
   {
@@ -8531,6 +9241,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 711,
   },
   {
@@ -8543,6 +9254,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 六级 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 712,
   },
   {
@@ -8555,6 +9267,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 713,
   },
   {
@@ -8567,6 +9280,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 714,
   },
   {
@@ -8579,6 +9293,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 715,
   },
   {
@@ -8591,6 +9306,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 716,
   },
   {
@@ -8603,6 +9319,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 717,
   },
   {
@@ -8615,6 +9332,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 718,
   },
   {
@@ -8627,6 +9345,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 719,
   },
   {
@@ -8639,6 +9358,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 720,
   },
   {
@@ -8651,6 +9371,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 721,
   },
   {
@@ -8663,6 +9384,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 722,
   },
   {
@@ -8675,6 +9397,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 723,
   },
   {
@@ -8687,6 +9410,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 724,
   },
   {
@@ -8699,6 +9423,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 725,
   },
   {
@@ -8711,6 +9436,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 726,
   },
   {
@@ -8723,6 +9449,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 727,
   },
   {
@@ -8735,6 +9462,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 728,
   },
   {
@@ -8747,6 +9475,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 729,
   },
   {
@@ -8759,6 +9488,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 六级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 730,
   },
   {
@@ -8771,6 +9501,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 731,
   },
   {
@@ -8783,6 +9514,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 732,
   },
   {
@@ -8795,6 +9527,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 733,
   },
   {
@@ -8807,6 +9540,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 734,
   },
   {
@@ -8819,6 +9553,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 735,
   },
   {
@@ -8831,6 +9566,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 736,
   },
   {
@@ -8843,6 +9579,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 737,
   },
   {
@@ -8855,6 +9592,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 738,
   },
   {
@@ -8867,6 +9605,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 739,
   },
   {
@@ -8879,6 +9618,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 740,
   },
   {
@@ -8891,6 +9631,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 741,
   },
   {
@@ -8903,6 +9644,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 742,
   },
   {
@@ -8915,6 +9657,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 743,
   },
   {
@@ -8927,6 +9670,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 744,
   },
   {
@@ -8939,6 +9683,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 745,
   },
   {
@@ -8951,6 +9696,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 746,
   },
   {
@@ -8963,6 +9709,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 747,
   },
   {
@@ -8975,6 +9722,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 748,
   },
   {
@@ -8987,6 +9735,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 六级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 749,
   },
   {
@@ -8999,6 +9748,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 750,
   },
   {
@@ -9011,6 +9761,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 751,
   },
   {
@@ -9023,6 +9774,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 752,
   },
   {
@@ -9035,6 +9787,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 雅思 专八 · 录入稿 ecastatic 已校正为 ecstatic",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 753,
   },
   {
@@ -9047,6 +9800,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 754,
   },
   {
@@ -9059,6 +9813,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 六级 雅思 专四 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 755,
   },
   {
@@ -9071,6 +9826,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 756,
   },
   {
@@ -9083,6 +9839,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 757,
   },
   {
@@ -9095,6 +9852,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 758,
   },
   {
@@ -9107,6 +9865,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 759,
   },
   {
@@ -9119,6 +9878,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 760,
   },
   {
@@ -9131,6 +9891,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "cet6", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 六级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 761,
   },
   {
@@ -9143,6 +9904,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 762,
   },
   {
@@ -9155,6 +9917,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 763,
   },
   {
@@ -9167,6 +9930,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet6", "tem4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 六级 雅思 专四",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 764,
   },
   {
@@ -9179,6 +9943,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 765,
   },
   {
@@ -9191,6 +9956,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 766,
   },
   {
@@ -9203,6 +9969,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 767,
   },
   {
@@ -9215,6 +9982,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 768,
   },
   {
@@ -9227,6 +9995,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 769,
   },
   {
@@ -9239,6 +10008,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 770,
   },
   {
@@ -9251,6 +10021,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 771,
   },
   {
@@ -9263,6 +10034,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 772,
   },
   {
@@ -9275,6 +10047,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 773,
   },
   {
@@ -9287,6 +10060,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4", "tem8", "ielts"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级 雅思 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 774,
   },
   {
@@ -9299,6 +10073,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["cet4"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 四级",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 775,
   },
   {
@@ -9311,6 +10086,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["other"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 776,
   },
   {
@@ -9323,6 +10099,7 @@ export const azkabanWords: WordEntry[] = [
     frequency: 1,
     tags: ["tem8"],
     note: "Chapter 6 Talons and Tea Leaves · 爪与茶渣 · 词库 专八",
+    book: "哈利·波特与阿兹卡班的囚徒",
     entryOrder: 777,
   },
 ]

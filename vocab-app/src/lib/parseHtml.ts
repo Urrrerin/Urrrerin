@@ -117,10 +117,29 @@ function extractPosFromMeaning(meaning: string): { meaning: string; pos?: string
   return { meaning: kept.join('\n'), pos }
 }
 
+function findBookLabel(doc: Document): string | undefined {
+  const header = doc.querySelector('.book-header h1')
+  if (!header) return undefined
+  let text = cleanText(header.textContent || '')
+  text = text.replace(/\s*·\s*生词表.*$/, '').trim()
+  return text || undefined
+}
+
+function findChapterLabel(table: Element): string | undefined {
+  const chapter = table.closest('.chapter')
+  const header = chapter?.querySelector('.chapter-header')
+  if (!header) return undefined
+  let text = cleanText(header.textContent || '')
+  text = text.replace(/\s*·\s*\d+\s*条\s*$/, '')
+  text = text.replace(/(Chapter\s+\d+)([A-Za-z])/i, '$1 $2')
+  return text || undefined
+}
+
 /** 《阿兹卡班》生词表：按章节保留全部行，不去重 */
 function parseAzkabanTable(doc: Document): WordEntry[] {
   const tables = Array.from(doc.querySelectorAll('table'))
   const words: WordEntry[] = []
+  const book = findBookLabel(doc)
   let index = 0
 
   for (const table of tables) {
@@ -176,22 +195,13 @@ function parseAzkabanTable(doc: Document): WordEntry[] {
         frequency: parseFrequency(occur),
         tags: parseTags(lexicon),
         note: noteParts.length > 0 ? noteParts.join(' · ') : undefined,
+        book,
         entryOrder: index,
       })
     }
   }
 
   return words
-}
-
-function findChapterLabel(table: Element): string | undefined {
-  const chapter = table.closest('.chapter')
-  const header = chapter?.querySelector('.chapter-header')
-  if (!header) return undefined
-  let text = cleanText(header.textContent || '')
-  text = text.replace(/\s*·\s*\d+\s*条\s*$/, '')
-  text = text.replace(/(Chapter\s+\d+)([A-Za-z])/i, '$1 $2')
-  return text || undefined
 }
 
 function parseTable(doc: Document): WordEntry[] {

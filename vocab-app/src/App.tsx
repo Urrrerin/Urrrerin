@@ -4,9 +4,11 @@ import { parseWordsFromHtml } from './lib/parseHtml'
 import { loadWords, resetToSample, saveWords } from './lib/storage'
 import { loadProgress, type LearningState } from './lib/progress'
 import {
-  buildFilterOptions,
+  CHIP_FILTERS,
   filterAndSortWords,
   getFilterLabel,
+  listBooks,
+  listChapters,
   sortLabels,
 } from './lib/query'
 import { TodayPage } from './pages/TodayPage'
@@ -39,6 +41,8 @@ function App() {
   const [source, setSource] = useState<'sample' | 'import'>('sample')
   const [query, setQuery] = useState('')
   const [filter, setFilter] = useState<FilterKey>('all')
+  const [bookFilter, setBookFilter] = useState('all')
+  const [chapterFilter, setChapterFilter] = useState('all')
   const [sort, setSort] = useState<SortKey>('entry-order')
   const [selected, setSelected] = useState<WordEntry | null>(null)
   const [toast, setToast] = useState<string | null>(null)
@@ -62,16 +66,36 @@ function App() {
     return () => window.clearTimeout(timer)
   }, [toast])
 
-  const visible = useMemo(
-    () => filterAndSortWords(words, query, filter, sort, progress),
-    [words, query, filter, sort, progress],
+  const books = useMemo(() => listBooks(words), [words])
+  const chapters = useMemo(
+    () => listChapters(words, bookFilter),
+    [words, bookFilter],
   )
 
-  const filterOptions = useMemo(() => buildFilterOptions(words), [words])
+  useEffect(() => {
+    if (bookFilter !== 'all' && !books.includes(bookFilter)) {
+      setBookFilter('all')
+      setChapterFilter('all')
+    }
+  }, [bookFilter, books])
 
   useEffect(() => {
-    if (!filterOptions.includes(filter)) setFilter('all')
-  }, [filter, filterOptions])
+    if (
+      chapterFilter !== 'all' &&
+      !chapters.some((c) => c.key === chapterFilter)
+    ) {
+      setChapterFilter('all')
+    }
+  }, [chapterFilter, chapters])
+
+  const visible = useMemo(
+    () =>
+      filterAndSortWords(words, query, filter, sort, progress, {
+        book: bookFilter,
+        chapter: chapterFilter,
+      }),
+    [words, query, filter, sort, progress, bookFilter, chapterFilter],
+  )
 
   function showToast(message: string) {
     setToast(message)
@@ -145,8 +169,42 @@ function App() {
               />
             </label>
 
-            <div className="filters" role="tablist" aria-label="筛选">
-              {filterOptions.map((key) => (
+            <div className="scope-filters" aria-label="书目与章节">
+              <label className="scope-field">
+                <span>书目</span>
+                <select
+                  value={bookFilter}
+                  onChange={(e) => {
+                    setBookFilter(e.target.value)
+                    setChapterFilter('all')
+                  }}
+                >
+                  <option value="all">全部书目</option>
+                  {books.map((book) => (
+                    <option key={book} value={book}>
+                      {book}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="scope-field">
+                <span>章节</span>
+                <select
+                  value={chapterFilter}
+                  onChange={(e) => setChapterFilter(e.target.value)}
+                >
+                  <option value="all">全部章节</option>
+                  {chapters.map((chapter) => (
+                    <option key={chapter.key} value={chapter.key}>
+                      {chapter.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+
+            <div className="filters" role="tablist" aria-label="标签筛选">
+              {CHIP_FILTERS.map((key) => (
                 <button
                   key={key}
                   type="button"
@@ -155,7 +213,7 @@ function App() {
                   className={filter === key ? 'chip active' : 'chip'}
                   onClick={() => setFilter(key)}
                 >
-                  {getFilterLabel(key, words)}
+                  {getFilterLabel(key)}
                 </button>
               ))}
             </div>
