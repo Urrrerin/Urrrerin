@@ -1,15 +1,24 @@
 import { useState } from 'react'
 import type { WordEntry } from '../types'
+import {
+  DEFAULT_DAILY_LIMITS,
+  NEW_LIMIT_RANGE,
+  REVIEW_LIMIT_RANGE,
+  loadDailyLimits,
+  saveDailyLimits,
+  type DailyLimits,
+} from '../lib/dailyLimits'
 import { loadProgress, seedDemoReviewProgress } from '../lib/progress'
 
 /** 改一版就换这个戳，方便确认手机是否拿到新包 */
-export const APP_BUILD = '0724-f'
+export const APP_BUILD = '0725-a'
 
 type Props = {
   lexiconCount: number
   words: WordEntry[]
   lexiconVersion?: string
   onProgressSeeded?: () => void
+  onLimitsChanged?: (limits: DailyLimits) => void
 }
 
 export function MinePage({
@@ -17,8 +26,13 @@ export function MinePage({
   words,
   lexiconVersion = 'Azkaban Ch.1–6',
   onProgressSeeded,
+  onLimitsChanged,
 }: Props) {
   const [updateMsg, setUpdateMsg] = useState<string | null>(null)
+  const [limits, setLimits] = useState<DailyLimits>(() => loadDailyLimits())
+  const [newDraft, setNewDraft] = useState(String(limits.newLimit))
+  const [reviewDraft, setReviewDraft] = useState(String(limits.reviewLimit))
+  const [limitsMsg, setLimitsMsg] = useState<string | null>(null)
 
   async function forceRefresh() {
     setUpdateMsg('正在清除缓存…')
@@ -46,6 +60,35 @@ export function MinePage({
     setUpdateMsg('已填充约 40 个待复习测试词，回「今日」查看。')
   }
 
+  function saveLimits() {
+    const parsedNew = Number(newDraft)
+    const parsedReview = Number(reviewDraft)
+    if (!Number.isFinite(parsedNew) || !Number.isFinite(parsedReview)) {
+      setLimitsMsg('请输入有效数字。')
+      return
+    }
+    const next = saveDailyLimits({
+      newLimit: parsedNew,
+      reviewLimit: parsedReview,
+    })
+    setLimits(next)
+    setNewDraft(String(next.newLimit))
+    setReviewDraft(String(next.reviewLimit))
+    onLimitsChanged?.(next)
+    setLimitsMsg(
+      `已保存：新学 ${next.newLimit} / 复习 ${next.reviewLimit}，今日队列已按新上限重新生成。`,
+    )
+  }
+
+  function resetLimits() {
+    const next = saveDailyLimits(DEFAULT_DAILY_LIMITS)
+    setLimits(next)
+    setNewDraft(String(next.newLimit))
+    setReviewDraft(String(next.reviewLimit))
+    onLimitsChanged?.(next)
+    setLimitsMsg('已恢复默认：新学 30 / 复习 75。')
+  }
+
   return (
     <div className="page mine-page">
       <header className="page-head">
@@ -62,8 +105,52 @@ export function MinePage({
 
       <section className="mine-block">
         <h2 className="mine-title">学习</h2>
-        <p className="mine-line">每日新词 30</p>
-        <p className="mine-line muted">每日复习上限 75</p>
+        <label className="mine-field">
+          <span className="mine-field-label">每日新词</span>
+          <input
+            type="number"
+            inputMode="numeric"
+            min={NEW_LIMIT_RANGE.min}
+            max={NEW_LIMIT_RANGE.max}
+            value={newDraft}
+            onChange={(e) => {
+              setNewDraft(e.target.value)
+              setLimitsMsg(null)
+            }}
+          />
+          <span className="mine-field-hint">
+            {NEW_LIMIT_RANGE.min}–{NEW_LIMIT_RANGE.max}
+          </span>
+        </label>
+        <label className="mine-field">
+          <span className="mine-field-label">每日复习上限</span>
+          <input
+            type="number"
+            inputMode="numeric"
+            min={REVIEW_LIMIT_RANGE.min}
+            max={REVIEW_LIMIT_RANGE.max}
+            value={reviewDraft}
+            onChange={(e) => {
+              setReviewDraft(e.target.value)
+              setLimitsMsg(null)
+            }}
+          />
+          <span className="mine-field-hint">
+            {REVIEW_LIMIT_RANGE.min}–{REVIEW_LIMIT_RANGE.max}
+          </span>
+        </label>
+        <div className="mine-actions">
+          <button type="button" className="secondary-btn" onClick={saveLimits}>
+            保存并立即生效
+          </button>
+          <button type="button" className="ghost-btn" onClick={resetLimits}>
+            恢复默认
+          </button>
+        </div>
+        {limitsMsg ? <p className="mine-line muted update-msg">{limitsMsg}</p> : null}
+        <p className="mine-line muted">
+          当前生效：新学 {limits.newLimit} · 复习 {limits.reviewLimit}
+        </p>
       </section>
 
       <section className="mine-block">

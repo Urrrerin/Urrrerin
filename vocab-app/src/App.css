@@ -1022,6 +1022,57 @@ code {
   font-size: 0.92rem;
 }
 
+.mine-field {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 6px 10px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.mine-field-label {
+  grid-column: 1 / -1;
+  font-size: 0.98rem;
+  color: var(--ink);
+}
+
+.mine-field input {
+  width: 5.5rem;
+  justify-self: start;
+  padding: 10px 12px;
+  border: 1px solid rgba(45, 74, 45, 0.28);
+  border-radius: 10px;
+  background: rgba(255, 253, 248, 0.9);
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.mine-field-hint {
+  color: var(--ink-faint);
+  font-size: 0.82rem;
+}
+
+.mine-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 4px 0 8px;
+}
+
+.ghost-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 10px 4px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .update-msg {
   margin-top: 12px;
   line-height: 1.5;

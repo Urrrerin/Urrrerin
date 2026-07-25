@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import type { WordEntry } from '../types'
+import { loadDailyLimits, type DailyLimits } from '../lib/dailyLimits'
 import {
   applyMastered,
   applyNewLearn,
@@ -23,13 +24,18 @@ type Props = {
   mode: TodayMode
   onMode: (mode: TodayMode) => void
   progressTick?: number
+  limitsTick?: number
 }
 
-const NEW_LIMIT = 30
-const REVIEW_LIMIT = 75
-
-export function TodayPage({ words, mode, onMode, progressTick = 0 }: Props) {
+export function TodayPage({
+  words,
+  mode,
+  onMode,
+  progressTick = 0,
+  limitsTick = 0,
+}: Props) {
   const [progress, setProgress] = useState<Record<string, LearningState>>({})
+  const [limits, setLimits] = useState<DailyLimits>(() => loadDailyLimits())
   const [queue, setQueue] = useState<WordEntry[]>([])
   const [index, setIndex] = useState(0)
   const [step, setStep] = useState<Step>('prompt')
@@ -40,13 +46,34 @@ export function TodayPage({ words, mode, onMode, progressTick = 0 }: Props) {
     setProgress(ensureDemoReviewProgress(words, loaded))
   }, [words, progressTick])
 
+  // 上限变更当天立即生效：刷新首页计数，若仍在会话中则按新上限重切队列
+  useEffect(() => {
+    const nextLimits = loadDailyLimits()
+    setLimits(nextLimits)
+    if (limitsTick === 0) return
+    const latest = loadProgress()
+    if (mode === 'review') {
+      setQueue(pickReviewWords(words, latest, nextLimits.reviewLimit))
+      setIndex(0)
+      setStep('prompt')
+      setPendingGrade(null)
+    } else if (mode === 'learn') {
+      setQueue(pickNewWords(words, latest, nextLimits.newLimit))
+      setIndex(0)
+      setStep('prompt')
+      setPendingGrade(null)
+    }
+    // 仅在 limitsTick 变化时重切；mode/words 取当时快照
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [limitsTick])
+
   const reviewQueue = useMemo(
-    () => pickReviewWords(words, progress, REVIEW_LIMIT),
-    [words, progress],
+    () => pickReviewWords(words, progress, limits.reviewLimit),
+    [words, progress, limits.reviewLimit],
   )
   const learnQueue = useMemo(
-    () => pickNewWords(words, progress, NEW_LIMIT),
-    [words, progress],
+    () => pickNewWords(words, progress, limits.newLimit),
+    [words, progress, limits.newLimit],
   )
 
   const current = queue[index] ?? null
@@ -63,7 +90,9 @@ export function TodayPage({ words, mode, onMode, progressTick = 0 }: Props) {
 
   function startReview() {
     playSfx('tap')
-    const list = pickReviewWords(words, progress, REVIEW_LIMIT)
+    const active = loadDailyLimits()
+    setLimits(active)
+    const list = pickReviewWords(words, progress, active.reviewLimit)
     setQueue(list)
     setIndex(0)
     resetCard()
@@ -72,7 +101,9 @@ export function TodayPage({ words, mode, onMode, progressTick = 0 }: Props) {
 
   function startLearn() {
     playSfx('tap')
-    const list = pickNewWords(words, progress, NEW_LIMIT)
+    const active = loadDailyLimits()
+    setLimits(active)
+    const list = pickNewWords(words, progress, active.newLimit)
     setQueue(list)
     setIndex(0)
     resetCard()

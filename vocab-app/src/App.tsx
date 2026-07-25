@@ -65,6 +65,7 @@ function App() {
   const [sort, setSort] = useState<SortKey>('entry-order')
   const [selected, setSelected] = useState<WordEntry | null>(null)
   const [progressTick, setProgressTick] = useState(0)
+  const [limitsTick, setLimitsTick] = useState(0)
   const [progress, setProgress] = useState<Record<string, LearningState>>({})
 
   useEffect(() => {
@@ -121,6 +122,7 @@ function App() {
           mode={todayMode}
           onMode={setTodayMode}
           progressTick={progressTick}
+          limitsTick={limitsTick}
         />
       ) : null}
 
@@ -248,6 +250,7 @@ function App() {
           lexiconCount={words.length}
           words={words}
           onProgressSeeded={() => setProgressTick((n) => n + 1)}
+          onLimitsChanged={() => setLimitsTick((n) => n + 1)}
         />
       ) : null}
 
