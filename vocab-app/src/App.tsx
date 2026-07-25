@@ -1,182 +1,282 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
-import type { FilterKey, SortKey, WordEntry } from './types'
-import { parseWordsFromHtml } from './lib/parseHtml'
-import { loadWords, resetToSample, saveWords } from './lib/storage'
+import { useEffect, useMemo, useState } from 'react'
+import type { FilterKey, SortKey, TabKey, WordEntry } from './types'
+import { loadWords } from './lib/storage'
+import { loadProgress, type LearningState } from './lib/progress'
 import {
+  CHIP_FILTERS,
   filterAndSortWords,
-  filterLabels,
+  getFilterLabel,
+  listBooks,
+  listChapters,
   sortLabels,
-  tagLabels,
 } from './lib/query'
+import { splitMeaningLines } from './lib/wordDisplay'
+import { TodayPage } from './pages/TodayPage'
+import { MinePage } from './pages/MinePage'
+import { WordDetailView } from './components/WordDetailView'
 import './App.css'
 
-const FILTERS: FilterKey[] = [
-  'all',
-  'high-freq',
-  'cet4',
-  'cet6',
-  'tem4',
-  'tem8',
-  'ielts',
-  'gaokao',
-  'other',
-]
 const SORTS: SortKey[] = [
+  'entry-order',
   'frequency-desc',
   'frequency-asc',
   'alpha',
   'alpha-desc',
 ]
 
-function App() {
-  const fileRef = useRef<HTMLInputElement>(null)
-  const [words, setWords] = useState<WordEntry[]>([])
-  const [source, setSource] = useState<'sample' | 'import'>('sample')
-  const [query, setQuery] = useState('')
-  const [filter, setFilter] = useState<FilterKey>('all')
-  const [sort, setSort] = useState<SortKey>('frequency-desc')
-  const [selected, setSelected] = useState<WordEntry | null>(null)
-  const [toast, setToast] = useState<string | null>(null)
-  const [importOpen, setImportOpen] = useState(false)
+type TodayMode = 'home' | 'review' | 'learn'
 
-  useEffect(() => {
-    const loaded = loadWords()
-    setWords(loaded.words)
-    setSource(loaded.source)
-  }, [])
+function withEntryOrder(words: WordEntry[]): WordEntry[] {
+  return words.map((word, index) => ({
+    ...word,
+    entryOrder: word.entryOrder ?? index + 1,
+  }))
+}
 
-  useEffect(() => {
-    if (!toast) return
-    const timer = window.setTimeout(() => setToast(null), 2800)
-    return () => window.clearTimeout(timer)
-  }, [toast])
-
-  const visible = useMemo(
-    () => filterAndSortWords(words, query, filter, sort),
-    [words, query, filter, sort],
+function ListMeaning({ word }: { word: WordEntry }) {
+  const lines = splitMeaningLines(word.word, word.meaning, word.pos).filter(
+    (line) => !line.label,
   )
 
-  function showToast(message: string) {
-    setToast(message)
-  }
-
-  async function handleFile(file: File) {
-    const text = await file.text()
-    const parsed = parseWordsFromHtml(text)
-    if (parsed.length === 0) {
-      showToast('没识别到单词，请检查 HTML 格式或发我一份样例')
-      return
-    }
-    saveWords(parsed, 'import')
-    setWords(parsed)
-    setSource('import')
-    setImportOpen(false)
-    setSelected(null)
-    showToast(`已导入 ${parsed.length} 个单词`)
-  }
-
-  function handleReset() {
-    const sample = resetToSample()
-    setWords(sample)
-    setSource('sample')
-    setSelected(null)
-    showToast('已恢复阿兹卡班词表')
+  if (lines.length === 0) {
+    return <span className="meaning-lines">{word.meaning}</span>
   }
 
   return (
-    <div className="app">
+    <span className="meaning-lines">
+      {lines.map((line, i) => (
+        <span key={`${line.pos ?? 'm'}-${i}`} className="meaning-line">
+          {line.pos ? <span className="meaning-pos">{line.pos}</span> : null}
+          <span className="meaning-text">{line.senses.join('；')}</span>
+        </span>
+      ))}
+    </span>
+  )
+}
+
+function App() {
+  const [tab, setTab] = useState<TabKey>('today')
+  const [todayMode, setTodayMode] = useState<TodayMode>('home')
+  const [words, setWords] = useState<WordEntry[]>([])
+  const [query, setQuery] = useState('')
+  const [filter, setFilter] = useState<FilterKey>('all')
+  const [bookFilter, setBookFilter] = useState('all')
+  const [chapterFilter, setChapterFilter] = useState('all')
+  const [sort, setSort] = useState<SortKey>('entry-order')
+  const [selected, setSelected] = useState<WordEntry | null>(null)
+  const [progressTick, setProgressTick] = useState(0)
+  const [limitsTick, setLimitsTick] = useState(0)
+  const [progress, setProgress] = useState<Record<string, LearningState>>({})
+
+  useEffect(() => {
+    setWords(withEntryOrder(loadWords()))
+  }, [])
+
+  useEffect(() => {
+    setProgress(loadProgress())
+  }, [progressTick, tab])
+
+  const books = useMemo(() => listBooks(words), [words])
+  const chapters = useMemo(
+    () => listChapters(words, bookFilter),
+    [words, bookFilter],
+  )
+
+  useEffect(() => {
+    if (bookFilter !== 'all' && !books.includes(bookFilter)) {
+      setBookFilter('all')
+      setChapterFilter('all')
+    }
+  }, [bookFilter, books])
+
+  useEffect(() => {
+    if (
+      chapterFilter !== 'all' &&
+      !chapters.some((c) => c.key === chapterFilter)
+    ) {
+      setChapterFilter('all')
+    }
+  }, [chapterFilter, chapters])
+
+  const visible = useMemo(
+    () =>
+      filterAndSortWords(words, query, filter, sort, progress, {
+        book: bookFilter,
+        chapter: chapterFilter,
+      }),
+    [words, query, filter, sort, progress, bookFilter, chapterFilter],
+  )
+
+  function switchTab(next: TabKey) {
+    setTab(next)
+    if (next !== 'today') setTodayMode('home')
+  }
+
+  return (
+    <div className="app has-tabbar">
       <div className="atmosphere" aria-hidden="true" />
 
-      <header className="top">
-        <div className="brand-block">
-          <p className="brand">魔法词本</p>
-          <h1>阿兹卡班词单</h1>
-          <p className="subtitle">
-            《哈利·波特与阿兹卡班的囚徒》前 5 章生词，通勤可查、可筛、可搜。
-          </p>
-        </div>
+      {tab === 'today' ? (
+        <TodayPage
+          words={words}
+          mode={todayMode}
+          onMode={setTodayMode}
+          progressTick={progressTick}
+          limitsTick={limitsTick}
+        />
+      ) : null}
 
-        <div className="meta-row">
-          <span className="pill">
-            {source === 'sample' ? '阿兹卡班词表' : '已导入词表'} · {words.length} 词
-          </span>
-          <button type="button" className="text-btn" onClick={() => setImportOpen(true)}>
-            导入 HTML
-          </button>
-        </div>
-      </header>
+      {tab === 'library' ? (
+        <div className="page library-page">
+          <header className="page-head">
+            <p className="brand">Lumos</p>
+            <h1>词库</h1>
+          </header>
 
-      <section className="controls" aria-label="搜索与筛选">
-        <label className="search">
-          <span className="sr-only">搜索单词</span>
-          <input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="搜索单词 / 释义"
-            enterKeyHint="search"
-          />
-        </label>
-
-        <div className="filters" role="tablist" aria-label="筛选">
-          {FILTERS.map((key) => (
-            <button
-              key={key}
-              type="button"
-              role="tab"
-              aria-selected={filter === key}
-              className={filter === key ? 'chip active' : 'chip'}
-              onClick={() => setFilter(key)}
-            >
-              {filterLabels[key]}
-            </button>
-          ))}
-        </div>
-
-        <label className="sort">
-          <span>排序</span>
-          <select value={sort} onChange={(e) => setSort(e.target.value as SortKey)}>
-            {SORTS.map((key) => (
-              <option key={key} value={key}>
-                {sortLabels[key]}
-              </option>
-            ))}
-          </select>
-        </label>
-      </section>
-
-      <p className="result-count">显示 {visible.length} / {words.length}</p>
-
-      <main className="list" aria-label="词汇列表">
-        {visible.length === 0 ? (
-          <div className="empty">
-            <p>没有匹配的单词</p>
-            <p className="empty-hint">试试清空搜索，或切换筛选条件</p>
+          <div className="meta-row">
+            <span className="pill">阿兹卡班词表 · {words.length} 词</span>
           </div>
-        ) : (
-          visible.map((word, index) => (
-            <button
-              key={word.id}
-              type="button"
-              className="word-row"
-              style={{ animationDelay: `${Math.min(index, 12) * 28}ms` }}
-              onClick={() => setSelected(word)}
-            >
-              <span className="word-main">
-                <span className="word">{word.word}</span>
-                {word.phonetic ? <span className="phonetic">{word.phonetic}</span> : null}
-              </span>
-              <span className="word-side">
-                <span className="meaning">{word.meaning}</span>
-                <span className="freq">×{word.frequency}</span>
-              </span>
-            </button>
-          ))
-        )}
-      </main>
 
-      <footer className="foot">
-        <p>iPhone：Safari 打开后，点分享 →「添加到主屏幕」，就能像 App 一样用。</p>
-      </footer>
+          <section className="controls" aria-label="搜索与筛选">
+            <label className="search">
+              <span className="sr-only">搜索单词</span>
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="搜索单词 / 释义"
+                enterKeyHint="search"
+              />
+            </label>
+
+            <div className="scope-filters" aria-label="书目与章节">
+              <label className="scope-field">
+                <span>书目</span>
+                <select
+                  value={bookFilter}
+                  onChange={(e) => {
+                    setBookFilter(e.target.value)
+                    setChapterFilter('all')
+                  }}
+                >
+                  <option value="all">全部书目</option>
+                  {books.map((book) => (
+                    <option key={book} value={book}>
+                      {book}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className="scope-field">
+                <span>章节</span>
+                <select
+                  value={chapterFilter}
+                  onChange={(e) => setChapterFilter(e.target.value)}
+                >
+                  <option value="all">全部章节</option>
+                  {chapters.map((chapter) => (
+                    <option key={chapter.key} value={chapter.key}>
+                      {chapter.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+
+            <div className="filters" role="tablist" aria-label="标签筛选">
+              {CHIP_FILTERS.map((key) => (
+                <button
+                  key={key}
+                  type="button"
+                  role="tab"
+                  aria-selected={filter === key}
+                  className={filter === key ? 'chip active' : 'chip'}
+                  onClick={() => setFilter(key)}
+                >
+                  {getFilterLabel(key)}
+                </button>
+              ))}
+            </div>
+
+            <label className="sort">
+              <span>排序</span>
+              <select value={sort} onChange={(e) => setSort(e.target.value as SortKey)}>
+                {SORTS.map((key) => (
+                  <option key={key} value={key}>
+                    {sortLabels[key]}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </section>
+
+          <p className="result-count">
+            显示 {visible.length} / {words.length}
+          </p>
+
+          <main className="list" aria-label="词汇列表">
+            {visible.length === 0 ? (
+              <div className="empty">
+                <p>没有匹配的单词</p>
+                <p className="empty-hint">试试清空搜索，或切换筛选条件</p>
+              </div>
+            ) : (
+              visible.map((word, index) => (
+                <button
+                  key={word.id}
+                  type="button"
+                  className="word-row"
+                  style={{ animationDelay: `${Math.min(index, 12) * 28}ms` }}
+                  onClick={() => setSelected(word)}
+                >
+                  <span className="word-main">
+                    <span className="word">{word.word}</span>
+                    {word.phonetic ? (
+                      <span className="phonetic">{word.phonetic}</span>
+                    ) : null}
+                  </span>
+                  <span className="word-side">
+                    <ListMeaning word={word} />
+                    <span className="freq">#{word.entryOrder ?? '—'}</span>
+                  </span>
+                </button>
+              ))
+            )}
+          </main>
+        </div>
+      ) : null}
+
+      {tab === 'mine' ? (
+        <MinePage
+          lexiconCount={words.length}
+          words={words}
+          onProgressSeeded={() => setProgressTick((n) => n + 1)}
+          onLimitsChanged={() => setLimitsTick((n) => n + 1)}
+        />
+      ) : null}
+
+      <nav className="tabbar" aria-label="主导航">
+        <button
+          type="button"
+          className={tab === 'today' ? 'tab active' : 'tab'}
+          onClick={() => switchTab('today')}
+        >
+          今日
+        </button>
+        <button
+          type="button"
+          className={tab === 'library' ? 'tab active' : 'tab'}
+          onClick={() => switchTab('library')}
+        >
+          词库
+        </button>
+        <button
+          type="button"
+          className={tab === 'mine' ? 'tab active' : 'tab'}
+          onClick={() => switchTab('mine')}
+        >
+          我的
+        </button>
+      </nav>
 
       {selected ? (
         <div className="sheet-backdrop" onClick={() => setSelected(null)}>
@@ -192,76 +292,22 @@ function App() {
               <div>
                 <p className="brand mini">词条</p>
                 <h2>{selected.word}</h2>
-                {selected.phonetic ? <p className="phonetic">{selected.phonetic}</p> : null}
+                {selected.phonetic ? (
+                  <p className="phonetic">{selected.phonetic}</p>
+                ) : null}
               </div>
-              <button type="button" className="icon-btn" onClick={() => setSelected(null)}>
+              <button
+                type="button"
+                className="icon-btn"
+                onClick={() => setSelected(null)}
+              >
                 关闭
               </button>
             </div>
-            <p className="sheet-meaning">{selected.meaning}</p>
-            <div className="tag-row">
-              {selected.tags.map((tag) => (
-                <span key={tag} className="tag">
-                  {tagLabels[tag] || tag}
-                </span>
-              ))}
-              <span className="tag quiet">出现 {selected.frequency} 次</span>
-            </div>
-            {selected.example ? (
-              <blockquote className="example">“{selected.example}”</blockquote>
-            ) : null}
-            {selected.note ? <p className="note">{selected.note}</p> : null}
+            <WordDetailView word={selected} variant="sheet" />
           </aside>
         </div>
       ) : null}
-
-      {importOpen ? (
-        <div className="sheet-backdrop" onClick={() => setImportOpen(false)}>
-          <aside
-            className="sheet import-sheet"
-            role="dialog"
-            aria-modal="true"
-            aria-label="导入词表"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="sheet-handle" />
-            <h2>导入你的 HTML 词表</h2>
-            <p className="import-copy">
-              选择你日常记录的词汇 HTML。识别成功后会保存在本机，通勤打开也能看。
-            </p>
-            <ol className="import-steps">
-              <li>已支持阿兹卡班格式：ID / 英文 / 音标 / 变形 / 出现 / 词库 / 中文</li>
-              <li>也支持通用表格：单词 / 音标 / 释义 / 频次 / 标签</li>
-              <li>词库写「四级 / 六级 / 专四 / 专八 / 雅思」会被自动识别</li>
-            </ol>
-            <input
-              ref={fileRef}
-              type="file"
-              accept=".html,.htm,text/html"
-              hidden
-              onChange={(e) => {
-                const file = e.target.files?.[0]
-                if (file) void handleFile(file)
-                e.target.value = ''
-              }}
-            />
-            <button
-              type="button"
-              className="primary-btn"
-              onClick={() => fileRef.current?.click()}
-            >
-              选择 HTML 文件
-            </button>
-            {source === 'import' ? (
-              <button type="button" className="text-btn reset" onClick={handleReset}>
-                恢复阿兹卡班词表
-              </button>
-            ) : null}
-          </aside>
-        </div>
-      ) : null}
-
-      {toast ? <div className="toast">{toast}</div> : null}
     </div>
   )
 }
