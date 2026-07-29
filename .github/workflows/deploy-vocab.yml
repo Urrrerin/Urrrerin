@@ -1,11 +1,9 @@
 name: Deploy vocab-app to GitHub Pages
 
+# 线上目前由 gh-pages 分支发布完整 Lumos（含记住/模糊/忘了）。
+# 在把 Lumos 源码合入 master 之前，禁止 master 自动部署覆盖站点。
+# 需要时再手动 Run workflow。
 on:
-  push:
-    branches: [master]
-    paths:
-      - 'vocab-app/**'
-      - '.github/workflows/deploy-vocab.yml'
   workflow_dispatch:
 
 permissions:
@@ -32,6 +30,9 @@ jobs:
           cache-dependency-path: vocab-app/package-lock.json
       - run: npm ci
       - run: npm run build
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: vocab-app/dist
