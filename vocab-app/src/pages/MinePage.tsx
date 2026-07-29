@@ -22,7 +22,7 @@ import {
 } from '../lib/sync'
 
 /** 改一版就换这个戳，方便确认手机是否拿到新包 */
-export const APP_BUILD = '0729-sync'
+export const APP_BUILD = '0729-modes'
 
 type Props = {
   lexiconCount: number

@@ -34,7 +34,7 @@ const SORTS: SortKey[] = [
   'alpha-desc',
 ]
 
-type TodayMode = 'home' | 'review' | 'learn'
+type TodayMode = 'home' | 'review' | 'learn' | 'drill'
 
 function withEntryOrder(words: WordEntry[]): WordEntry[] {
   return words.map((word, index) => ({
