@@ -47,6 +47,18 @@ npm run dev
 - 排序：频次高低、A-Z
 - 词条详情（音标、释义、标签、章节备注）
 - 导入后保存在本机浏览器（localStorage）
+- 可选 Supabase 云同步（本地优先 + 静默备份 + 恢复凭证）
+
+## 云同步（Supabase）
+
+1. 复制 `.env.example` 为 `.env.local`，填入 Project URL 和 `anon` public key  
+2. 本地：`npm run dev`  
+3. 上线 GitHub Pages：在仓库 **Settings → Secrets and variables → Actions** 添加  
+   - `VITE_SUPABASE_URL`  
+   - `VITE_SUPABASE_ANON_KEY`  
+4. App 内点「云同步」→ **复制恢复凭证**，存到备忘录（清网站数据后用来找回）
+
+云端表：`user_progress`（`user_id` / `payload` / `updated_at`），需开启 Anonymous Sign-In 与 RLS 策略。
 
 ## 下一步（V1）
 
