@@ -1,0 +1,40 @@
+name: Publish Lumos to gh-pages
+
+# 线上 Pages 当前从 gh-pages 分支发布。
+# 手动运行：用 Secrets 构建 Lumos 并推送到 gh-pages，避免盖错版本。
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-gh-pages
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: vocab-app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: vocab-app/package-lock.json
+      - run: npm ci
+      - run: npm run build
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+      - name: Publish dist to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: vocab-app/dist
+          publish_branch: gh-pages
+          force_orphan: false
+          commit_message: 'deploy: Lumos learning + supabase sync'
