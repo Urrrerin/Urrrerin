@@ -1,11 +1,9 @@
 name: Deploy vocab-app to GitHub Pages
 
+# 线上目前由 gh-pages 分支发布完整 Lumos（含记住/模糊/忘了）。
+# 在把 Lumos 源码合入 master 之前，禁止 master 自动部署覆盖站点。
+# 需要时再手动 Run workflow。
 on:
-  push:
-    branches: [master]
-    paths:
-      - 'vocab-app/**'
-      - '.github/workflows/deploy-vocab.yml'
   workflow_dispatch:
 
 permissions:
