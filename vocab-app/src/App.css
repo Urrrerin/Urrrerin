@@ -289,8 +289,9 @@ code {
   font-size: 0.92rem;
   line-height: 1.35;
   text-align: right;
+  white-space: pre-line;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -369,7 +370,8 @@ code {
 .sheet-meaning {
   margin: 14px 0 0;
   font-size: 1.05rem;
-  line-height: 1.5;
+  line-height: 1.55;
+  white-space: pre-line;
 }
 
 .tag-row {

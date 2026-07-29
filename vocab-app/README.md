@@ -6,10 +6,26 @@
 
 ## 默认词表
 
-已内置《阿兹卡班的囚徒》前 5 章生词（约 583 条）：
+已内置《阿兹卡班的囚徒》前 6 章生词（约 777 条）：
 
-- `public/azkaban-vocabulary.html`：原始 HTML
+- `public/azkaban-vocabulary.html`：原始 HTML（一章一页翻阅；词性写在中文前（多词性分行）；完整原句例句；若文中义很特殊，释义下加一行 `文中特指：…`）
 - `src/data/azkabanWords.ts`：录入后的 App 数据
+
+释义校准：本地可把开源词典 ECDICT 的 `ecdict.csv` 放到 `vocab-app/.dict/`（已 gitignore），再运行 `python3 scripts/enrich_meanings_ecdict.py` 批量用词典义覆盖上下文义；单次查词用 `python3 scripts/dict_lookup.py <word>`。考试标签可用 `python3 scripts/retag_exam_tags.py` 按 ECDICT（四级/六级/考研/雅思）+ 专四专八词表重标。
+
+### 预览词表 HTML（本地）
+
+直接用浏览器打开：
+
+`vocab-app/public/azkaban-vocabulary.html`
+
+打开后可用「上一章 / 下一章」或顶部章节圆点翻页，也可用键盘 ← →。
+
+不需要 `npm run dev`。本地开发时若已启动 Vite，也可访问：
+
+`http://localhost:5173/azkaban-vocabulary.html`
+
+线上（合并并部署后）：https://urrrerin.github.io/Urrrerin/azkaban-vocabulary.html
 
 ## 你怎么在 iPhone 上用
 
@@ -31,9 +47,9 @@ npm run dev
 
 优先支持阿兹卡班词表表格：
 
-| ID | 英文 | 音标 | 变形 | 出现 | 词库 | 中文 |
-| --- | --- | --- | --- | --- | --- | --- |
-| 1 | torch | /tɔːtʃ/ | / | / | 四级 雅思 | 火把；火炬 |
+| ID | 英文 | 音标 | 变形 | 出现 | 词库 | 中文 | 例句 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | flashlight | /ˈflæʃlaɪt/ | / | / | 四级 雅思 | n. 手电筒；火把（英式亦作 torch） | It was nearly midnight... |
 
 也兼容通用表格：单词 / 音标 / 释义 / 频次 / 标签，以及一行一个：`word — 释义`。
 

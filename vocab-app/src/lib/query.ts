@@ -48,10 +48,11 @@ export const filterLabels: Record<FilterKey, string> = {
   'high-freq': '高频',
   cet4: '四级',
   cet6: '六级',
-  gaokao: '高考',
+  kaoyan: '考研',
   tem4: '专四',
   tem8: '专八',
   ielts: '雅思',
+  gaokao: '高考',
   other: '其他',
 }
 
@@ -65,9 +66,10 @@ export const sortLabels: Record<SortKey, string> = {
 export const tagLabels: Record<string, string> = {
   cet4: '四级',
   cet6: '六级',
-  gaokao: '高考',
+  kaoyan: '考研',
   tem4: '专四',
   tem8: '专八',
   ielts: '雅思',
+  gaokao: '高考',
   other: '其他',
 }
