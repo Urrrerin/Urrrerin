@@ -3,9 +3,11 @@ import type { ExamTag, WordEntry } from '../types'
 const CET4_HINT = /四级|cet-?4|cet4|大学英语四级/i
 const CET6_HINT = /六级|cet-?6|cet6|大学英语六级/i
 const GAOKAO_HINT = /高考|gaokao|高中/i
+const KAOYAN_HINT = /考研|kaoyan|研究生/i
 const TEM4_HINT = /专四|tem-?4|tem4/i
 const TEM8_HINT = /专八|tem-?8|tem8/i
 const IELTS_HINT = /雅思|ielts/i
+const TOEFL_HINT = /托福|toefl/i
 
 function uid(word: string, index: number): string {
   return `${word.toLowerCase().replace(/\s+/g, '-')}-${index}`
@@ -16,9 +18,11 @@ function parseTags(text: string): ExamTag[] {
   if (CET4_HINT.test(text)) tags.push('cet4')
   if (CET6_HINT.test(text)) tags.push('cet6')
   if (GAOKAO_HINT.test(text)) tags.push('gaokao')
+  if (KAOYAN_HINT.test(text)) tags.push('kaoyan')
   if (TEM4_HINT.test(text)) tags.push('tem4')
   if (TEM8_HINT.test(text)) tags.push('tem8')
   if (IELTS_HINT.test(text)) tags.push('ielts')
+  if (TOEFL_HINT.test(text)) tags.push('toefl')
   if (tags.length === 0) tags.push('other')
   return tags
 }
@@ -55,7 +59,8 @@ function looksLikeWord(text: string): boolean {
 
 /**
  * 尽量兼容常见个人词表 HTML：
- * 1) 阿兹卡班格式：ID | 英文 | 音标 | 变形 | 出现 | 词库 | 中文
+ * 1) 阿兹卡班格式：ID | 英文 | 音标 | 变形 | 出现 | 词库 | 中文 | 例句
+ *    中文列可含词性前缀（如 `n. 火把`）；多词性多行；例句列可选
  * 2) table 行：单词 | 音标 | 释义 | 频次 | 标签
  * 3) 带 data-word 的节点
  * 4) li / p 行内：word — meaning
@@ -75,10 +80,66 @@ export function parseWordsFromHtml(html: string): WordEntry[] {
   return dedupe(fromLines)
 }
 
+/** 保留释义里的换行（多词性分行）；把 <br> 转成 \\n */
+function cellMeaningText(cell: Element | null | undefined): string {
+  if (!cell) return ''
+  const html = cell.innerHTML || ''
+  const withBreaks = html
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<[^>]+>/g, '')
+  return withBreaks
+    .split('\n')
+    .map((line) => line.replace(/\s+/g, ' ').trim())
+    .filter(Boolean)
+    .join('\n')
+}
+
+/** 提取首个词性；保留 meaning 中的词性前缀与换行 */
+function extractPosFromMeaning(meaning: string): { meaning: string; pos?: string } {
+  const normalized = meaning.replace(/\r\n/g, '\n').trim()
+  const lines = normalized.split('\n').map((l) => l.trim()).filter(Boolean)
+  if (lines.length === 0) return { meaning }
+
+  let pos: string | undefined
+  const kept: string[] = []
+  for (const line of lines) {
+    const matched = line.match(
+      /^(n|v|vt|vi|adj|adv|prep|conj|pron|int|num|art|phr|aux)\.\s*(.*)$/i,
+    )
+    if (matched) {
+      const p = `${matched[1].toLowerCase()}.`
+      if (!pos) pos = p
+      kept.push(`${p} ${matched[2].trim()}`.trim())
+    } else {
+      kept.push(line)
+    }
+  }
+  return { meaning: kept.join('\n'), pos }
+}
+
+function findBookLabel(doc: Document): string | undefined {
+  const header = doc.querySelector('.book-header h1')
+  if (!header) return undefined
+  let text = cleanText(header.textContent || '')
+  text = text.replace(/\s*·\s*生词表.*$/, '').trim()
+  return text || undefined
+}
+
+function findChapterLabel(table: Element): string | undefined {
+  const chapter = table.closest('.chapter')
+  const header = chapter?.querySelector('.chapter-header')
+  if (!header) return undefined
+  let text = cleanText(header.textContent || '')
+  text = text.replace(/\s*·\s*\d+\s*条\s*$/, '')
+  text = text.replace(/(Chapter\s+\d+)([A-Za-z])/i, '$1 $2')
+  return text || undefined
+}
+
 /** 《阿兹卡班》生词表：按章节保留全部行，不去重 */
 function parseAzkabanTable(doc: Document): WordEntry[] {
   const tables = Array.from(doc.querySelectorAll('table'))
   const words: WordEntry[] = []
+  const book = findBookLabel(doc)
   let index = 0
 
   for (const table of tables) {
@@ -107,8 +168,15 @@ function parseAzkabanTable(doc: Document): WordEntry[] {
       const inflection = emptyish(cells[3]) ? undefined : cells[3]
       const occur = cells[4] || ''
       const lexicon = cells[5] || ''
-      const meaning = cells[6] || cells.find((c, i) => i > 1 && /[\u4e00-\u9fff]/.test(c)) || ''
-      if (!meaning) continue
+      const meaningCell = row.querySelectorAll('td, th')[6] as Element | undefined
+      const rawMeaning =
+        cellMeaningText(meaningCell) ||
+        cells[6] ||
+        cells.find((c, i) => i > 1 && /[\u4e00-\u9fff]/.test(c)) ||
+        ''
+      if (!rawMeaning) continue
+      const { meaning, pos } = extractPosFromMeaning(rawMeaning)
+      const example = cells.length > 7 && !emptyish(cells[7]) ? cells[7] : undefined
 
       index += 1
       const noteParts: string[] = []
@@ -121,25 +189,19 @@ function parseAzkabanTable(doc: Document): WordEntry[] {
         id: uid(`${chapter || 'azkaban'}-${word}`, index),
         word,
         phonetic,
+        pos,
         meaning,
+        example,
         frequency: parseFrequency(occur),
         tags: parseTags(lexicon),
         note: noteParts.length > 0 ? noteParts.join(' · ') : undefined,
+        book,
+        entryOrder: index,
       })
     }
   }
 
   return words
-}
-
-function findChapterLabel(table: Element): string | undefined {
-  const chapter = table.closest('.chapter')
-  const header = chapter?.querySelector('.chapter-header')
-  if (!header) return undefined
-  let text = cleanText(header.textContent || '')
-  text = text.replace(/\s*·\s*\d+\s*条\s*$/, '')
-  text = text.replace(/(Chapter\s+\d+)([A-Za-z])/i, '$1 $2')
-  return text || undefined
 }
 
 function parseTable(doc: Document): WordEntry[] {

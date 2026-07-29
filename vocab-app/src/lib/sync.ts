@@ -5,21 +5,16 @@ import {
   makePayload,
   type CloudPayload,
 } from './cloudPayload'
-import type { StoredSource } from './storage'
-import type { WordEntry } from '../types'
+import type { DailyLimits } from './dailyLimits'
+import type { LearningState } from './progress'
 
-export type SyncStatus =
-  | 'disabled'
-  | 'idle'
-  | 'syncing'
-  | 'synced'
-  | 'error'
+export type SyncStatus = 'disabled' | 'idle' | 'syncing' | 'synced' | 'error'
 
 export type LocalBundle = {
-  words: WordEntry[]
-  source: StoredSource
+  progress: Record<string, LearningState>
+  dailyLimits: DailyLimits
   updatedAt: string | null
-  hasLocalSave: boolean
+  hasLocalProgress: boolean
 }
 
 async function ensureAnonSession(): Promise<Session | null> {
@@ -96,40 +91,34 @@ function pickWinner(
   local: LocalBundle,
   cloud: CloudPayload | null,
 ): 'local' | 'cloud' | 'none' {
-  if (!cloud) return local.hasLocalSave || local.source === 'import' ? 'local' : 'none'
-  if (!local.hasLocalSave && local.source === 'sample') return 'cloud'
+  if (!cloud) return local.hasLocalProgress ? 'local' : 'none'
+  if (!local.hasLocalProgress) return 'cloud'
 
   const localTs = local.updatedAt ? Date.parse(local.updatedAt) : 0
   const cloudTs = Date.parse(cloud.updatedAt) || 0
-
-  if (cloud.source === 'import' && local.source === 'sample' && !local.hasLocalSave) {
-    return 'cloud'
-  }
   if (cloudTs > localTs) return 'cloud'
   if (localTs > cloudTs) return 'local'
-  // same timestamp: prefer import over sample
-  if (local.source === 'import' && cloud.source !== 'import') return 'local'
-  if (cloud.source === 'import' && local.source !== 'import') return 'cloud'
   return 'local'
 }
 
 export type BootstrapResult = {
-  words: WordEntry[]
-  source: StoredSource
+  progress: Record<string, LearningState>
+  dailyLimits: DailyLimits
   updatedAt: string
   status: SyncStatus
   message?: string
+  appliedFromCloud: boolean
 }
 
-/** 启动时：匿名登录 + 和云端对齐 */
 export async function bootstrapSync(local: LocalBundle): Promise<BootstrapResult> {
   if (!isSupabaseConfigured()) {
     return {
-      words: local.words,
-      source: local.source,
+      progress: local.progress,
+      dailyLimits: local.dailyLimits,
       updatedAt: local.updatedAt || new Date().toISOString(),
       status: 'disabled',
       message: '未配置云同步',
+      appliedFromCloud: false,
     }
   }
 
@@ -140,50 +129,54 @@ export async function bootstrapSync(local: LocalBundle): Promise<BootstrapResult
 
     if (winner === 'cloud' && cloud) {
       return {
-        words: cloud.words,
-        source: cloud.source,
+        progress: cloud.progress,
+        dailyLimits: cloud.dailyLimits,
         updatedAt: cloud.updatedAt,
         status: 'synced',
-        message: '已从云端恢复',
+        message: '已从云端恢复学习进度',
+        appliedFromCloud: true,
       }
     }
 
     const updatedAt = local.updatedAt || new Date().toISOString()
-    const payload = makePayload(local.words, local.source, updatedAt)
+    const payload = makePayload(local.progress, local.dailyLimits, updatedAt)
 
     if (winner === 'local' || (winner === 'none' && !cloud)) {
-      await pushCloudPayload(payload)
+      if (local.hasLocalProgress) {
+        await pushCloudPayload(payload)
+      }
     }
 
     return {
-      words: local.words,
-      source: local.source,
+      progress: local.progress,
+      dailyLimits: local.dailyLimits,
       updatedAt,
       status: 'synced',
-      message: winner === 'local' ? '已备份到云端' : '云同步已开启',
+      message: winner === 'local' ? '学习进度已备份到云端' : '云同步已开启',
+      appliedFromCloud: false,
     }
   } catch (err) {
-    const message = err instanceof Error ? err.message : '同步失败'
     return {
-      words: local.words,
-      source: local.source,
+      progress: local.progress,
+      dailyLimits: local.dailyLimits,
       updatedAt: local.updatedAt || new Date().toISOString(),
       status: 'error',
-      message,
+      message: err instanceof Error ? err.message : '同步失败',
+      appliedFromCloud: false,
     }
   }
 }
 
 export async function syncNow(
-  words: WordEntry[],
-  source: StoredSource,
+  progress: Record<string, LearningState>,
+  dailyLimits: DailyLimits,
   updatedAt = new Date().toISOString(),
 ): Promise<{ status: SyncStatus; message?: string; updatedAt: string }> {
   if (!isSupabaseConfigured()) {
     return { status: 'disabled', updatedAt, message: '未配置云同步' }
   }
   try {
-    await pushCloudPayload(makePayload(words, source, updatedAt))
+    await pushCloudPayload(makePayload(progress, dailyLimits, updatedAt))
     return { status: 'synced', updatedAt, message: '已备份到云端' }
   } catch (err) {
     return {
@@ -194,7 +187,22 @@ export async function syncNow(
   }
 }
 
-/** 恢复凭证：清缓存后可粘贴找回同一云端身份 */
+let syncTimer: number | null = null
+
+/** 答题后防抖上传，避免每点一下都打满请求 */
+export function queueProgressSync(
+  progress: Record<string, LearningState>,
+  dailyLimits: DailyLimits,
+  delayMs = 1200,
+): void {
+  if (!isSupabaseConfigured()) return
+  if (syncTimer) window.clearTimeout(syncTimer)
+  syncTimer = window.setTimeout(() => {
+    const updatedAt = new Date().toISOString()
+    void syncNow(progress, dailyLimits, updatedAt)
+  }, delayMs)
+}
+
 export async function exportRecoveryCredential(): Promise<string> {
   const supabase = getSupabase()
   if (!supabase) throw new Error('未配置云同步')

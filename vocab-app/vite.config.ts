@@ -11,12 +11,17 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg'],
+      workbox: {
+        skipWaiting: true,
+        clientsClaim: true,
+        cleanupOutdatedCaches: true,
+      },
       manifest: {
-        name: '魔法词本',
-        short_name: '魔法词本',
-        description: '哈利波特阅读词汇小记事本',
-        theme_color: '#1a1510',
-        background_color: '#1a1510',
+        name: 'Lumos',
+        short_name: 'Lumos',
+        description: '哈利波特阅读生词 · 复习词典',
+        theme_color: '#f7f3ea',
+        background_color: '#f7f3ea',
         display: 'standalone',
         orientation: 'portrait',
         lang: 'zh-CN',
