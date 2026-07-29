@@ -14,6 +14,7 @@ export type LearningState = {
 }
 
 const PROGRESS_KEY = 'lumos-learning-progress-v1'
+const UPDATED_KEY = 'lumos-learning-updated-v1'
 const DEMO_SEED_KEY = 'lumos-demo-review-seeded-v2'
 
 function todayIsoDate(): string {
@@ -37,8 +38,23 @@ export function loadProgress(): Record<string, LearningState> {
   }
 }
 
-export function saveProgress(map: Record<string, LearningState>): void {
+export function loadProgressUpdatedAt(): string | null {
+  return localStorage.getItem(UPDATED_KEY)
+}
+
+export function hasLocalProgress(
+  map: Record<string, LearningState> = loadProgress(),
+): boolean {
+  return Object.keys(map).length > 0
+}
+
+export function saveProgress(
+  map: Record<string, LearningState>,
+  updatedAt = new Date().toISOString(),
+): string {
   localStorage.setItem(PROGRESS_KEY, JSON.stringify(map))
+  localStorage.setItem(UPDATED_KEY, updatedAt)
+  return updatedAt
 }
 
 /**

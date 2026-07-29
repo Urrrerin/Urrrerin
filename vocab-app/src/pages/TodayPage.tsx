@@ -13,6 +13,8 @@ import {
   type LearningState,
   type ReviewGrade,
 } from '../lib/progress'
+import { isSupabaseConfigured } from '../lib/supabase'
+import { queueProgressSync } from '../lib/sync'
 import { playSfx } from '../lib/sfx'
 import { WordDetailView } from '../components/WordDetailView'
 
@@ -25,6 +27,8 @@ type Props = {
   onMode: (mode: TodayMode) => void
   progressTick?: number
   limitsTick?: number
+  /** 云同步启动完成前先不种测试数据，避免盖住云端进度 */
+  syncReady?: boolean
 }
 
 export function TodayPage({
@@ -33,6 +37,7 @@ export function TodayPage({
   onMode,
   progressTick = 0,
   limitsTick = 0,
+  syncReady = true,
 }: Props) {
   const [progress, setProgress] = useState<Record<string, LearningState>>({})
   const [limits, setLimits] = useState<DailyLimits>(() => loadDailyLimits())
@@ -42,9 +47,14 @@ export function TodayPage({
   const [pendingGrade, setPendingGrade] = useState<ReviewGrade | null>(null)
 
   useEffect(() => {
+    if (!syncReady) return
     const loaded = loadProgress()
+    if (isSupabaseConfigured()) {
+      setProgress(loaded)
+      return
+    }
     setProgress(ensureDemoReviewProgress(words, loaded))
-  }, [words, progressTick])
+  }, [words, progressTick, syncReady])
 
   // 上限变更当天立即生效：刷新首页计数，若仍在会话中则按新上限重切队列
   useEffect(() => {
@@ -81,6 +91,7 @@ export function TodayPage({
   function persist(next: Record<string, LearningState>) {
     setProgress(next)
     saveProgress(next)
+    queueProgressSync(next, loadDailyLimits())
   }
 
   function resetCard() {

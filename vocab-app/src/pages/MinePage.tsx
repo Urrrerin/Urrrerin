@@ -8,10 +8,21 @@ import {
   saveDailyLimits,
   type DailyLimits,
 } from '../lib/dailyLimits'
-import { loadProgress, seedDemoReviewProgress } from '../lib/progress'
+import {
+  loadProgress,
+  saveProgress,
+  seedDemoReviewProgress,
+} from '../lib/progress'
+import { isSupabaseConfigured } from '../lib/supabase'
+import {
+  exportRecoveryCredential,
+  importRecoveryCredential,
+  syncNow,
+  type SyncStatus,
+} from '../lib/sync'
 
 /** 改一版就换这个戳，方便确认手机是否拿到新包 */
-export const APP_BUILD = '0725-a'
+export const APP_BUILD = '0729-sync'
 
 type Props = {
   lexiconCount: number
@@ -19,6 +30,22 @@ type Props = {
   lexiconVersion?: string
   onProgressSeeded?: () => void
   onLimitsChanged?: (limits: DailyLimits) => void
+  onProgressRestored?: () => void
+}
+
+function syncLabel(status: SyncStatus): string {
+  switch (status) {
+    case 'disabled':
+      return '未配置'
+    case 'syncing':
+      return '同步中…'
+    case 'synced':
+      return '已开启'
+    case 'error':
+      return '失败'
+    default:
+      return '待命'
+  }
 }
 
 export function MinePage({
@@ -27,12 +54,19 @@ export function MinePage({
   lexiconVersion = 'Azkaban Ch.1–6',
   onProgressSeeded,
   onLimitsChanged,
+  onProgressRestored,
 }: Props) {
   const [updateMsg, setUpdateMsg] = useState<string | null>(null)
   const [limits, setLimits] = useState<DailyLimits>(() => loadDailyLimits())
   const [newDraft, setNewDraft] = useState(String(limits.newLimit))
   const [reviewDraft, setReviewDraft] = useState(String(limits.reviewLimit))
   const [limitsMsg, setLimitsMsg] = useState<string | null>(null)
+  const [syncStatus, setSyncStatus] = useState<SyncStatus>(
+    isSupabaseConfigured() ? 'idle' : 'disabled',
+  )
+  const [syncMsg, setSyncMsg] = useState<string | null>(null)
+  const [recoveryText, setRecoveryText] = useState('')
+  const [recoveryInput, setRecoveryInput] = useState('')
 
   async function forceRefresh() {
     setUpdateMsg('正在清除缓存…')
@@ -54,13 +88,17 @@ export function MinePage({
     }
   }
 
-  function refillDemoReview() {
-    seedDemoReviewProgress(words, loadProgress(), 40)
+  async function refillDemoReview() {
+    const next = seedDemoReviewProgress(words, loadProgress(), 40)
     onProgressSeeded?.()
     setUpdateMsg('已填充约 40 个待复习测试词，回「今日」查看。')
+    if (!isSupabaseConfigured()) return
+    setSyncStatus('syncing')
+    const result = await syncNow(next, loadDailyLimits())
+    setSyncStatus(result.status)
   }
 
-  function saveLimits() {
+  async function saveLimits() {
     const parsedNew = Number(newDraft)
     const parsedReview = Number(reviewDraft)
     if (!Number.isFinite(parsedNew) || !Number.isFinite(parsedReview)) {
@@ -78,15 +116,72 @@ export function MinePage({
     setLimitsMsg(
       `已保存：新学 ${next.newLimit} / 复习 ${next.reviewLimit}，今日队列已按新上限重新生成。`,
     )
+    if (!isSupabaseConfigured()) return
+    setSyncStatus('syncing')
+    const result = await syncNow(loadProgress(), next)
+    setSyncStatus(result.status)
   }
 
-  function resetLimits() {
+  async function resetLimits() {
     const next = saveDailyLimits(DEFAULT_DAILY_LIMITS)
     setLimits(next)
     setNewDraft(String(next.newLimit))
     setReviewDraft(String(next.reviewLimit))
     onLimitsChanged?.(next)
     setLimitsMsg('已恢复默认：新学 30 / 复习 75。')
+    if (!isSupabaseConfigured()) return
+    setSyncStatus('syncing')
+    const result = await syncNow(loadProgress(), next)
+    setSyncStatus(result.status)
+  }
+
+  async function handleCopyRecovery() {
+    try {
+      const token = await exportRecoveryCredential()
+      setRecoveryText(token)
+      await navigator.clipboard.writeText(token)
+      setSyncMsg('恢复凭证已复制，请存到备忘录（清缓存后用来找回进度）。')
+      setSyncStatus('synced')
+    } catch (err) {
+      setSyncStatus('error')
+      setSyncMsg(err instanceof Error ? err.message : '导出失败')
+    }
+  }
+
+  async function handleRestoreRecovery() {
+    if (!recoveryInput.trim()) {
+      setSyncMsg('请先粘贴恢复凭证')
+      return
+    }
+    setSyncStatus('syncing')
+    try {
+      const cloud = await importRecoveryCredential(recoveryInput)
+      if (!cloud) {
+        setSyncStatus('error')
+        setSyncMsg('云端没有找到进度')
+        return
+      }
+      saveProgress(cloud.progress, cloud.updatedAt)
+      saveDailyLimits(cloud.dailyLimits)
+      onProgressRestored?.()
+      setSyncStatus('synced')
+      setRecoveryInput('')
+      setSyncMsg('已用恢复凭证找回学习进度')
+    } catch (err) {
+      setSyncStatus('error')
+      setSyncMsg(err instanceof Error ? err.message : '恢复失败')
+    }
+  }
+
+  async function handleSyncNow() {
+    if (!isSupabaseConfigured()) {
+      setSyncMsg('未配置云同步密钥')
+      return
+    }
+    setSyncStatus('syncing')
+    const result = await syncNow(loadProgress(), loadDailyLimits())
+    setSyncStatus(result.status)
+    setSyncMsg(result.message || null)
   }
 
   return (
@@ -101,6 +196,56 @@ export function MinePage({
         <h2 className="mine-title">词库</h2>
         <p className="mine-line">{lexiconVersion}</p>
         <p className="mine-line muted">{lexiconCount} 词</p>
+      </section>
+
+      <section className="mine-block">
+        <h2 className="mine-title">云同步</h2>
+        <p className="mine-line muted">状态：{syncLabel(syncStatus)}</p>
+        <p className="mine-line muted">
+          平时自动备份学习进度。清网站数据前请先复制恢复凭证。
+        </p>
+        {isSupabaseConfigured() ? (
+          <>
+            <div className="mine-actions">
+              <button type="button" className="secondary-btn" onClick={() => void handleSyncNow()}>
+                立即备份
+              </button>
+              <button
+                type="button"
+                className="ghost-btn"
+                onClick={() => void handleCopyRecovery()}
+              >
+                复制恢复凭证
+              </button>
+            </div>
+            {recoveryText ? (
+              <textarea className="recovery-box" readOnly value={recoveryText} rows={3} />
+            ) : null}
+            <label className="recovery-label">
+              用恢复凭证找回
+              <textarea
+                className="recovery-box"
+                value={recoveryInput}
+                onChange={(e) => setRecoveryInput(e.target.value)}
+                placeholder="粘贴之前复制的恢复凭证"
+                rows={3}
+              />
+            </label>
+            <button
+              type="button"
+              className="ghost-btn"
+              onClick={() => void handleRestoreRecovery()}
+            >
+              恢复云端进度
+            </button>
+          </>
+        ) : (
+          <p className="mine-line muted">
+            未检测到云配置。上线需在 GitHub Secrets 填写 VITE_SUPABASE_URL /
+            VITE_SUPABASE_ANON_KEY。
+          </p>
+        )}
+        {syncMsg ? <p className="mine-line muted update-msg">{syncMsg}</p> : null}
       </section>
 
       <section className="mine-block">
@@ -140,10 +285,10 @@ export function MinePage({
           </span>
         </label>
         <div className="mine-actions">
-          <button type="button" className="secondary-btn" onClick={saveLimits}>
+          <button type="button" className="secondary-btn" onClick={() => void saveLimits()}>
             保存并立即生效
           </button>
-          <button type="button" className="ghost-btn" onClick={resetLimits}>
+          <button type="button" className="ghost-btn" onClick={() => void resetLimits()}>
             恢复默认
           </button>
         </div>
@@ -155,7 +300,7 @@ export function MinePage({
 
       <section className="mine-block">
         <h2 className="mine-title">测试数据</h2>
-        <button type="button" className="secondary-btn" onClick={refillDemoReview}>
+        <button type="button" className="secondary-btn" onClick={() => void refillDemoReview()}>
           填充待复习测试词
         </button>
       </section>

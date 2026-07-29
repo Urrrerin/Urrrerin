@@ -1,7 +1,17 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { FilterKey, SortKey, TabKey, WordEntry } from './types'
 import { loadWords } from './lib/storage'
-import { loadProgress, type LearningState } from './lib/progress'
+import {
+  ensureDemoReviewProgress,
+  hasLocalProgress,
+  loadProgress,
+  loadProgressUpdatedAt,
+  saveProgress,
+  type LearningState,
+} from './lib/progress'
+import { loadDailyLimits, saveDailyLimits } from './lib/dailyLimits'
+import { isSupabaseConfigured } from './lib/supabase'
+import { bootstrapSync } from './lib/sync'
 import {
   CHIP_FILTERS,
   filterAndSortWords,
@@ -67,14 +77,72 @@ function App() {
   const [progressTick, setProgressTick] = useState(0)
   const [limitsTick, setLimitsTick] = useState(0)
   const [progress, setProgress] = useState<Record<string, LearningState>>({})
+  const [syncReady, setSyncReady] = useState(!isSupabaseConfigured())
+  const [syncToast, setSyncToast] = useState<string | null>(null)
 
   useEffect(() => {
-    setWords(withEntryOrder(loadWords()))
+    let cancelled = false
+    const ordered = withEntryOrder(loadWords())
+    setWords(ordered)
+
+    const localProgress = loadProgress()
+    const localLimits = loadDailyLimits()
+
+    if (!isSupabaseConfigured()) {
+      const seeded = ensureDemoReviewProgress(ordered, localProgress)
+      setProgress(seeded)
+      setSyncReady(true)
+      return
+    }
+
+    void bootstrapSync({
+      progress: localProgress,
+      dailyLimits: localLimits,
+      updatedAt: loadProgressUpdatedAt(),
+      hasLocalProgress: hasLocalProgress(localProgress),
+    }).then((result) => {
+      if (cancelled) return
+      let nextProgress = result.progress
+      const nextLimits = result.dailyLimits
+      let nextUpdatedAt = result.updatedAt
+
+      if (Object.keys(nextProgress).length === 0) {
+        nextProgress = ensureDemoReviewProgress(ordered, nextProgress)
+        if (Object.keys(nextProgress).length > 0) {
+          nextUpdatedAt = saveProgress(nextProgress, new Date().toISOString())
+          saveDailyLimits(nextLimits)
+        }
+      } else if (result.appliedFromCloud) {
+        saveProgress(nextProgress, nextUpdatedAt)
+        saveDailyLimits(nextLimits)
+        setLimitsTick((n) => n + 1)
+      }
+
+      setProgress(nextProgress)
+      setSyncReady(true)
+      setProgressTick((n) => n + 1)
+      if (result.appliedFromCloud) {
+        setSyncToast(result.message || '已从云端恢复')
+      } else if (result.status === 'error' && result.message) {
+        setSyncToast(result.message)
+      }
+    })
+
+    return () => {
+      cancelled = true
+    }
   }, [])
 
   useEffect(() => {
+    if (!syncToast) return
+    const timer = window.setTimeout(() => setSyncToast(null), 2800)
+    return () => window.clearTimeout(timer)
+  }, [syncToast])
+
+  useEffect(() => {
+    if (!syncReady) return
     setProgress(loadProgress())
-  }, [progressTick, tab])
+  }, [progressTick, tab, syncReady])
 
   const books = useMemo(() => listBooks(words), [words])
   const chapters = useMemo(
@@ -123,6 +191,7 @@ function App() {
           onMode={setTodayMode}
           progressTick={progressTick}
           limitsTick={limitsTick}
+          syncReady={syncReady}
         />
       ) : null}
 
@@ -251,6 +320,11 @@ function App() {
           words={words}
           onProgressSeeded={() => setProgressTick((n) => n + 1)}
           onLimitsChanged={() => setLimitsTick((n) => n + 1)}
+          onProgressRestored={() => {
+            setProgress(loadProgress())
+            setProgressTick((n) => n + 1)
+            setLimitsTick((n) => n + 1)
+          }}
         />
       ) : null}
 
@@ -308,6 +382,8 @@ function App() {
           </aside>
         </div>
       ) : null}
+
+      {syncToast ? <div className="toast">{syncToast}</div> : null}
     </div>
   )
 }

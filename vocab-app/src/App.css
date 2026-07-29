@@ -638,7 +638,7 @@ code {
 .toast {
   position: fixed;
   left: 50%;
-  bottom: calc(24px + var(--safe-bottom));
+  bottom: calc(88px + var(--safe-bottom));
   transform: translateX(-50%);
   z-index: 40;
   max-width: calc(100% - 32px);
@@ -1076,6 +1076,28 @@ code {
 .update-msg {
   margin-top: 12px;
   line-height: 1.5;
+}
+
+.recovery-label {
+  display: block;
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.recovery-box {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid rgba(45, 74, 45, 0.22);
+  border-radius: 10px;
+  background: rgba(255, 253, 248, 0.9);
+  color: var(--ink);
+  resize: vertical;
+  line-height: 1.4;
+  word-break: break-all;
+  font-size: 0.82rem;
 }
 
 .tabbar {
