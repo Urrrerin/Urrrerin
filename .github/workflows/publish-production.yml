@@ -1,0 +1,42 @@
+name: Publish Production (正式服)
+
+# 仅在确认测试服没问题后，把当前所选分支发到正式根目录。
+# 正式服：https://urrrerin.github.io/Urrrerin/
+# 注意：keep_files 会保留 /staging/ 测试服目录不被清掉。
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-production
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: vocab-app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: vocab-app/package-lock.json
+      - run: npm ci
+      - run: npm run build
+        env:
+          VITE_APP_ENV: production
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+      - name: Publish dist to gh-pages root
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: vocab-app/dist
+          publish_branch: gh-pages
+          keep_files: true
+          commit_message: 'deploy(production): release Lumos'

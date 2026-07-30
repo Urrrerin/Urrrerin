@@ -138,6 +138,18 @@ code {
   font-size: 0.95rem;
 }
 
+.env-badge {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 4px 10px;
+  border: 1px solid rgba(122, 31, 36, 0.35);
+  background: rgba(122, 31, 36, 0.08);
+  color: #7a1f24;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
 .meta-row {
   display: flex;
   align-items: center;
@@ -813,6 +825,103 @@ code {
   font-size: 2.4rem;
   line-height: 1;
   color: var(--gold-strong);
+}
+
+.learn-panel {
+  margin-top: 18px;
+  padding-top: 4px;
+}
+
+.learn-panel-title {
+  margin: 0 0 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.learn-seg {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+
+.learn-seg.wrap {
+  flex-wrap: wrap;
+}
+
+.learn-seg-btn {
+  appearance: none;
+  flex: 1;
+  min-height: 40px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink-soft);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 12px;
+}
+
+.learn-seg.wrap .learn-seg-btn {
+  flex: 0 0 auto;
+}
+
+.learn-seg-btn.active {
+  border-color: rgba(45, 74, 45, 0.45);
+  background: rgba(45, 74, 45, 0.1);
+  color: var(--gold-strong);
+}
+
+.learn-fields {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.learn-field {
+  display: grid;
+  gap: 6px;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.learn-field select {
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  color: var(--ink);
+  padding: 0 12px;
+}
+
+.learn-hint {
+  margin: 10px 0 0;
+  color: var(--ink-faint);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.home-entry-note {
+  margin-top: 10px;
+}
+
+.drill-panel {
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.drill-btn {
+  margin-top: 12px;
+}
+
+.reset-prefs {
+  display: block;
+  width: 100%;
+  margin: 18px 0 8px;
+  text-align: center;
 }
 
 .secondary-btn {

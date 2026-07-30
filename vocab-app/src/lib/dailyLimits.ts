@@ -1,4 +1,6 @@
-const STORAGE_KEY = 'lumos-daily-limits-v1'
+import { storageKey } from './env'
+
+const STORAGE_KEY = storageKey('lumos-daily-limits-v1')
 
 export type DailyLimits = {
   newLimit: number
