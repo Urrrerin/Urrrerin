@@ -1,7 +1,7 @@
-name: Publish Lumos to gh-pages
+name: Publish Staging (测试服)
 
-# 线上 Pages 当前从 gh-pages 分支发布。
-# 手动运行：用 Secrets 构建 Lumos 并推送到 gh-pages，避免盖错版本。
+# 把任意分支发到测试服，不影响正式地址。
+# 测试服：https://urrrerin.github.io/Urrrerin/staging/
 on:
   workflow_dispatch:
 
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: publish-gh-pages
+  group: publish-staging
   cancel-in-progress: true
 
 jobs:
@@ -28,13 +28,15 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
+          VITE_APP_ENV: staging
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
-      - name: Publish dist to gh-pages
+      - name: Publish dist to gh-pages/staging
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: vocab-app/dist
           publish_branch: gh-pages
-          force_orphan: false
-          commit_message: 'deploy: Lumos learning + supabase sync'
+          destination_dir: staging
+          keep_files: true
+          commit_message: 'deploy(staging): preview build'

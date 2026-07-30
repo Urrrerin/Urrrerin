@@ -20,9 +20,10 @@ import {
   syncNow,
   type SyncStatus,
 } from '../lib/sync'
+import { ENV_LABEL, isStaging } from '../lib/env'
 
 /** 改一版就换这个戳，方便确认手机是否拿到新包 */
-export const APP_BUILD = '0729-modes'
+export const APP_BUILD = '0730-envs'
 
 type Props = {
   lexiconCount: number
@@ -188,8 +189,11 @@ export function MinePage({
     <div className="page mine-page">
       <header className="page-head">
         <p className="brand">Lumos</p>
+        {isStaging ? <p className="env-badge">测试服 · 可放心试，不影响正式进度</p> : null}
         <h1>我的</h1>
-        <p className="subtitle">版本 {APP_BUILD}</p>
+        <p className="subtitle">
+          版本 {APP_BUILD} · {ENV_LABEL}
+        </p>
       </header>
 
       <section className="mine-block">

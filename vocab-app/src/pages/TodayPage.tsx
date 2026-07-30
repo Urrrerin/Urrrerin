@@ -32,6 +32,7 @@ import { isSupabaseConfigured } from '../lib/supabase'
 import { queueProgressSync } from '../lib/sync'
 import { playSfx } from '../lib/sfx'
 import { WordDetailView } from '../components/WordDetailView'
+import { ENV_LABEL, isStaging } from '../lib/env'
 
 type TodayMode = 'home' | 'review' | 'learn' | 'drill'
 type Step = 'prompt' | 'detail'
@@ -424,9 +425,11 @@ export function TodayPage({
     <div className="page today-page">
       <header className="page-head">
         <p className="brand">Lumos</p>
+        {isStaging ? <p className="env-badge">测试服</p> : null}
         <h1>今日</h1>
         <p className="subtitle">
           {describeScope(prefs, selectedChapterLabel)} · {describeOrder(prefs.order)}
+          {isStaging ? ` · ${ENV_LABEL}` : ''}
         </p>
       </header>
 

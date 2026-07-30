@@ -1,4 +1,5 @@
 import type { WordEntry } from '../types'
+import { storageKey } from './env'
 
 export type ReviewGrade = 'remember' | 'fuzzy' | 'forgot'
 
@@ -13,9 +14,9 @@ export type LearningState = {
   lastGrade?: ReviewGrade
 }
 
-const PROGRESS_KEY = 'lumos-learning-progress-v1'
-const UPDATED_KEY = 'lumos-learning-updated-v1'
-const DEMO_SEED_KEY = 'lumos-demo-review-seeded-v2'
+const PROGRESS_KEY = storageKey('lumos-learning-progress-v1')
+const UPDATED_KEY = storageKey('lumos-learning-updated-v1')
+const DEMO_SEED_KEY = storageKey('lumos-demo-review-seeded-v2')
 
 function todayIsoDate(): string {
   return new Date().toISOString().slice(0, 10)

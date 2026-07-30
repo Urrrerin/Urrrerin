@@ -1,4 +1,5 @@
 import type { ExamTag, FilterKey, WordEntry } from '../types'
+import { storageKey } from './env'
 import { getChapterKey, listChapters } from './query'
 import {
   pickNewWords,
@@ -18,7 +19,7 @@ export type LearnPrefs = {
   drillChapter: string
 }
 
-const PREFS_KEY = 'lumos-learn-prefs-v1'
+const PREFS_KEY = storageKey('lumos-learn-prefs-v1')
 
 export const TAG_SCOPE_OPTIONS: { key: FilterKey; label: string }[] = [
   { key: 'cet', label: '四六级' },

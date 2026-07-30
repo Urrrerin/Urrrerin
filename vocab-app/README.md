@@ -49,6 +49,19 @@ npm run dev
 - 导入后保存在本机浏览器（localStorage）
 - 可选 Supabase 云同步（本地优先 + 静默备份 + 恢复凭证）
 
+## 测试服 / 正式服
+
+像游戏一样分两套环境，互不影响：
+
+| | 地址 | 怎么发布 |
+| --- | --- | --- |
+| **正式服** | https://urrrerin.github.io/Urrrerin/ | Actions → **Publish Production (正式服)** → 选分支（通常 `master`） |
+| **测试服** | https://urrrerin.github.io/Urrrerin/staging/ | Actions → **Publish Staging (测试服)** → 选功能分支 |
+
+推荐流程：功能分支 → 发到**测试服**看效果 → 满意再合 master / 发**正式服**。
+
+测试服带「测试服」标记；本地进度与正式服隔离，不会弄乱你正在背的进度。
+
 ## 云同步（Supabase）
 
 1. 复制 `.env.example` 为 `.env.local`，填入 Project URL 和 `anon` public key  
